@@ -1,0 +1,31 @@
+User-agent: *
+Allow: /
+
+# Google AdsTxt Crawler (Official Google Guideline)
+User-agent: Google-adstxt
+Disallow:
+
+# Google AdSense Crawler (Supporting Google Guideline)
+User-agent: Mediapartners-Google
+Disallow:
+
+# Sitemap
+Sitemap: https://crazycatlab.com/sitemap.xml
+
+# Allow important resources for rendering (CRITICAL for Google indexing)
+Allow: /js/
+Allow: /css/
+Allow: /image/
+
+# Disallow sensitive files only
+Disallow: *.md
+Disallow: /CLAUDE.md
+Disallow: /README.md
+Disallow: /test_i18n.html
+Disallow: /test-modal.html
+
+# Disallow Cloudflare paths (if Email Protection is enabled)
+Disallow: /cdn-cgi/
+
+# Crawl delay (optional)
+Crawl-delay: 1

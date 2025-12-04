@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms of Service - CrazyCat Lab</title>
+    <meta name="description" content="CrazyCat Lab Terms of Service - Terms and conditions for using our website and mobile applications.">
+    <meta name="robots" content="index,follow">
+
+    <!-- SEO Essential Tags -->
+    <link rel="canonical" href="https://crazycatlab.com/terms.html">
+
+    <!-- Security Headers -->
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta http-equiv="X-Frame-Options" content="DENY">
+    <meta http-equiv="X-XSS-Protection" content="1; mode=block">
+    <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%238b5cf6'/><text x='50' y='58' text-anchor='middle' font-size='54' fill='white' font-family='Arial,Helvetica,sans-serif'>C</text></svg>">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/style.css">
+    
+    <script>
+        // Mobile menu functionality for terms page
+        function headToggleMobileMenu() {
+            const navMenu = document.querySelector('.nav-menu');
+            const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+            
+            if (navMenu && mobileMenuBtn) {
+                navMenu.classList.toggle('active');
+                mobileMenuBtn.classList.toggle('active');
+                
+                // Body scroll 관리
+                if (navMenu.classList.contains('active')) {
+                    document.body.style.overflow = 'hidden';
+                } else {
+                    document.body.style.overflow = 'auto';
+                }
+            }
+        }
+        
+        // Register functions after DOM loads
+        document.addEventListener('DOMContentLoaded', function() {
+            // 글로벌 함수 등록
+            window.toggleMobileMenu = headToggleMobileMenu;
+            
+            // 모바일 메뉴 이벤트 등록
+            const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+            const navMenu = document.querySelector('.nav-menu');
+            
+            if (mobileMenuBtn) {
+                mobileMenuBtn.addEventListener('click', headToggleMobileMenu);
+                
+                // 메뉴 링크 클릭 시 메뉴 닫기
+                if (navMenu) {
+                    navMenu.querySelectorAll('a').forEach(link => {
+                        link.addEventListener('click', () => {
+                            if (navMenu.classList.contains('active')) {
+                                headToggleMobileMenu();
+                            }
+                        });
+                    });
+                    
+                    // 외부 클릭 시 메뉴 닫기
+                    document.addEventListener('click', (e) => {
+                        if (!mobileMenuBtn.contains(e.target) && !navMenu.contains(e.target)) {
+                            if (navMenu.classList.contains('active')) {
+                                headToggleMobileMenu();
+                            }
+                        }
+                    });
+                }
+            }
+        });
+    </script>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <nav class="nav">
+                <div class="brand" onclick="window.location.href='index.html'">
+                    <div class="brand-badge">C</div>
+                    <span>CrazyCat Lab</span>
+                </div>
+                <div class="nav-menu">
+                    <a href="index.html#about" data-i18n="nav.about">About</a>
+                    <a href="index.html#services" data-i18n="nav.services">Services</a>
+                    <a href="index.html#portfolio" data-i18n="nav.portfolio">Portfolio</a>
+                    <a href="index.html#ourapps" data-i18n="nav.ourapps">Our Apps</a>
+                    <a href="index.html#stack" data-i18n="nav.stack">Tech Stack</a>
+                    <div class="language-switcher">
+                        <button class="lang-btn" onclick="switchToEnglish()">EN</button>
+                        <button class="lang-btn" onclick="switchToKorean()">한국어</button>
+                    </div>
+                </div>
+                <div class="mobile-menu-btn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container" style="padding-top: 120px; padding-bottom: 80px;">
+        <div class="legal-document">
+            <h1 data-i18n="terms.title">Terms of Service</h1>
+            <p class="last-updated" data-i18n="terms.updated">Last updated: <span id="terms-date">December 4, 2025</span></p>
+            
+            <div class="legal-content">
+                <section class="legal-section">
+                    <h2 data-i18n="terms.intro.title">Introduction</h2>
+                    <p data-i18n="terms.intro.content">Welcome to CrazyCat Lab. These Terms of Service ("Terms") govern your use of our website and mobile applications ("Services") operated by CrazyCat Lab ("we," "our," or "us").</p>
+                </section>
+
+                <section class="legal-section">
+                    <h2 data-i18n="terms.acceptance.title">Acceptance of Terms</h2>
+                    <p data-i18n="terms.acceptance.content">By accessing and using our Services, you accept and agree to be bound by the terms and provision of this agreement. If you do not agree to abide by the above, please do not use this service.</p>
+                </section>
+
+                <section class="legal-section">
+                    <h2 data-i18n="terms.services.title">Description of Services</h2>
+                    <p data-i18n="terms.services.content">CrazyCat Lab provides mobile application development services and maintains a website showcasing our portfolio and services. Our Services include:</p>
+                    <ul>
+                        <li data-i18n="terms.services.item1">Mobile application development (iOS and Android)</li>
+                        <li data-i18n="terms.services.item2">Cross-platform development using Flutter</li>
+                        <li data-i18n="terms.services.item3">Native development using Kotlin and Swift</li>
+                        <li data-i18n="terms.services.item4">Consultation and technical support</li>
+                    </ul>
+                </section>
+
+                <section class="legal-section">
+                    <h2 data-i18n="terms.use.title">Acceptable Use</h2>
+                    <p data-i18n="terms.use.content">You agree to use our Services only for lawful purposes and in accordance with these Terms. You agree not to:</p>
+                    <ul>
+                        <li data-i18n="terms.use.item1">Use the Services for any unlawful purpose or to solicit others to perform unlawful acts</li>
+                        <li data-i18n="terms.use.item2">Violate any international, federal, provincial, or state regulations, rules, laws, or local ordinances</li>
+                        <li data-i18n="terms.use.item3">Infringe upon or violate our intellectual property rights or the intellectual property rights of others</li>
+                        <li data-i18n="terms.use.item4">Harass, abuse, insult, harm, defame, slander, disparage, intimidate, or discriminate</li>
+                        <li data-i18n="terms.use.item5">Submit false or misleading information</li>
+                        <li data-i18n="terms.use.item6">Upload or transmit viruses or any other type of malicious code</li>
+                    </ul>
+                </section>
+
+                <section class="legal-section">
+                    <h2 data-i18n="terms.intellectual.title">Intellectual Property Rights</h2>
+                    <p data-i18n="terms.intellectual.content">The Services and their original content, features, and functionality are and will remain the exclusive property of CrazyCat Lab and its licensors. The Services are protected by copyright, trademark, and other laws.</p>
+                </section>
+
+                <section class="legal-section">
+                    <h2 data-i18n="terms.user.title">User Content</h2>
+                    <p data-i18n="terms.user.content">Our Services may allow you to post, link, store, share and otherwise make available certain information, text, graphics, videos, or other material ("Content"). You are responsible for the Content that you post to the Services, including its legality, reliability, and appropriateness.</p>
+                </section>
+
+                <section class="legal-section">
+                    <h2 data-i18n="terms.privacy.title">Privacy Policy</h2>
+                    <p data-i18n="terms.privacy.content">Your privacy is important to us. Please review our Privacy Policy, which also governs your use of the Services, to understand our practices.</p>
+                </section>
+
+                <section class="legal-section">
+                    <h2 data-i18n="terms.termination.title">Termination</h2>
+                    <p data-i18n="terms.termination.content">We may terminate or suspend your access immediately, without prior notice or liability, for any reason whatsoever, including without limitation if you breach the Terms.</p>
+                </section>
+
+                <section class="legal-section">
+                    <h2 data-i18n="terms.disclaimer.title">Disclaimer</h2>
+                    <p data-i18n="terms.disclaimer.content">The information on this website is provided on an "as is" basis. To the fullest extent permitted by law, this Company:</p>
+                    <ul>
+                        <li data-i18n="terms.disclaimer.item1">Excludes all representations and warranties relating to this website and its contents</li>
+                        <li data-i18n="terms.disclaimer.item2">Excludes all liability for damages arising out of or in connection with your use of this website</li>
+                    </ul>
+                </section>
+
+                <section class="legal-section">
+                    <h2 data-i18n="terms.limitation.title">Limitation of Liability</h2>
+                    <p data-i18n="terms.limitation.content">In no event shall CrazyCat Lab, nor its directors, employees, partners, agents, suppliers, or affiliates, be liable for any indirect, incidental, special, consequential, or punitive damages, including without limitation, loss of profits, data, use, goodwill, or other intangible losses, resulting from your use of the Services.</p>
+                </section>
+
+                <section class="legal-section">
+                    <h2 data-i18n="terms.governing.title">Governing Law</h2>
+                    <p data-i18n="terms.governing.content">These Terms shall be interpreted and governed by the laws of the Republic of Korea, without regard to its conflict of law provisions.</p>
+                </section>
+
+                <section class="legal-section">
+                    <h2 data-i18n="terms.changes.title">Changes to Terms</h2>
+                    <p data-i18n="terms.changes.content">We reserve the right, at our sole discretion, to modify or replace these Terms at any time. If a revision is material, we will try to provide at least 30 days notice prior to any new terms taking effect.</p>
+                </section>
+
+                <section class="legal-section">
+                    <h2 data-i18n="terms.contact.title">Contact Information</h2>
+                    <p data-i18n="terms.contact.content">If you have any questions about these Terms of Service, please contact us at:</p>
+                    <div class="contact-info">
+                        <p><strong>Email:</strong> <a href="mailto:support@crazycatlab.com">support@crazycatlab.com</a></p>
+                        <p><strong data-i18n="terms.contact.company">Company:</strong> CrazyCat Lab</p>
+                        <p><strong data-i18n="terms.contact.location">Location:</strong> <span data-i18n="terms.contact.location.value">Korea (Republic of Korea)</span></p>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-left">
+                    <span>© <span id="currentYear"></span> CrazyCat Lab. <span data-i18n="footer.rights">All rights reserved.</span></span>
+                </div>
+                <div class="footer-right">
+                    <a href="privacy.html" data-i18n="footer.privacy">Privacy Policy</a>
+                    <span>·</span>
+                    <a href="terms.html" data-i18n="footer.terms">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+        // 페이지 로드 전에 언어 설정 확인
+        const savedLanguage = localStorage.getItem('language');
+        if (savedLanguage) {
+            document.documentElement.lang = savedLanguage;
+            console.log('Pre-load language set to:', savedLanguage);
+        }
+    </script>
+    <script src="js/main.js"></script>
+    <script src="js/i18n-terms.js"></script>
+</body>
+</html>

@@ -1,0 +1,904 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CrazyCat Lab — Mobile App Developer from Korea</title>
+    <meta name="description" content="CrazyCat Lab is a Korea-based indie studio building high-quality mobile apps with Flutter, Kotlin, and Swift. Portfolio, services, tech stack, and contact.">
+    
+    <!-- SEO Essential Tags -->
+    <link rel="canonical" href="https://crazycatlab.com/">
+    <meta property="og:url" content="https://crazycatlab.com/">
+    <meta property="og:site_name" content="CrazyCat Lab">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="CrazyCat Lab — Mobile App Developer from Korea">
+    <meta property="og:description" content="CrazyCat Lab is a Korea-based indie studio building high-quality mobile apps with Flutter, Kotlin, and Swift. Portfolio, services, tech stack, and contact.">
+    <meta property="og:image" content="https://crazycatlab.com/app_icon.png">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:locale:alternate" content="ko_KR">
+    
+    <!-- Twitter Card Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@crazycatlab">
+    <meta name="twitter:title" content="CrazyCat Lab — Mobile App Developer from Korea">
+    <meta name="twitter:description" content="CrazyCat Lab is a Korea-based indie studio building high-quality mobile apps with Flutter, Kotlin, and Swift. Portfolio, services, tech stack, and contact.">
+    <meta name="twitter:image" content="https://crazycatlab.com/app_icon.png">
+    
+    <!-- Additional SEO Tags -->
+    <meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1">
+    <meta name="googlebot" content="index,follow">
+    <meta name="bingbot" content="index,follow">
+    
+    <!-- Security Headers -->
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta http-equiv="X-XSS-Protection" content="1; mode=block">
+    <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%238b5cf6'/><text x='50' y='58' text-anchor='middle' font-size='54' fill='white' font-family='Arial,Helvetica,sans-serif'>C</text></svg>">
+    
+    <!-- PWA Manifest -->
+    <link rel="manifest" href="manifest.json">
+    
+    <!-- Apple Touch Icon -->
+    <link rel="apple-touch-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%238b5cf6'/><text x='50' y='58' text-anchor='middle' font-size='54' fill='white' font-family='Arial,Helvetica,sans-serif'>C</text></svg>">
+    
+    <!-- Theme Color -->
+    <meta name="theme-color" content="#8b5cf6">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/style.css">
+    
+    <!-- Complete Modal Implementation in Head -->
+    <script>
+        // Complete app data and modal implementation
+        const appData = {
+            wallypto: {
+                title: 'Wallypto Beta',
+                titleKo: 'Wallypto Beta',
+                description: 'Blockchain wallet developed by LG Electronics, Inc. for secure digital asset management. Developed with Flutter for Android and iOS platforms.',
+                descriptionKo: 'LG Electronics, Inc.에서 개발한 안전한 디지털 자산 관리를 위한 블록체인 지갑입니다. Flutter 앱으로 Android와 iOS 담당 개발을 진행했습니다.',
+                storeUrl: 'https://play.google.com/store/apps/details?id=xyz.wallypto',
+                storeUrlIos: 'https://apps.apple.com/kr/app/wallypto-blockchain-wallet/id1639302472',
+                images: ['image/wallypto/unnamed1.webp', 'image/wallypto/unnamed2.webp', 'image/wallypto/unnamed3.webp', 'image/wallypto/unnamed4.webp', 'image/wallypto/unnamed5.webp', 'image/wallypto/unnamed6.webp']
+            },
+            everycalc: {
+                title: 'Every Calc',
+                titleKo: 'Every Calc',
+                description: 'Comprehensive calculator app with multiple calculation modes and beautiful design.',
+                descriptionKo: '다양한 계산 모드와 아름다운 디자인을 갖춘 종합 계산기 앱입니다.',
+                storeUrl: 'https://play.google.com/store/apps/details?id=com.crazycatlab.every_calc',
+                images: ['image/every_calc/calc1.webp', 'image/every_calc/calc2.webp', 'image/every_calc/calc3.webp', 'image/every_calc/calc4.webp', 'image/every_calc/calc5.webp', 'image/every_calc/calc6.webp', 'image/every_calc/calc7.webp', 'image/every_calc/calc8.webp']
+            },
+            smarthq: {
+                title: 'Smart HQ',
+                titleKo: 'Smart HQ',
+                description: 'Smart home device management app provided by GE (General Electric). Developed Water Heater and Air Product (WAC, PAC, DFS, Dehum, Central Controller) Android functionality and Flutter migration.',
+                descriptionKo: 'GE(General Electric)에서 제공하는 스마트 홈 디바이스 관리 앱입니다. Water Heater와 Air Product(WAC, PAC, DFS, Dehum, Central Controller) Android 담당 및 Flutter 리뉴얼(마이그레이션)을 진행했습니다.',
+                storeUrl: null,
+                images: ['image/smarthq/smarthq1.webp', 'image/smarthq/smarthq2.webp', 'image/smarthq/smarthq3.webp', 'image/smarthq/smarthq4.webp', 'image/smarthq/smarthq5.webp', 'image/smarthq/smarthq6.webp']
+            },
+            kkl: {
+                title: 'MyData KKL',
+                titleKo: '마이데이터 끌',
+                description: 'Personalized financial data integration and asset management service mobile app by Kyobo Securities. Developed with Flutter for Android and iOS platforms, responsible for development and maintenance.',
+                descriptionKo: '교보증권의 개인화된 금융 데이터 통합 및 자산 관리 서비스 모바일 앱입니다. Flutter 앱으로 Android와 iOS 담당 개발 및 유지보수를 진행했습니다.',
+                storeUrl: 'https://play.google.com/store/apps/details?id=com.iprovest.mykkl',
+                storeUrlIos: 'https://apps.apple.com/us/app/id1617913593',
+                images: ['image/kkl/kkl1.webp', 'image/kkl/kkl2.webp', 'image/kkl/kkl3.webp', 'image/kkl/kkl4.webp', 'image/kkl/kkl5.webp', 'image/kkl/kkl6.webp', 'image/kkl/kkl7.webp', 'image/kkl/kkl8.webp']
+            },
+            funnc: {
+                title: 'Cat & Dog President',
+                titleKo: '고양이 대통령 & 강아지 대통령',
+                description: 'Pet shopping mall apps featuring cat and dog characters. Developed with Native Android technology, responsible for Android renewal development.',
+                descriptionKo: '고양이와 강아지 캐릭터를 특징으로 하는 펫 쇼핑몰 앱입니다. Native 앱으로 Android 리뉴얼 개발을 담당했습니다.',
+                isDoubleApp: true,
+                apps: {
+                    cat: {
+                        storeUrl: 'https://play.google.com/store/apps/details?id=com.funnc.catpre',
+                        storeUrlIos: 'https://apps.apple.com/me/app/id1133039683',
+                        images: ['image/funnc/go1.webp', 'image/funnc/go2.webp', 'image/funnc/go3.webp', 'image/funnc/go4.webp', 'image/funnc/go5.webp']
+                    },
+                    dog: {
+                        storeUrl: 'https://play.google.com/store/apps/details?id=com.funnc.dogpre',
+                        storeUrlIos: 'https://apps.apple.com/me/app/id1121905472',
+                        images: ['image/funnc/gang1.webp', 'image/funnc/gang2.webp', 'image/funnc/gang3.webp', 'image/funnc/gang4.webp', 'image/funnc/gang5.webp']
+                    }
+                }
+            },
+            favoriit: {
+                title: 'Favoriit',
+                titleKo: '페이보릿',
+                description: 'Innovative secondhand trading platform with instant sales, real-time auctions, and story features. Developed with Native Android and iOS technology, responsible for development.',
+                descriptionKo: '즉시 판매, 실시간 경매, 소중한 물건들의 스토리 기능을 갖춘 혁신적인 중고거래 플랫폼입니다. Native 앱으로 Android와 iOS 개발을 담당했습니다.',
+                storeUrl: 'https://play.google.com/store/apps/details?id=com.favoriit',
+                storeUrlIos: 'https://apps.apple.com/kr/app/페이보릿-favoriit/id1532185221',
+                images: ['image/favoriit/favoriit1.webp', 'image/favoriit/favoriit2.webp', 'image/favoriit/favoriit3.webp', 'image/favoriit/favoriit4.webp', 'image/favoriit/favoriit5.webp', 'image/favoriit/favoriit6.webp']
+            },
+            style: {
+                title: 'StyleSeller',
+                titleKo: '스타일셀러',
+                description: 'Easy and fast SNS product sales platform for side hustlers with free multi-links, recommended products, and data-driven group buying. Native Android development and maintenance.',
+                descriptionKo: 'N잡러를 위한 쉽고 빠른 SNS 상품 판매 플랫폼입니다. 무료 멀티링크, 추천상품, 매주 발행 셀러레터, 데이터 기반 공동구매 매칭 등 다양한 혜택을 제공합니다. Native앱으로 Android 개발 및 유지보수 담당.',
+                storeUrl: 'https://play.google.com/store/apps/details?id=com.mint.style',
+                storeUrlIos: 'https://apps.apple.com/kr/app/n잡러-필수앱-스타일셀러/id1262954182',
+                images: ['image/style/style1.webp', 'image/style/style2.webp', 'image/style/style3.webp', 'image/style/style4.webp', 'image/style/style5.webp', 'image/style/style6.webp', 'image/style/style7.webp']
+            }
+        };
+
+        // Define functions (will be registered after DOM and scripts load)
+        function headOpenAppModal(appId) {
+            const app = appData[appId];
+            if (!app) {
+                console.error('App data not found for:', appId);
+                return;
+            }
+            
+            const modal = document.getElementById('appModal');
+            const modalTitle = document.getElementById('modalTitle');
+            const modalDescription = document.getElementById('modalDescription');
+            const modalStoreLink = document.getElementById('modalStoreLink');
+            const imageContainer = document.getElementById('imageContainer');
+            
+            if (!modal) {
+                console.error('Modal element not found!');
+                return;
+            }
+            
+            // Set title and description based on current language
+            const currentLang = localStorage.getItem('language') || 'en';
+            modalTitle.textContent = currentLang === 'ko' && app.titleKo ? app.titleKo : app.title;
+            modalDescription.textContent = currentLang === 'ko' && app.descriptionKo ? app.descriptionKo : app.description;
+            
+            // Clear and populate images
+            imageContainer.innerHTML = '';
+            
+            if (app.isDoubleApp) {
+                // Handle double app (Cat & Dog President)
+                const allImages = [...app.apps.cat.images, ...app.apps.dog.images];
+                allImages.forEach(imageSrc => {
+                    const img = document.createElement('img');
+                    img.src = imageSrc;
+                    img.className = 'gallery-image';
+                    img.loading = 'lazy';
+                    imageContainer.appendChild(img);
+                });
+                
+                modalStoreLink.innerHTML = `
+                    <div style="display: flex; gap: 1rem; justify-content: space-between; align-items: center; flex-wrap: wrap;">
+                        <div style="display: flex; gap: 0.5rem;">
+                            <a href="https://play.google.com/store/apps/details?id=com.funnc.catpre" target="_blank" class="modal-store-link">고양이 대통령 Android</a>
+                            <a href="https://apps.apple.com/me/app/id1133039683" target="_blank" class="modal-store-link" style="background: linear-gradient(135deg, #6366f1, #8b5cf6);">고양이 대통령 iOS</a>
+                        </div>
+                        <span style="color: var(--text-muted); font-size: 1.2rem;">|</span>
+                        <div style="display: flex; gap: 0.5rem;">
+                            <a href="https://play.google.com/store/apps/details?id=com.funnc.dogpre" target="_blank" class="modal-store-link">강아지 대통령 Android</a>
+                            <a href="https://apps.apple.com/me/app/id1121905472" target="_blank" class="modal-store-link" style="background: linear-gradient(135deg, #6366f1, #8b5cf6);">강아지 대통령 iOS</a>
+                        </div>
+                    </div>
+                `;
+            } else {
+                // Handle regular apps
+                app.images.forEach(imageSrc => {
+                    const img = document.createElement('img');
+                    img.src = imageSrc;
+                    img.className = 'gallery-image';
+                    img.loading = 'lazy';
+                    imageContainer.appendChild(img);
+                });
+                
+                if (app.storeUrl || app.storeUrlIos) {
+                    let storeLinksHtml = '<div style="display: flex; gap: 0.5rem;">';
+                    if (app.storeUrl) {
+                        storeLinksHtml += `<a href="${app.storeUrl}" target="_blank" class="modal-store-link">Android</a>`;
+                    }
+                    if (app.storeUrlIos) {
+                        storeLinksHtml += `<a href="${app.storeUrlIos}" target="_blank" class="modal-store-link">iOS</a>`;
+                    }
+                    storeLinksHtml += '</div>';
+                    modalStoreLink.innerHTML = storeLinksHtml;
+                } else if (appId === 'smarthq') {
+                    // Special case for Smart HQ - show proper release status
+                    const currentLang = localStorage.getItem('language') || 'en';
+                    const releaseMessage = currentLang === 'ko' ? 
+                        '출시됨 - 미국 앱 스토어에서 이용 가능 (VPN 필요)' : 
+                        'Released - Available on US App Store (VPN required for access)';
+                    modalStoreLink.innerHTML = `<span style="color: var(--accent-green);">${releaseMessage}</span>`;
+                } else {
+                    modalStoreLink.innerHTML = '<span style="color: var(--accent-green);">Coming Soon</span>';
+                }
+            }
+            
+            // Show modal
+            modal.style.display = 'block';
+            document.body.style.overflow = 'hidden';
+        }
+        
+        function headCloseAppModal() {
+            const modal = document.getElementById('appModal');
+            if (modal) {
+                modal.style.display = 'none';
+                document.body.style.overflow = 'auto';
+            }
+        }
+        
+        function headToggleMobileMenu() {
+            const navMenu = document.querySelector('.nav-menu');
+            const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+            
+            if (navMenu && mobileMenuBtn) {
+                navMenu.classList.toggle('active');
+                mobileMenuBtn.classList.toggle('active');
+                
+                // Body scroll 관리
+                if (navMenu.classList.contains('active')) {
+                    document.body.style.overflow = 'hidden';
+                } else {
+                    document.body.style.overflow = 'auto';
+                }
+            }
+        }
+        
+        // Register functions after DOM loads
+        document.addEventListener('DOMContentLoaded', function() {
+            // 글로벌 함수 등록
+            window.openAppModal = headOpenAppModal;
+            window.closeAppModal = headCloseAppModal;
+            window.toggleMobileMenu = headToggleMobileMenu;
+            
+            // 모바일 메뉴 이벤트 등록
+            const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+            const navMenu = document.querySelector('.nav-menu');
+            
+            if (mobileMenuBtn) {
+                mobileMenuBtn.addEventListener('click', headToggleMobileMenu);
+                
+                // 메뉴 링크 클릭 시 메뉴 닫기
+                if (navMenu) {
+                    navMenu.querySelectorAll('a').forEach(link => {
+                        link.addEventListener('click', () => {
+                            if (navMenu.classList.contains('active')) {
+                                headToggleMobileMenu();
+                            }
+                        });
+                    });
+                    
+                    // 외부 클릭 시 메뉴 닫기
+                    document.addEventListener('click', (e) => {
+                        if (!mobileMenuBtn.contains(e.target) && !navMenu.contains(e.target)) {
+                            if (navMenu.classList.contains('active')) {
+                                headToggleMobileMenu();
+                            }
+                        }
+                    });
+                }
+            }
+        });
+    </script>
+
+    
+
+    
+
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "CrazyCat Lab",
+        "url": "https://crazycatlab.com",
+        "logo": "https://crazycatlab.com/app_icon.png",
+        "email": "support@crazycatlab.com",
+        "address": {
+            "@type": "PostalAddress",
+            "addressCountry": "KR"
+        }
+    }
+    </script>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <nav class="nav">
+                <a href="#hero" class="brand">
+                    <div class="brand-badge">
+                        <img src="image/dev/img_dev_logo.webp" alt="CrazyCatLab Logo" loading="eager" width="40" height="40" fetchpriority="high">
+                    </div>
+                    <span>CrazyCat Lab</span>
+                </a>
+                <div class="nav-menu">
+                    <a href="#about" data-i18n="nav.about">About</a>
+                    <a href="#services" data-i18n="nav.services">Services</a>
+                    <a href="#portfolio" data-i18n="nav.portfolio">Portfolio</a>
+                    <a href="#ourapps" data-i18n="nav.ourapps">Our Apps</a>
+                    <a href="#stack" data-i18n="nav.stack">Tech Stack</a>
+                    <div class="language-switcher">
+                        <button class="lang-btn" onclick="switchToEnglish()">EN</button>
+                        <button class="lang-btn" onclick="switchToKorean()">한국어</button>
+                    </div>
+                </div>
+                <div class="mobile-menu-btn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Main Banner Section -->
+        <section class="banner-section">
+            <div class="container">
+                <div class="banner-image">
+                    <img src="image/dev/img_dev_banner0.webp" 
+                         srcset="image/dev/img_dev_banner0.webp 2048w"
+                         sizes="(max-width: 768px) 100vw, (max-width: 1200px) 90vw, 1024px"
+                         alt="CrazyCat Lab Main Banner" 
+                         loading="eager"
+                         fetchpriority="high"
+                         width="1024" 
+                         height="322"
+                         decoding="async">
+                    <div class="banner-overlay">
+                        <h2 data-i18n="hero.title">Indie Mobile App Studio from Korea</h2>
+                        <p data-i18n="hero.description">CrazyCat Lab designs and ships practical mobile apps with a clean UX and solid engineering. We focus on Flutter for cross‑platform speed, and Kotlin/Swift when native experiences are required.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Hero Section -->
+        <section id="hero" class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <div class="hero-text">
+                        <h2 data-i18n="hero.welcome">Welcome to CrazyCat Lab</h2>
+                        <p class="hero-subtitle" data-i18n="hero.subtitle">Where Quality Meets Creativity</p>
+                        <div class="hero-features" data-i18n="hero.features">
+                            • Flutter Expert • Native Performance • Indie Spirit
+                        </div>
+                        <div class="cta-buttons">
+                            <a href="mailto:support@crazycatlab.com" class="btn btn-primary" data-i18n="hero.cta.primary">Start a conversation</a>
+                            <a href="#portfolio" class="btn btn-secondary" data-i18n="hero.cta.secondary">See what we build</a>
+                        </div>
+                        <div class="hero-meta">
+                            <span data-i18n="hero.meta.location">📍 Based in Korea</span>
+                            <span data-i18n="hero.meta.platforms">📱 iOS & Android</span>
+                            <span data-i18n="hero.meta.quality">🧪 CI-ready, testable code</span>
+                        </div>
+                    </div>
+                    <div class="hero-card">
+                        <h3 data-i18n="hero.highlights.title">Highlights</h3>
+                        <ul>
+                            <li data-i18n="hero.highlights.item1">Product-minded development: quick experiments → reliable releases</li>
+                            <li data-i18n="hero.highlights.item2">Monetization: AdMob / AppLovin MAX mediation, IAP subscriptions</li>
+                            <li data-i18n="hero.highlights.item3">Privacy-first analytics and crash reporting</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Banner Section -->
+        <section class="banner-section">
+            <div class="container">
+                <div class="banner-image">
+                    <img src="image/dev/img_dev_banner1.webp" 
+                         srcset="image/dev/img_dev_banner1.webp 2048w"
+                         sizes="(max-width: 768px) 100vw, (max-width: 1200px) 90vw, 1024px"
+                         alt="About CrazyCat Lab Banner" 
+                         loading="eager"
+                         fetchpriority="high"
+                         width="1024" 
+                         height="322"
+                         decoding="async">
+                    <div class="banner-overlay">
+                        <h2 data-i18n="about.title">About CrazyCat Lab</h2>
+                        <p data-i18n="about.description">CrazyCat Lab is an indie developer building helpful everyday apps. The goal is simple: deliver fast, stable, and delightful experiences that people keep on their home screen.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="section">
+            <div class="container">
+                <div class="grid-3">
+                    <div class="card">
+                        <h3 data-i18n="about.lean.title">Lean & Transparent</h3>
+                        <p data-i18n="about.lean.description">We share timelines early, cut scope when needed, and ship value in small increments.</p>
+                    </div>
+                    <div class="card">
+                        <h3 data-i18n="about.design.title">Design × Engineering</h3>
+                        <p data-i18n="about.design.description">From wireframes to pixel‑polish: UX flows, UI systems, and implementation under one roof.</p>
+                    </div>
+                    <div class="card">
+                        <h3 data-i18n="about.quality.title">Quality by Default</h3>
+                        <p data-i18n="about.quality.description">Type‑safe code, lint rules, automated builds, and meaningful monitoring to keep apps healthy.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Banner -->
+        <section class="banner-section">
+            <div class="container">
+                <div class="banner-image">
+                    <img src="image/dev/img_dev_banner2.webp" 
+                         srcset="image/dev/img_dev_banner2.webp 2048w"
+                         sizes="(max-width: 768px) 100vw, (max-width: 1200px) 90vw, 1024px"
+                         alt="What We Build Banner" 
+                         loading="lazy"
+                         width="1024" 
+                         height="322"
+                         decoding="async">
+                    <div class="banner-overlay">
+                        <h2 data-i18n="services.title">What We Build</h2>
+                        <p data-i18n="services.description">Production mobile apps for everyday needs — utilities, lifestyle, education, and simple games.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services" class="section">
+            <div class="container">
+                <div class="grid-3">
+                    <div class="card">
+                        <h3 data-i18n="services.flutter.title">Cross‑platform Apps (Flutter)</h3>
+                        <p data-i18n="services.flutter.description">Single codebase targeting iOS and Android with native‑level performance and smooth animations.</p>
+                    </div>
+                    <div class="card">
+                        <h3 data-i18n="services.native.title">Native Android / iOS</h3>
+                        <p data-i18n="services.native.description">Kotlin + Jetpack on Android, Swift + SwiftUI/UIKit on iOS when platform‑specific features matter.</p>
+                    </div>
+                    <div class="card">
+                        <h3 data-i18n="services.monetization.title">Monetization & Growth</h3>
+                        <p data-i18n="services.monetization.description">AdMob & AppLovin MAX mediation, in‑app purchases, A/B testing, privacy‑friendly analytics.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Portfolio Banner -->
+        <section class="banner-section">
+            <div class="container">
+                <div class="banner-image">
+                    <img src="image/dev/img_dev_banner3.webp" 
+                         srcset="image/dev/img_dev_banner3.webp 2048w"
+                         sizes="(max-width: 768px) 100vw, (max-width: 1200px) 90vw, 1024px"
+                         alt="Portfolio Banner" 
+                         loading="lazy"
+                         width="1024" 
+                         height="322"
+                         decoding="async">
+                    <div class="banner-overlay">
+                        <h2 data-i18n="portfolio.title">Portfolio</h2>
+                        <p data-i18n="portfolio.description">Mobile applications we've developed and launched for various companies and clients.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Portfolio Section -->
+        <section id="portfolio" class="section">
+            <div class="container">
+                <div class="portfolio-grid">
+                    <!-- Smart HQ - First Position -->
+                    <div class="portfolio-card featured" onclick="window.openAppModal('smarthq')">
+                        <div class="portfolio-icon">
+                            <img src="image/smarthq/app_icon.webp" alt="Smart HQ App Icon" loading="lazy">
+                        </div>
+                        <div class="portfolio-content">
+                            <h3 data-i18n="portfolio.smarthq.title">Smart HQ</h3>
+                            <p data-i18n="portfolio.smarthq.description">Smart home device management app provided by GE (General Electric). Users can easily control and monitor GE smart devices.</p>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 100%"></div>
+                            </div>
+                            <span class="progress-text" data-i18n="portfolio.smarthq.progress">Released - Available on US App Store</span>
+                        </div>
+                    </div>
+                    
+                    <!-- MyData KKL - Second Position -->
+                    <div class="portfolio-card featured" onclick="openAppModal('kkl')">
+                        <div class="portfolio-icon">
+                            <img src="image/kkl/app_icon.webp" alt="MyData KKL App Icon" loading="lazy">
+                        </div>
+                        <div class="portfolio-content">
+                            <h3 data-i18n="portfolio.kkl.title">MyData KKL</h3>
+                            <p data-i18n="portfolio.kkl.description">Personalized financial data integration and asset management service mobile app by Kyobo Securities.</p>
+                            <div class="store-links">
+                                <a href="https://play.google.com/store/apps/details?id=com.iprovest.mykkl" target="_blank" class="store-link android" onclick="event.stopPropagation()">
+                                    <span data-i18n="portfolio.kkl.android">Android</span>
+                                </a>
+                                <a href="https://apps.apple.com/us/app/id1617913593" target="_blank" class="store-link ios" onclick="event.stopPropagation()">
+                                    <span data-i18n="portfolio.kkl.ios">iOS</span>
+                                </a>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 100%"></div>
+                            </div>
+                            <span class="progress-text" data-i18n="portfolio.kkl.progress">Released - Available on App Stores</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Wallypto Beta - Third Position -->
+                    <div class="portfolio-card featured" onclick="openAppModal('wallypto')">
+                        <div class="portfolio-icon">
+                            <img src="image/wallypto/app_icon.webp" alt="Wallypto Beta App Icon" loading="lazy">
+                        </div>
+                        <div class="portfolio-content">
+                            <h3 data-i18n="portfolio.wallypto.title">Wallypto Beta</h3>
+                            <p data-i18n="portfolio.wallypto.description">Blockchain wallet developed by LG Electronics, Inc. for secure digital asset management.</p>
+                            <div class="store-links">
+                                <a href="https://play.google.com/store/apps/details?id=xyz.wallypto" target="_blank" class="store-link android" onclick="event.stopPropagation()">
+                                    <span data-i18n="portfolio.wallypto.android">Android</span>
+                                </a>
+                                <a href="https://apps.apple.com/kr/app/wallypto-blockchain-wallet/id1639302472" target="_blank" class="store-link ios" onclick="event.stopPropagation()">
+                                    <span data-i18n="portfolio.wallypto.ios">iOS</span>
+                                </a>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 100%"></div>
+                            </div>
+                            <span class="progress-text" data-i18n="portfolio.wallypto.progress">Released - Available on App Stores</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Cat & Dog President - Fourth Position -->
+                    <div class="portfolio-card featured" onclick="openAppModal('funnc')">
+                        <div style="display: flex; gap: 10px; margin-bottom: 1.5rem; justify-content: flex-start;">
+                            <div class="portfolio-icon">
+                                <img src="image/funnc/app_icon1.webp" alt="Cat President App Icon" loading="lazy">
+                            </div>
+                            <div class="portfolio-icon">
+                                <img src="image/funnc/app_icon2.webp" alt="Dog President App Icon" loading="lazy">
+                            </div>
+                        </div>
+                        <div class="portfolio-content">
+                            <h3 data-i18n="portfolio.funnc.title">Cat & Dog President</h3>
+                            <p data-i18n="portfolio.funnc.description">Pet shopping mall apps featuring cat and dog characters, providing users with a friendly and fun shopping experience.</p>
+                            <div class="store-links" style="display: flex; justify-content: space-between; align-items: center; gap: 1rem;">
+                                <div style="display: flex; gap: 0.5rem;">
+                                    <a href="https://play.google.com/store/apps/details?id=com.funnc.catpre" target="_blank" class="store-link android" onclick="event.stopPropagation()">
+                                        <span>Android</span>
+                                    </a>
+                                    <a href="https://apps.apple.com/me/app/id1133039683" target="_blank" class="store-link ios" onclick="event.stopPropagation()">
+                                        <span>iOS</span>
+                                    </a>
+                                </div>
+                                <div style="display: flex; gap: 0.5rem;">
+                                    <a href="https://play.google.com/store/apps/details?id=com.funnc.dogpre" target="_blank" class="store-link android" onclick="event.stopPropagation()">
+                                        <span>Android</span>
+                                    </a>
+                                    <a href="https://apps.apple.com/me/app/id1121905472" target="_blank" class="store-link ios" onclick="event.stopPropagation()">
+                                        <span>iOS</span>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 100%"></div>
+                            </div>
+                            <span class="progress-text" data-i18n="portfolio.funnc.progress">Released - Available on App Stores</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Favoriit - Fifth Position -->
+                    <div class="portfolio-card featured" onclick="openAppModal('favoriit')">
+                        <div class="portfolio-icon">
+                            <img src="image/favoriit/app_icon.webp" alt="Favoriit App Icon" loading="lazy">
+                        </div>
+                        <div class="portfolio-content">
+                            <h3 data-i18n="portfolio.favoriit.title">Favoriit</h3>
+                            <p data-i18n="portfolio.favoriit.description">Innovative secondhand trading platform with instant sales, real-time auctions, and story features for beloved items.</p>
+                            <div class="store-links">
+                                <a href="https://play.google.com/store/apps/details?id=com.favoriit" target="_blank" class="store-link android" onclick="event.stopPropagation()">
+                                    <span data-i18n="portfolio.favoriit.android">Android</span>
+                                </a>
+                                <a href="https://apps.apple.com/kr/app/페이보릿-favoriit/id1532185221" target="_blank" class="store-link ios" onclick="event.stopPropagation()">
+                                    <span data-i18n="portfolio.favoriit.ios">iOS</span>
+                                </a>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 100%"></div>
+                            </div>
+                            <span class="progress-text" data-i18n="portfolio.favoriit.progress">Released - Available on App Stores</span>
+                        </div>
+                    </div>
+                    
+                    <!-- StyleSeller - Sixth Position -->
+                    <div class="portfolio-card featured" onclick="openAppModal('style')">
+                        <div class="portfolio-icon">
+                            <img src="image/style/app_icon.webp" alt="StyleSeller App Icon" loading="lazy">
+                        </div>
+                        <div class="portfolio-content">
+                            <h3 data-i18n="portfolio.style.title">StyleSeller</h3>
+                            <p data-i18n="portfolio.style.description">Easy and fast SNS product sales platform for side hustlers with free multi-links, recommended products, and data-driven group buying.</p>
+                            <div class="store-links">
+                                <a href="https://play.google.com/store/apps/details?id=com.mint.style" target="_blank" class="store-link android" onclick="event.stopPropagation()">
+                                    <span data-i18n="portfolio.style.android">Android</span>
+                                </a>
+                                <a href="https://apps.apple.com/kr/app/n잡러-필수앱-스타일셀러/id1262954182" target="_blank" class="store-link ios" onclick="event.stopPropagation()">
+                                    <span data-i18n="portfolio.style.ios">iOS</span>
+                                </a>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 100%"></div>
+                            </div>
+                            <span class="progress-text" data-i18n="portfolio.style.progress">Released - Available on App Stores</span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Our Mobile Apps Banner -->
+        <section class="banner-section">
+            <div class="container">
+                <div class="banner-image">
+                    <img src="image/dev/img_dev_banner4.webp" 
+                         srcset="image/dev/img_dev_banner4.webp 2048w"
+                         sizes="(max-width: 768px) 100vw, (max-width: 1200px) 90vw, 1024px"
+                         alt="Our Mobile Apps Banner" 
+                         loading="lazy"
+                         width="1024" 
+                         height="322"
+                         decoding="async">
+                    <div class="banner-overlay">
+                        <h2 data-i18n="ourapps.title">Our Mobile Apps</h2>
+                        <p data-i18n="ourapps.description">Innovative mobile applications we're developing and launching under our own brand.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Our Mobile Apps Section -->
+        <section id="ourapps" class="section">
+            <div class="container">
+                <div class="portfolio-grid">
+                    <!-- Every Calc -->
+                    <div class="portfolio-card featured" onclick="openAppModal('everycalc')">
+                        <div class="portfolio-icon">
+                            <img src="image/every_calc/app_icon.webp" alt="Every Calc App Icon" loading="lazy">
+                        </div>
+                        <div class="portfolio-content">
+                            <h3 data-i18n="portfolio.calc.title">Every Calc</h3>
+                            <p data-i18n="portfolio.calc.description">Comprehensive calculator app with multiple calculation modes and beautiful design.</p>
+                            <div class="store-links">
+                                <a href="https://play.google.com/store/apps/details?id=com.crazycatlab.every_calc" target="_blank" class="store-link android" onclick="event.stopPropagation()">
+                                    <span data-i18n="portfolio.calc.android">Android</span>
+                                </a>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 100%"></div>
+                            </div>
+                            <span class="progress-text" data-i18n="portfolio.calc.progress">Released - Available on Google Play Store</span>
+                        </div>
+                    </div>
+                    
+                    <div class="portfolio-card">
+                        <div class="portfolio-icon">
+                            <div class="icon-placeholder weather">🌤️</div>
+                        </div>
+                        <div class="portfolio-content">
+                            <h3 data-i18n="portfolio.weather.title">Weather Companion</h3>
+                            <p data-i18n="portfolio.weather.description">Smart weather forecasting with personalized insights and beautiful animations.</p>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 90%"></div>
+                            </div>
+                            <span class="progress-text" data-i18n="portfolio.weather.progress">90% Complete - In Development</span>
+                        </div>
+                    </div>
+                    <div class="portfolio-card">
+                        <div class="portfolio-icon">
+                            <div class="icon-placeholder health">💚</div>
+                        </div>
+                        <div class="portfolio-content">
+                            <h3 data-i18n="portfolio.health.title">Health Tracker</h3>
+                            <p data-i18n="portfolio.health.description">Comprehensive health monitoring with AI-powered insights and goal tracking.</p>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 70%"></div>
+                            </div>
+                            <span class="progress-text" data-i18n="portfolio.health.progress">70% Complete - In Development</span>
+                        </div>
+                    </div>
+                    <div class="portfolio-card">
+                        <div class="portfolio-icon">
+                            <div class="icon-placeholder daily">📱</div>
+                        </div>
+                        <div class="portfolio-content">
+                            <h3 data-i18n="portfolio.daily.title">Daily Life Assistant</h3>
+                            <p data-i18n="portfolio.daily.description">Smart daily planner with habit tracking and productivity insights.</p>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 70%"></div>
+                            </div>
+                            <span class="progress-text" data-i18n="portfolio.daily.progress">70% Complete - In Development</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tech Stack Banner -->
+        <section class="banner-section">
+            <div class="container">
+                <div class="banner-image">
+                    <img src="image/dev/img_dev_banner5.webp" 
+                         srcset="image/dev/img_dev_banner5.webp 2048w"
+                         sizes="(max-width: 768px) 100vw, (max-width: 1200px) 90vw, 1024px"
+                         alt="Tech Stack Banner" 
+                         loading="lazy"
+                         width="1024" 
+                         height="322"
+                         decoding="async">
+                    <div class="banner-overlay">
+                        <h2 data-i18n="stack.title">Tech Stack</h2>
+                        <p data-i18n="stack.description">Modern tools and technologies we use to build exceptional mobile experiences.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tech Stack Section -->
+        <section id="stack" class="section">
+            <div class="container">
+                
+                <div class="stack-summary">
+                    <div class="code-block">
+                        <div class="code-line">• Kotlin, Java, Dart (Flutter), Swift</div>
+                        <div class="code-line">• Riverpod, BLoC, GoRouter, Freezed, JsonSerializable</div>
+                        <div class="code-line">• Dio, Hive/Isar, sqflite, in_app_purchase, intl</div>
+                        <div class="code-line">• Jetpack Compose, SwiftUI, MVVM, Hilt/Koin</div>
+                        <div class="code-line">• Retrofit2, Glide, ExoPlayer, Lottie</div>
+                    </div>
+                </div>
+
+                <div class="stack-grid">
+                    <div class="stack-category">
+                        <h3 data-i18n="stack.mobile.title">Mobile Development (Main)</h3>
+                        <div class="tech-chips">
+                            <span class="chip primary">Kotlin</span>
+                            <span class="chip primary">Dart (Flutter)</span>
+                            <span class="chip primary">Java</span>
+                            <span class="chip primary">Swift</span>
+                            <span class="chip">Riverpod</span>
+                            <span class="chip">BLoC</span>
+                            <span class="chip">GoRouter</span>
+                            <span class="chip">Freezed</span>
+                            <span class="chip">JsonSerializable</span>
+                            <span class="chip">Dio</span>
+                            <span class="chip">Hive/Isar</span>
+                            <span class="chip">sqflite</span>
+                            <span class="chip">in_app_purchase</span>
+                            <span class="chip">intl</span>
+                            <span class="chip">Jetpack Compose</span>
+                            <span class="chip">SwiftUI</span>
+                            <span class="chip">MVVM</span>
+                            <span class="chip">Hilt/Koin</span>
+                            <span class="chip">Retrofit2</span>
+                            <span class="chip">Glide</span>
+                            <span class="chip">ExoPlayer</span>
+                            <span class="chip">Lottie</span>
+                        </div>
+                    </div>
+
+                    <div class="stack-category">
+                        <h3 data-i18n="stack.backend.title">Server Development (Sub)</h3>
+                        <div class="tech-chips">
+                            <span class="chip">Spring Boot + Kotlin</span>
+                            <span class="chip">Ktor</span>
+                            <span class="chip">Spring Data JPA</span>
+                            <span class="chip">Exposed (Kotlin ORM)</span>
+                            <span class="chip">Spring Security</span>
+                            <span class="chip">JWT Authentication</span>
+                            <span class="chip">Gradle Kotlin DSL</span>
+                            <span class="chip">Coroutines</span>
+                            <span class="chip">Jackson (JSON)</span>
+                            <span class="chip">PostgreSQL</span>
+                            <span class="chip">MySQL</span>
+                            <span class="chip">Redis</span>
+                            <span class="chip">REST API</span>
+                            <span class="chip">OpenAPI/Swagger</span>
+                            <span class="chip">Spring WebFlux</span>
+                        </div>
+                    </div>
+
+                    <div class="stack-category">
+                        <h3 data-i18n="stack.web.title">Web Development</h3>
+                        <div class="tech-chips">
+                            <span class="chip">Flutter Web</span>
+                            <span class="chip">Next.js + React</span>
+                        </div>
+                    </div>
+
+                    <div class="stack-category">
+                        <h3 data-i18n="stack.cloud.title">Cloud & Deployment</h3>
+                        <div class="tech-chips">
+                            <span class="chip">Firebase</span>
+                            <span class="chip">Docker + Docker Compose</span>
+                            <span class="chip">GitHub Actions (CI/CD)</span>
+                            <span class="chip">AWS EC2/RDS</span>
+                            <span class="chip">Google Cloud</span>
+                        </div>
+                    </div>
+
+                    <div class="stack-category">
+                        <h3 data-i18n="stack.tools.title">Development Tools</h3>
+                        <div class="tech-chips">
+                            <span class="chip">Android Studio</span>
+                            <span class="chip">Xcode</span>
+                            <span class="chip">IntelliJ IDEA</span>
+                            <span class="chip">VS Code</span>
+                            <span class="chip">Git</span>
+                            <span class="chip">GitHub</span>
+                            <span class="chip">Postman</span>
+                            <span class="chip">Figma</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+    </main>
+
+
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-left">
+                    <span>© <span id="currentYear"></span> CrazyCat Lab. <span data-i18n="footer.rights">All rights reserved.</span></span>
+                </div>
+                <div class="footer-center">
+                    <div class="footer-contact">
+                        <span data-i18n="footer.contact">Contact:</span>
+                        <a href="mailto:support@crazycatlab.com" class="footer-email">support@crazycatlab.com</a>
+                    </div>
+                </div>
+                <div class="footer-right">
+                    <a href="privacy.html" data-i18n="footer.privacy">Privacy Policy</a>
+                    <span>·</span>
+                    <a href="terms.html" data-i18n="footer.terms">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts - Load before any onclick events can be triggered -->
+    <script src="js/i18n-simple.js"></script>
+    <script src="js/main.js"></script>
+    
+    <!-- Debug Script -->
+
+    <!-- App Modal -->
+    <div id="appModal" class="modal" onclick="closeAppModal()">
+        <div class="modal-content" onclick="event.stopPropagation()">
+            <div class="modal-header">
+                <h3 id="modalTitle"></h3>
+                <span class="modal-close" onclick="closeAppModal()">&times;</span>
+            </div>
+            <div class="modal-body">
+                <div class="image-gallery">
+                    <div class="image-container" id="imageContainer">
+                        <!-- Images will be loaded here -->
+                    </div>
+                </div>
+                <div class="modal-info">
+                    <p id="modalDescription"></p>
+                    <div id="modalStoreLink"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
