@@ -65,6 +65,22 @@
                 storeUrlIos: 'https://apps.apple.com/kr/app/wallypto-blockchain-wallet/id1639302472',
                 images: ['image/wallypto/unnamed1.webp', 'image/wallypto/unnamed2.webp', 'image/wallypto/unnamed3.webp', 'image/wallypto/unnamed4.webp', 'image/wallypto/unnamed5.webp', 'image/wallypto/unnamed6.webp']
             },
+            watercoach: {
+                title: 'Water Coach',
+                titleKo: 'Water Coach',
+                description: 'Smart Water Tracker. Personalized water goals, smart alerts, and analytics to build healthy hydration.',
+                descriptionKo: '스마트 물 섭취 트래커. 개인화된 물 목표, 스마트 알림, 건강한 수분 섭취 습관을 위한 분석 기능을 제공합니다.',
+                storeUrl: 'https://play.google.com/store/apps/details?id=com.crazycatlab.watercoach',
+                images: ['image/water_coach/water_coach_01.webp', 'image/water_coach/water_coach_02.webp', 'image/water_coach/water_coach_03.webp', 'image/water_coach/water_coach_04.webp', 'image/water_coach/water_coach_05.webp', 'image/water_coach/water_coach_06.webp', 'image/water_coach/water_coach_07.webp', 'image/water_coach/water_coach_08.webp']
+            },
+            windowclose: {
+                title: 'Window Close',
+                titleKo: 'Window Close',
+                description: 'Fine dust/Ultra-fine dust alerts, Real-time air quality information and weather data.',
+                descriptionKo: '미세먼지/초미세먼지 알림, 실시간 대기질 정보와 날씨 정보를 제공합니다.',
+                storeUrl: 'https://play.google.com/store/apps/details?id=com.crazycatlab.simple_air',
+                images: ['image/window_close/windowclose01.webp', 'image/window_close/windowclose02.webp', 'image/window_close/windowclose03.webp', 'image/window_close/windowclose04.webp', 'image/window_close/windowclose05.webp', 'image/window_close/windowclose06.webp']
+            },
             everycalc: {
                 title: 'Every Calc',
                 titleKo: 'Every Calc',
@@ -664,7 +680,47 @@
         <section id="ourapps" class="section">
             <div class="container">
                 <div class="portfolio-grid">
-                    <!-- Every Calc -->
+                    <!-- Water Coach - First Position -->
+                    <div class="portfolio-card featured" onclick="openAppModal('watercoach')">
+                        <div class="portfolio-icon">
+                            <img src="image/water_coach/app_icon.webp" alt="Water Coach App Icon" loading="lazy">
+                        </div>
+                        <div class="portfolio-content">
+                            <h3 data-i18n="portfolio.watercoach.title">Water Coach</h3>
+                            <p data-i18n="portfolio.watercoach.description">Smart Water Tracker. Personalized water goals, smart alerts, and analytics to build healthy hydration.</p>
+                            <div class="store-links">
+                                <a href="https://play.google.com/store/apps/details?id=com.crazycatlab.watercoach" target="_blank" class="store-link android" onclick="event.stopPropagation()">
+                                    <span data-i18n="portfolio.watercoach.android">Android</span>
+                                </a>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 100%"></div>
+                            </div>
+                            <span class="progress-text" data-i18n="portfolio.watercoach.progress">Released - Available on Google Play Store</span>
+                        </div>
+                    </div>
+
+                    <!-- Window Close - Second Position -->
+                    <div class="portfolio-card featured" onclick="openAppModal('windowclose')">
+                        <div class="portfolio-icon">
+                            <img src="image/window_close/app_icon.webp" alt="Window Close App Icon" loading="lazy">
+                        </div>
+                        <div class="portfolio-content">
+                            <h3 data-i18n="portfolio.windowclose.title">Window Close</h3>
+                            <p data-i18n="portfolio.windowclose.description">Fine dust/Ultra-fine dust alerts, Real-time air quality information and weather data.</p>
+                            <div class="store-links">
+                                <a href="https://play.google.com/store/apps/details?id=com.crazycatlab.simple_air" target="_blank" class="store-link android" onclick="event.stopPropagation()">
+                                    <span data-i18n="portfolio.windowclose.android">Android</span>
+                                </a>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 100%"></div>
+                            </div>
+                            <span class="progress-text" data-i18n="portfolio.windowclose.progress">Released - Available on Google Play Store</span>
+                        </div>
+                    </div>
+
+                    <!-- Every Calc - Third Position -->
                     <div class="portfolio-card featured" onclick="openAppModal('everycalc')">
                         <div class="portfolio-icon">
                             <img src="image/every_calc/app_icon.webp" alt="Every Calc App Icon" loading="lazy">
@@ -683,7 +739,7 @@
                             <span class="progress-text" data-i18n="portfolio.calc.progress">Released - Available on Google Play Store</span>
                         </div>
                     </div>
-                    
+
                     <div class="portfolio-card">
                         <div class="portfolio-icon">
                             <div class="icon-placeholder weather">🌤️</div>
