@@ -142,6 +142,14 @@
                 storeUrl: 'https://play.google.com/store/apps/details?id=com.mint.style',
                 storeUrlIos: 'https://apps.apple.com/kr/app/n잡러-필수앱-스타일셀러/id1262954182',
                 images: ['image/style/style1.webp', 'image/style/style2.webp', 'image/style/style3.webp', 'image/style/style4.webp', 'image/style/style5.webp', 'image/style/style6.webp', 'image/style/style7.webp']
+            },
+            dodomusicplayer: {
+                title: 'Dodo Music Player',
+                titleKo: 'Dodo Music Player',
+                description: 'Automatically adjusts equalizer settings based on genre tags for optimal sound quality.',
+                descriptionKo: '장르 태그를 기반으로 이퀄라이저 설정을 자동으로 조절하여 최적의 음질을 제공합니다.',
+                storeUrl: 'https://play.google.com/store/apps/details?id=com.crazycatlab.dodo',
+                images: ['image/dodo_music_player/dodo01.webp', 'image/dodo_music_player/dodo02.webp', 'image/dodo_music_player/dodo03.webp', 'image/dodo_music_player/dodo04.webp', 'image/dodo_music_player/dodo05.webp', 'image/dodo_music_player/dodo06.webp', 'image/dodo_music_player/dodo07.webp', 'image/dodo_music_player/dodo08.webp']
             }
         };
 
@@ -680,7 +688,27 @@
         <section id="ourapps" class="section">
             <div class="container">
                 <div class="portfolio-grid">
-                    <!-- Water Coach - First Position -->
+                    <!-- Dodo Music Player - First Position -->
+                    <div class="portfolio-card featured" onclick="openAppModal('dodomusicplayer')">
+                        <div class="portfolio-icon">
+                            <img src="image/dodo_music_player/app_icon.webp" alt="Dodo Music Player App Icon" loading="lazy">
+                        </div>
+                        <div class="portfolio-content">
+                            <h3 data-i18n="portfolio.dodomusicplayer.title">Dodo Music Player</h3>
+                            <p data-i18n="portfolio.dodomusicplayer.description">Automatically adjusts equalizer settings based on genre tags for optimal sound quality.</p>
+                            <div class="store-links">
+                                <a href="https://play.google.com/store/apps/details?id=com.crazycatlab.dodo" target="_blank" class="store-link android" onclick="event.stopPropagation()">
+                                    <span data-i18n="portfolio.dodomusicplayer.android">Android</span>
+                                </a>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 100%"></div>
+                            </div>
+                            <span class="progress-text" data-i18n="portfolio.dodomusicplayer.progress">Released - Available on Google Play Store</span>
+                        </div>
+                    </div>
+
+                    <!-- Water Coach - Second Position -->
                     <div class="portfolio-card featured" onclick="openAppModal('watercoach')">
                         <div class="portfolio-icon">
                             <img src="image/water_coach/app_icon.webp" alt="Water Coach App Icon" loading="lazy">

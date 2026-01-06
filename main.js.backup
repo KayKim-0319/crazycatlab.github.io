@@ -1,0 +1,739 @@
+// Main JavaScript functionality
+document.addEventListener('DOMContentLoaded', function() {
+    // Initialize EmailJS (replace with your actual User ID)
+    // Get your User ID from https://dashboard.emailjs.com/admin/account
+    if (typeof emailjs !== 'undefined') {
+        emailjs.init("YOUR_EMAILJS_USER_ID"); // Replace with your EmailJS user ID
+    }
+    
+    // Set current year in footer
+    document.getElementById('currentYear').textContent = new Date().getFullYear();
+    
+    // Initialize i18n (internationalization)
+    if (typeof initI18n === 'function') {
+        initI18n();
+    }
+    
+    // Initialize smooth scrolling
+    initSmoothScrolling();
+    
+    // Initialize contact form
+    initContactForm();
+    
+    // Initialize mobile menu
+    initMobileMenu();
+    
+    // Initialize scroll animations
+    initScrollAnimations();
+    
+    // Initialize header scroll effect
+    initHeaderScrollEffect();
+});
+
+// Smooth scrolling for navigation s
+) {
+    document.querySelectorAll('a[href^="#"]').forEach(anchor  {
+        anchor.ad (e) {
+            e.p
+            const target = docu;
+            if (target) {
+                const headerHeight = document.querySelector('.header').offsetHeight;
+                const targetPosition = target.offsetTop - headerHeight - 20;
+                
+                window.scrollTo({
+                 on,
+                    behavior: 'smooth'
+                });
+            }
+        });
+    });
+}
+
+// Scrunction
+function scrollTtionId) {
+    const target = document.
+    if (target) {
+        const headerHeight = document.querySelector('.header').offsetHeight;
+        const targetPosition = target.offsetTop - headerHeight - 20;
+        
+        window.scollTo({
+            top: targetPosition,
+            behavior: 'smooth'
+        });
+    }
+}
+
+// Contac
+functi) {
+    const );
+    const statusDiv = docume;
+    
+    if (form) {
+        form.addEventListener('submit', async function(e) {
+            e.preventDefault();
+            
+            const);
+            const name = formData.me');
+            const email = formDatal');
+            const message = formDage');
+            
+            // Show loading state
+            const submitBtn = formbmit"]');
+            const originalText = sntent;
+            submitBtn.textContent');
+         = true;
+      
+            
+                // Check if EmailJS ired
+                if (typeof emailjs ==
+                    throw new Error('EmailJS not loaded');
+                }
+                
+               ilJS
+                cond(
+                    'YOUR_SERVICE_ID', ce ID
+                    'YOUR_TEMPLATE_ID
+                    {
+                        from_name: name,
+                        fil,
+                        message: message,
+                        to_email: 'crazyCatm'
+                    }
+                );
+                
+                /
+              cess'));
+                fom.reset();
+                
+            } catch (error) {
+                console.error('EmailJS error:', error);
+                
+                // Fallba
+                const subject = encodeURIComp name);
+                const body = encodeURIComponello,
+
+I'm contacting you through your DDsoft websit.
+
+Name: ${name}
+Email: ${email}
+
+Message:
+${message}
+
+---
+Please reply to this email for further communication.`);
+                const mailtoLink = `mailto:crazyCat.X815@gmail.com?subject=${subject}&body=${body}`;
+                
+                // Try to open email client
+                try {
+                    window.location.href = mLink;
+                    showFormStatus('success'
+                } catch (mailtoError) {
+                    // If mailto fails, shows
+                    showFormStatus('error', `);
+                }
+         ly {
+      t button
+            Text;
+                submitBtn.dis
+            }
+        });
+    }
+}
+
+// Show form statsage
+function showFormStatus(type, message) {
+    const statusDiv = document.getElemus');
+    if (statusDiv) {
+        statusDiv.className = `form-stype}`;
+        statusDiv.textContent = messag
+        statusDiv.style.display = 'blo
+        
+        /nds
+      => {
+            st
+        }, 5000);
+    }
+}
+
+// Mobile menu functionality
+function initMobinu() {
+    const mobileMenuBtn = document.querySe
+    const navMenu = document.querySelector
+    
+    if (mobileMenuBtn && navMenu) {
+        mobileMenuBtn.addEventListener('cl
+            navMenu.classList.toggle('act
+         ');
+     
+  
+
+        navMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListe=> {
+                navMenu.classList.remove('active');
+                mobileMenuBtn.classList.remove('active');
+     });
+        });
+        
+        // Closng outside
+        document.addEventListener('click', (e) => {
+            if get)) {
+     
+    ;
+            }
+        });
+    }
+}
+
+// Toggle mobile menu
+function toggleMobileMenu() {
+    const navMenu = document.querySelector('.nav-menu');
+    const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+    
+    if (navMenu && mobileMenuBtn) {
+        const isActive = navMenu.classList.contains('active');
+        
+        if (isActive) {
+            navMenu.classList.remove('active');
+            mobileMenuBtn.classList.remove('active');
+            const menuWidth = window.innerWidth <= 480 ? '260px' : '280px';
+            navMenu.style.right = '-' + menuWidth;
+        } else {
+            navMenu.classList.add('active');
+            mobileMenuBtn.classList.add('active');
+            navMenu.style.right = '0px';
+            navMenu.style.display = 'flex';
+            const menuWidth = window.innerWidth <= 480 ? '260px' : '280px';
+            navMenu.style.width = menuWidth;
+        }
+    }
+}
+
+// Sions
+function initScrollAnimations() {
+    const observerOptions = {
+        threshold: 0.1,
+    '
+    };
+    
+    const observer = new IntersectionObserver((entries) => {
+    ry => {
+            if (entry.isIntersecing) {
+                entry.target.classin-up');
+    }
+        });
+    }, observerOptions);
+    
+    // Observe all cards and sections
+    document.querySelectorAll('.card, .portfolio=> {
+        observer.observe(el);
+    });
+}
+
+// Header scroll effect
+function inict() {
+    const header = document.querySelector('.header');
+    let lastScrollY = window.scrollY;
+    
+    window.addEventListener('scroll', () => 
+        concrollY;
+        
+        if (currentScrollY > 100) {
+            header.classList.add('sc);
+        } else {
+            header.classList.remove('scrolled');
+        }
+        
+        // Hide/show header on scroll
+        if (currentScrollY >
+            header.style.transform = 'translateY(-100%)';
+        } else {
+            header.style.tra;
+        }
+        
+        lastScrollY = currentScrollY;
+    });
+}
+
+// Utility function to get translation (fallback if i18n.js not loaded)
+function getTranslation(key) {
+    if (typeof window.getTra {
+        return window.getT
+    }
+    
+    // Fals
+    const fa {
+        'form.sending': 'Sendge...',
+        'form.success': 'Message sent successfulln.',
+        'form.error': 'Failed to send message. Please 
+    };
+    
+    return fallbackTranslations[key] || key;
+}
+
+// Keyboard navigation support
+document.addEventListener('keydown', function(e) {
+    // ESC kenu
+    if (e.key === 'Escape') {
+        con
+        
+        
+        if (navMenu && navMenu.classList.conta
+            navMenu.classList.remove('active');
+            ');
+        }
+    }
+});
+
+// Performance optimizat
+function initLazyL
+    if ('Inte{
+        cons
+            entries.forEach(entry > {
+                if (entry.isInterseng) {
+                    const img = entry.target;
+                    img.src = img.dataset.src;
+                    img.zy');
+                  mg);
+              }
+            });
+        });
+        
+        document=> {
+            imageObserver.observe(img);
+        });
+    }
+}
+
+// Initiaeady
+docum
+
+// Security: Prev
+function sanitizeInput(input) {
+    const div = document.createEle
+    div.textContent = input;
+    return div.innerHTML;
+}
+
+
+function debounce(func, wa
+    let timeout;
+    return function executedFuncts) {
+        const later = () => {
+ t);
+rgs);
+        };
+        clearTimeout(timeout);
+        timeout = setTimeout(later, wait);
+    };
+}
+
+// Apply debouncents
+const debouncedScrol
+
+// Error handling for EmailJS
+window.addEventListenee) {
+    if (e.message.includes(') {
+        console.warn('EmailJS no);
+    }
+});
+
+// Ament
+function manageFocus() {
+    // Skip to main con link
+    const skipLink = do
+    skipLink.href = '#mai;
+    skipLink.textConten
+    skipLink.className =
+    skipLink.style.cssText = `
+        position: absolute;
+      p: -40px;
+    x;
+        background: var(--accrple);
+        color: white;
+    
+        text-decoration: none;
+ x;
+1;
+        transition: top 0.3s;
+    `;
+    
+    skipLink.addEventListener('focus', () => {
+    
+    });
+    
+    skipLink.addEventListener('blur', () => {
+     0px';
+  });
+  
+    document.body.insertBefore(skipLink, document.bohild);
+}
+
+// Initialize accessibilres
+docum;
+
+)
+if ('serviceWorker' in navigator) {
+    window.addEventListener('load', ({
+        navigator.serviceWorker.register('/sw.js')
+            .then> {
+                console.log('SW registered: ', registration);
+            })
+        => {
+                console.lor);
+            });
+    });
+}
+
+/switching
+) {
+    console.log('Current language:', currentLanguage);
+    console.log('Available translations:', Object.keys(translats));
+h);
+    
+
+    switchLanguage('ko');
+    console.log('Switched to Korean, current language:',ge);
+}
+
+// Make functions globally available for debugging
+w
+;
+
+// App Modal Functionality
+const appData = {
+    wallypto: {
+       Beta',
+        
+        description: 'Blockchain wallet developed by LG Electronics, Inc. for secu,
+ 니다.',
+,
+        storeUrlIos: 'https://apps.apple.72',
+        images: [
+            'imbp',
+ 2.webp',
+d3.webp',
+            'image/wallypto/unnamed4.webp',
+            'image/wallypto/unnamed5.webp',
+            'image/wallypto/unnamed6.webp'
+        ]
+    },
+    everycalc: {
+        title: 'Every Calc',
+        titleKo: 'Every Calc',
+       
+         제공합니다.',
+        storeUrl: null,
+        images: [
+            'image/ev
+            'image/every_ca
+            'image/every_calcc3.webp',
+ p',
+c5.webp',
+            'image/every_calc/calc6.webp'
+        ]
+    },
+    smarthq: {
+        title: 'Smart HQ',
+        titleKo: 'Smart HQ',
+        description: 'Smart home device management app provided by GE (General Electric). Developed Water Heater and Air Product (WAC, PAC, DFS, Dehum, Central Controller) Android functionality and Flutter migration.',
+        descriptionKo: 'GE(General Electric)에서 제공하는 스마트 홈 디바이스 관리 앱입니다. Water Heater와 Air Product(WAC, PAC, DFS, Dehum, Central Controller) Android 담당 및 Flutter 리뉴얼(마이그레이션)을 진행했습니다.',
+        storeUrl: null, // US App Store only
+        images: [
+            'image/smarthq/smarthq1.webp',
+            'image/smarthq/smarthq2.webp',
+            'image/smarthq/smarthq3.webp',
+            'image/smarthq/smarthq4.webp',
+            'image/smarthq/smarthq5.webp',
+            'image/smarthq/smarthq6.webp'
+        ]
+    },
+  kkl: {
+        title: 'MyData KKL',
+        titleKo: '마이데이터 끌',
+        description: 'Personalized financial data integrn.',
+        descriptionKo: '교보증권의 개인화된 금융 데이터 통합 및 자산 관리 서비스 모바일 합니다.',
+    kl',
+        storeUr13593',
+        images: [
+            'image/kkl/kkl1.web
+            bp',
+            'image/kkl/kkl3.webp',
+            'image/kkl/kkl4.webp',
+            'image/kkl/kkl5.webp',
+            'image/kkl/kkl6.webp',
+            ,
+            'image/kkl/kkl8.webp'
+        ]
+    },
+    funnc: {
+        title: 'Cat & Dog President',
+        titl대통령',
+        descripti
+        descriptionKo: '고양이와 강아지 캐릭터를 특징으로 하는 펫 쇼핑몰 앱으로, 사
+        isDoubleApp: true,
+        apps: {
+            cat: 
+                esident',
+                titleKo: '고양이 대통령',
+                storeUrl: 'https://play.google.compre',
+                storeUrlIos: 'https://apps.apple.com/me/app/id1133039683',
+                images: [
+                    '
+                    'image/funnc/go2.web
+                    'image/funnc/go3.webp',
+                    'image/funnc/go4.webp
+                    'image/funnc/go5.webp'
+                ]
+            },
+            dog: {
+                title: 'Dog President',
+                titleKo: '강아지 대통령',
+                storeUrl: 'htdogpre',
+                72',
+                images: [
+                    'image/funnc/gang1.webp',
+                ,
+                    'image/funnc/gang3.webp',
+                    'image/funnc/gang4.webp',
+                    'image/funnc/gang5.webp'
+ ]
+            }
+      }
+    },
+    favoriit: {
+t',
+        
+        de
+.',
+   t',
+        storeUrlIos: 'https://apps.apple.com/kr/app/페이보릿',
+        images: [
+            'ima
+            'image/favoriit/favoriit2.webp',
+            'image/fa
+            'image/favoriit/favoriit4.webp',
+            'image/favoriit/favoriit5.webp',
+            'image/favoriit/favoriit6.w'
+        ]
+    },
+    style: {
+        title: 'StyleSeller',
+        titleKo: '스타일셀러',
+        description: 'Easy and fast SNS product sales platform for side hustlers with free multi-links, recommended products, and data-driven group buying. Native Android development and maintenance.',
+        descriptionKo: 'N잡러를 위한 쉽고 빠른 SNS 상품 판매 플랫폼입니다. 무료 멀티링크, 추천상품, 매주 발행 셀러레터, 데이터 기반 공동구매 매칭 등 다양한 혜택을 제공합니다. Native앱으로 Android 개발 및 유지보수 담당.',
+        storeUrl: 'https://play.google.com/store/apps/details?id=com.mint.style',
+        storeUrlIos: 'https://apps.apple.com/kr/app/n잡러-필수앱-스타일셀러/id1262954182',
+        images: [
+            'image/style/style1.webp',
+            'image/style/style2.webp',
+            'image/style/style3.webp',
+            'image/style/style4.webp',
+            'image/style/style5.webp',
+            'image/style/style6.webp',
+            'image/style/style7.webp'
+        ]
+    }
+};
+
+function openAppModal(appI
+    console.log('=== openAppModal DEBUG ===');
+    console.log(');
+    
+ 
+
+    if (!app) {
+        console.error('App ;
+        return;
+    }
+    
+    const modal = document.getEleme
+    const modalTitle = document.getElementById('modalTi
+    const modalDescription = document.getElemen
+    const modalStoreLink = document.getElementById('m
+    const ir');
+    
+    console.log('3. Modal elements found:');
+    console.log('   - modal:', modal ? 'YES' : 'NO');
+    console.log('   - modalTitle:', modalTitle ? ');
+    console.log('   - modalDescription:', modalDesc);
+    console.log('   - imageContainer:', imageContainer ? 
+    
+    if (!mol) {
+        );
+        return;
+    }
+    
+    // Get current language (fallback to 'en' if noble)
+    const isKorean = (typeof currentLang !== 'undefined' 
+             
+    
+    /
+ 
+n;
+    
+e images
+    imageContainer.i '';
+    
+    // Handle special case font)
+    if (app.isDoubleApp
+        // Combine images from both apps
+      images];
+    
+            const img = document.createElement('img');
+            img.src = imageSrc;
+            img.alt = `${app.title} Scr + 1}`;
+            img.className = 'gallery-image';
+            i;
+            
+            // Add clicky
+    
+            
+            imageContainer.appendChild(img);
+        });
+        
+ app
+ = `
+            <div style=">
+                <div style="displayen;">
+                    <div style="display: flex; gap: 0;">
+                        <a href="${ap
+    
+                        </a>
+                        <a href="${app.apps.ca6);">
+        
+                        </a>
+                    </div>
+                n>
+                    <div style="display: flex; g
+         
+        '}
+                        </a>
+                        <a href="${app.apps.dog.storeUrlIos}" targef6);">
+                            ${isKorean ? '강아지 대통령 iOS' :  iOS'}
+                 </a>
+                    </div>
+         iv>
+        iv>
+        `;
+    } else {
+ p
+) => {
+            const img = document.createElement('img');
+            img.src = imageSrc;
+            img.alt = `${app.title} Screenshot ${index + 1}`;
+            img.className = 'gallery-image';
+     ;
+        
+            // Make first im
+            if (index === 0) {
+                img.classList.add('large');
+            }
+            
+      
+    itle);
+            
+ 
+
+        
+        // Set store link for regular apps
+        if (app.storeUrl || app.s) {
+            let storeLinksHtm">';
+            
+            if (app.storeUrl) {
+        l += `
+                    <a href="${app.storeUrl}" target="_blank" ink">
+                        ${isKorean ? 'Android' }
+                    </a>
+         
+          }
+   
+
+                storeLinksHtml += `
+                    <a href=">
+                        ${isKorean ? 'iOS' iOS'}
+                    </a>
+                `;
+            }
+            
+            storeLinksHtml += '</div>';
+            modalStoreLink.innerHTML = storeLinks
+        } else {
+            modalL = `
+               n);">
+           }
+        
+            `;
+        }
+    }
+    
+ modal
+);
+    modal.style.display = 'block';
+    document.body.style.overflow = 'hidden';
+    console.log('5. Modal should now be visible');
+    cons;
+}
+
+
+    const modal = document.getElementBy
+    modal.style.display = 'none
+    document.body.style.overflow = 'auto';
+}
+
+fTitle) {
+
+    const overlay = document.createEle
+    overlay.style.cssText = `
+        positiond;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        ba.9);
+        display: flex;
+        align-items: center;
+      
+ 000;
+nter;
+    `;
+    
+);
+    img.src = imageSrc;
+    img.alt = appTitle;
+    img.style.cssText = `
+        max-width: 90%;
+     90%;
+    12px;
+
+    `;
+    
+    overlay.appendChild(img);
+    overlay.onclick = () => document.body.removeClay);
+    
+    document.body.appendChild(overlay);
+}
+
+// Close modal when clickinESC
+document.addEventLi {
+    if (e.key === ') {
+        closeAppModal();
+    }
+});
+
+// Make functions globally vailable
+window.openAppModal = 
+window.closeAppModal = closeAal;
+
+// Mers
+window.scrollToSection = scrollToSection;
+window.toggleMobileMenu = toggleMobileMenu;
+xpose real functions for temporary functions to use
+window.realOpenAppModal = openAppModal;
+window.realCloseAppModal = closeAppModal;
+window.realToggleMobileMenu = toggleMobileMenu;
+
+console.log('Real functions exposed from main.js');
+console.log('- realOpenAppModal:', typeof window.realOpenAppModal);
+console.log('- realCloseAppModal:', typeof window.realCloseAppModal);
+console.log('- realToggleMobileMenu:', typeof window.realToggleMobileMenu);
