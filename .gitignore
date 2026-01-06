@@ -1,0 +1,46 @@
+# IDE & Editor
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+.DS_Store
+.env.local
+
+# Dependencies & Packages
+node_modules/
+npm-debug.log
+yarn.lock
+package-lock.json
+
+# Build & Dist
+dist/
+build/
+*.min.js
+*.min.css
+
+# OS & System Files
+.DS_Store
+Thumbs.db
+*.log
+
+# Backup & Temporary Files
+*.backup
+*.tmp
+*.bak
+*~
+.git/
+
+# Local Development
+.env
+.env.local
+.env.*.local
+local_settings.js
+
+# Test Coverage
+coverage/
+.nyc_output/
+
+# Cache
+.cache/
+.eslintcache
