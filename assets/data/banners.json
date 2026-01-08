@@ -1,0 +1,703 @@
+{
+  "version": 1,
+  "languages": {
+    "ko": {
+      "bannerTitle": "개발자의 다른 앱 둘러보기",
+      "banners": {
+        "banner_001": {
+          "description": "스마트 물 알림"
+        },
+        "banner_002": {
+          "description": "스마트 EQ 음악 플레이어"
+        },
+        "banner_003": {
+          "description": "스마트 생활 계산기"
+        }
+      }
+    },
+    "en": {
+      "bannerTitle": "Explore More Apps from the Developer",
+      "banners": {
+        "banner_001": {
+          "description": "Smart Water Reminder"
+        },
+        "banner_002": {
+          "description": "Smart EQ Music Player"
+        },
+        "banner_003": {
+          "description": "Smart Daily Calculator"
+        }
+      }
+    },
+    "ja": {
+      "bannerTitle": "開発者の他のアプリを探索する",
+      "banners": {
+        "banner_001": {
+          "description": "スマート水リマインダー"
+        },
+        "banner_002": {
+          "description": "スマート EQ 音楽プレイヤー"
+        },
+        "banner_003": {
+          "description": "スマート生活計算機"
+        }
+      }
+    },
+    "ru": {
+      "bannerTitle": "Изучите другие приложения разработчика",
+      "banners": {
+        "banner_001": {
+          "description": "Умное напоминание о воде"
+        },
+        "banner_002": {
+          "description": "Умный эквалайзер для музыки"
+        },
+        "banner_003": {
+          "description": "Умный калькулятор повседневной жизни"
+        }
+      }
+    },
+    "de": {
+      "bannerTitle": "Entdecken Sie weitere Apps des Entwicklers",
+      "banners": {
+        "banner_001": {
+          "description": "Intelligente Wassererinnerung"
+        },
+        "banner_002": {
+          "description": "Intelligenter Musik-Equalizer"
+        },
+        "banner_003": {
+          "description": "Intelligenter Alltags-Taschenrechner"
+        }
+      }
+    },
+    "ar": {
+      "bannerTitle": "استكشف المزيد من تطبيقات المطور",
+      "banners": {
+        "banner_001": {
+          "description": "تذكير ذكي بشرب الماء"
+        },
+        "banner_002": {
+          "description": "معادل صوت ذكي لتطبيق الموسيقى"
+        },
+        "banner_003": {
+          "description": "آلة حاسبة ذكية للحياة اليومية"
+        }
+      }
+    },
+    "hi": {
+      "bannerTitle": "डेवलपर की अन्य ऐप्स देखें",
+      "banners": {
+        "banner_001": {
+          "description": "स्मार्ट जल अनुस्मारक"
+        },
+        "banner_002": {
+          "description": "स्मार्ट संगीत EQ"
+        },
+        "banner_003": {
+          "description": "स्मार्ट दैनिक जीवन कैलकुलेटर"
+        }
+      }
+    },
+    "id": {
+      "bannerTitle": "Jelajahi Aplikasi Lain dari Developer",
+      "banners": {
+        "banner_001": {
+          "description": "Pengingat Minum Air Pintar"
+        },
+        "banner_002": {
+          "description": "Pemutar Musik EQ Pintar"
+        },
+        "banner_003": {
+          "description": "Kalkulator Kehidupan Sehari-hari Pintar"
+        }
+      }
+    },
+    "tr": {
+      "bannerTitle": "Geliştirici'nin Diğer Uygulamalarını Keşfet",
+      "banners": {
+        "banner_001": {
+          "description": "Akıllı Su Hatırlatıcısı"
+        },
+        "banner_002": {
+          "description": "Akıllı Müzik Eşitleyicisi"
+        },
+        "banner_003": {
+          "description": "Akıllı Günlük Yaşam Hesap Makinesi"
+        }
+      }
+    },
+    "vi": {
+      "bannerTitle": "Khám Phá Các Ứng Dụng Khác của Nhà Phát Triển",
+      "banners": {
+        "banner_001": {
+          "description": "Nhắc Nhở Uống Nước Thông Minh"
+        },
+        "banner_002": {
+          "description": "Trình Phát Nhạc EQ Thông Minh"
+        },
+        "banner_003": {
+          "description": "Máy Tính Sinh Hoạt Hàng Ngày Thông Minh"
+        }
+      }
+    },
+    "th": {
+      "bannerTitle": "สำรวจแอปอื่น ๆ ของผู้พัฒนา",
+      "banners": {
+        "banner_001": {
+          "description": "การเตือนน้ำอัจฉริยะ"
+        },
+        "banner_002": {
+          "description": "เครื่องเล่นเพลง EQ อัจฉริยะ"
+        },
+        "banner_003": {
+          "description": "เครื่องคิดเลขชีวิตประจำวันอัจฉริยะ"
+        }
+      }
+    },
+    "ms": {
+      "bannerTitle": "Terokai Aplikasi Lain daripada Pembangun",
+      "banners": {
+        "banner_001": {
+          "description": "Peringatan Air Pintar"
+        },
+        "banner_002": {
+          "description": "Pemain Musik EQ Pintar"
+        },
+        "banner_003": {
+          "description": "Kalkulator Kehidupan Sehari-hari Pintar"
+        }
+      }
+    },
+    "fr": {
+      "bannerTitle": "Découvrez les autres applications du développeur",
+      "banners": {
+        "banner_001": {
+          "description": "Rappel d'eau intelligent"
+        },
+        "banner_002": {
+          "description": "Lecteur Musique EQ Intelligent"
+        },
+        "banner_003": {
+          "description": "Calculatrice de vie quotidienne intelligente"
+        }
+      }
+    },
+    "it": {
+      "bannerTitle": "Scopri altre app dello sviluppatore",
+      "banners": {
+        "banner_001": {
+          "description": "Promemoria intelligente per l'acqua"
+        },
+        "banner_002": {
+          "description": "Lettore Musica EQ Intelligente"
+        },
+        "banner_003": {
+          "description": "Calcolatrice intelligente della vita quotidiana"
+        }
+      }
+    },
+    "pl": {
+      "bannerTitle": "Odkryj inne aplikacje dewelopera",
+      "banners": {
+        "banner_001": {
+          "description": "Inteligentne przypomnienie wody"
+        },
+        "banner_002": {
+          "description": "Inteligentny Odtwarzacz Muzyki EQ"
+        },
+        "banner_003": {
+          "description": "Inteligentny kalkulator życia codziennego"
+        }
+      }
+    },
+    "zh-cn": {
+      "bannerTitle": "浏览开发者的其他应用",
+      "banners": {
+        "banner_001": {
+          "description": "智能喝水提醒"
+        },
+        "banner_002": {
+          "description": "智能音乐均衡器"
+        },
+        "banner_003": {
+          "description": "智能日常生活计算器"
+        }
+      }
+    },
+    "zh-tw": {
+      "bannerTitle": "瀏覽開發者的其他應用",
+      "banners": {
+        "banner_001": {
+          "description": "智慧喝水提醒"
+        },
+        "banner_002": {
+          "description": "智慧音樂均衡器"
+        },
+        "banner_003": {
+          "description": "智慧日常生活計算機"
+        }
+      }
+    },
+    "zh-hk": {
+      "bannerTitle": "瀏覽開發者的其他應用",
+      "banners": {
+        "banner_001": {
+          "description": "智能飲水提醒"
+        },
+        "banner_002": {
+          "description": "智能音樂均衡器"
+        },
+        "banner_003": {
+          "description": "智能日常生活計算機"
+        }
+      }
+    },
+    "pt": {
+      "bannerTitle": "Explore outros aplicativos do desenvolvedor",
+      "banners": {
+        "banner_001": {
+          "description": "Lembrete inteligente de água"
+        },
+        "banner_002": {
+          "description": "Reprodutor Música EQ Inteligente"
+        },
+        "banner_003": {
+          "description": "Calculadora inteligente da vida cotidiana"
+        }
+      }
+    },
+    "pt-br": {
+      "bannerTitle": "Explore outros aplicativos do desenvolvedor",
+      "banners": {
+        "banner_001": {
+          "description": "Lembrete inteligente para beber água"
+        },
+        "banner_002": {
+          "description": "Reprodutor Música EQ Inteligente"
+        },
+        "banner_003": {
+          "description": "Calculadora inteligente para a vida cotidiana"
+        }
+      }
+    },
+    "he": {
+      "bannerTitle": "בדוק יישומים נוספים של המפתח",
+      "banners": {
+        "banner_001": {
+          "description": "תזכורת חכמה למים"
+        },
+        "banner_002": {
+          "description": "נגן מוסיקה EQ חכם"
+        },
+        "banner_003": {
+          "description": "מחשבון חכם לחיי היום יום"
+        }
+      }
+    },
+    "es": {
+      "bannerTitle": "Explora más aplicaciones del desarrollador",
+      "banners": {
+        "banner_001": {
+          "description": "Recordatorio inteligente de agua"
+        },
+        "banner_002": {
+          "description": "Reproductor Música EQ Inteligente"
+        },
+        "banner_003": {
+          "description": "Calculadora inteligente de la vida cotidiana"
+        }
+      }
+    },
+    "es-mx": {
+      "bannerTitle": "Explora más aplicaciones del desarrollador",
+      "banners": {
+        "banner_001": {
+          "description": "Recordatorio inteligente para beber agua"
+        },
+        "banner_002": {
+          "description": "Reproductor Música EQ Inteligente"
+        },
+        "banner_003": {
+          "description": "Calculadora inteligente para la vida diaria"
+        }
+      }
+    },
+    "nl": {
+      "bannerTitle": "Verken meer apps van de ontwikkelaar",
+      "banners": {
+        "banner_001": {
+          "description": "Slimme waterherinnering"
+        },
+        "banner_002": {
+          "description": "Slimme Muziekspeler EQ"
+        },
+        "banner_003": {
+          "description": "Slimme dagelijks leven rekenmachine"
+        }
+      }
+    },
+    "sv": {
+      "bannerTitle": "Utforska fler appar från utvecklaren",
+      "banners": {
+        "banner_001": {
+          "description": "Smart vattenerinring"
+        },
+        "banner_002": {
+          "description": "Smart musikspelare EQ"
+        },
+        "banner_003": {
+          "description": "Smart miniräknare för vardagen"
+        }
+      }
+    },
+    "no": {
+      "bannerTitle": "Utforsk flere apper fra utvikleren",
+      "banners": {
+        "banner_001": {
+          "description": "Smart vannpåminnelse"
+        },
+        "banner_002": {
+          "description": "Smart musikspiller EQ"
+        },
+        "banner_003": {
+          "description": "Smart kalkulator for dagliglivet"
+        }
+      }
+    },
+    "da": {
+      "bannerTitle": "Udforsk flere apps fra udvikler",
+      "banners": {
+        "banner_001": {
+          "description": "Smart vandpåmindelse"
+        },
+        "banner_002": {
+          "description": "Smart musikafspiller EQ"
+        },
+        "banner_003": {
+          "description": "Smart dagligdags regnemaskine"
+        }
+      }
+    },
+    "cs": {
+      "bannerTitle": "Prozkoumejte další aplikace od vývojáře",
+      "banners": {
+        "banner_001": {
+          "description": "Inteligentní připomenutí vody"
+        },
+        "banner_002": {
+          "description": "Inteligentní hudební přehrávač EQ"
+        },
+        "banner_003": {
+          "description": "Inteligentní kalkulačka na každodenní život"
+        }
+      }
+    },
+    "ro": {
+      "bannerTitle": "Explorează alte aplicații ale dezvoltatorului",
+      "banners": {
+        "banner_001": {
+          "description": "Reamintire inteligentă de apă"
+        },
+        "banner_002": {
+          "description": "Playerul Muzică EQ Inteligent"
+        },
+        "banner_003": {
+          "description": "Calculator inteligent al vieții cotidiene"
+        }
+      }
+    },
+    "el": {
+      "bannerTitle": "Εξερευνήστε περισσότερες εφαρμογές του προγραμματιστή",
+      "banners": {
+        "banner_001": {
+          "description": "Έξυπνη υπενθύμιση νερού"
+        },
+        "banner_002": {
+          "description": "Έξυπνος Αναπαραγωγός Μουσικής EQ"
+        },
+        "banner_003": {
+          "description": "Έξυπνη αριθμομηχανή καθημερινής ζωής"
+        }
+      }
+    },
+    "fi": {
+      "bannerTitle": "Tutustu kehittäjän muihin sovelluksiin",
+      "banners": {
+        "banner_001": {
+          "description": "Älykäs vesimuistutus"
+        },
+        "banner_002": {
+          "description": "Älykäs musiikkisovitin EQ"
+        },
+        "banner_003": {
+          "description": "Älykäs päivittäisen elämän laskin"
+        }
+      }
+    },
+    "hu": {
+      "bannerTitle": "Fedezd fel a fejlesztő további alkalmazásait",
+      "banners": {
+        "banner_001": {
+          "description": "Intelligens vízfigyelmeztetés"
+        },
+        "banner_002": {
+          "description": "Intelligens Zenelejátszó EQ"
+        },
+        "banner_003": {
+          "description": "Intelligens mindennapi élet számológép"
+        }
+      }
+    },
+    "ta": {
+      "bannerTitle": "உருவாக்குநரின் மற்ற பயன்பாடுகளை ஆராயுங்கள்",
+      "banners": {
+        "banner_001": {
+          "description": "ஸ்மார்ட் நீர் நினைவூட்டல்"
+        },
+        "banner_002": {
+          "description": "ஸ்மார்ட் இசை இ கியு"
+        },
+        "banner_003": {
+          "description": "ஸ்மார்ட் தினசரி வாழ்க்கை கணக்கெடுப்பு"
+        }
+      }
+    },
+    "uk": {
+      "bannerTitle": "Дослідіть інші додатки розробника",
+      "banners": {
+        "banner_001": {
+          "description": "Розумне нагадування про воду"
+        },
+        "banner_002": {
+          "description": "Розумний музичний плеєр EQ"
+        },
+        "banner_003": {
+          "description": "Розумний калькулятор повсякденного життя"
+        }
+      }
+    },
+    "bg": {
+      "bannerTitle": "Изучете други приложения на разработчика",
+      "banners": {
+        "banner_001": {
+          "description": "Интелигентно напомняне за вода"
+        },
+        "banner_002": {
+          "description": "Интелигентен музикален плеър EQ"
+        },
+        "banner_003": {
+          "description": "Интелигентен ежедневен калкулатор"
+        }
+      }
+    },
+    "sk": {
+      "bannerTitle": "Pozrite si ďalšie aplikácie vývojára",
+      "banners": {
+        "banner_001": {
+          "description": "Inteligentná upozornenie na vodu"
+        },
+        "banner_002": {
+          "description": "Inteligentný hudobný prehrávač EQ"
+        },
+        "banner_003": {
+          "description": "Inteligentná kalkulačka na každodenný život"
+        }
+      }
+    },
+    "sl": {
+      "bannerTitle": "Odkrijte druge aplikacije razvojnega inženirja",
+      "banners": {
+        "banner_001": {
+          "description": "Pametno opominjanje vode"
+        },
+        "banner_002": {
+          "description": "Pametni glasbeni predvajalnik EQ"
+        },
+        "banner_003": {
+          "description": "Pametni kalkulator vsakdanjega življenja"
+        }
+      }
+    },
+    "sr": {
+      "bannerTitle": "Истражите друге апликације разивача",
+      "banners": {
+        "banner_001": {
+          "description": "Паметно подсећање о води"
+        },
+        "banner_002": {
+          "description": "Паметан музички плејер EQ"
+        },
+        "banner_003": {
+          "description": "Паметан калкулатор свакодневног живота"
+        }
+      }
+    },
+    "zu": {
+      "bannerTitle": "Buye izinhlelo zesofthiwe ezinye zomtholakuli",
+      "banners": {
+        "banner_001": {
+          "description": "Okukhumbula kokunca amanzi okusoka"
+        },
+        "banner_002": {
+          "description": "Isikhali semusika se-EQ esosoka"
+        },
+        "banner_003": {
+          "description": "Isibali sesosoka sokuphila nsuku zonke"
+        }
+      }
+    },
+    "sw": {
+      "bannerTitle": "Chunguza Programu Nyingine za Mtengenezaji",
+      "banners": {
+        "banner_001": {
+          "description": "Kumbukumbu ya Akili ya Maji"
+        },
+        "banner_002": {
+          "description": "Kichezaji Muziki cha Akili cha EQ"
+        },
+        "banner_003": {
+          "description": "Kikokotoo cha Akili cha Maisha ya Kila Siku"
+        }
+      }
+    },
+    "hr": {
+      "bannerTitle": "Istražite druge aplikacije programera",
+      "banners": {
+        "banner_001": {
+          "description": "Pametni podsjetnik vode"
+        },
+        "banner_002": {
+          "description": "Pametni glazbeni ključ EQ"
+        },
+        "banner_003": {
+          "description": "Pametni kalkulator svakodnevnog života"
+        }
+      }
+    },
+    "mn": {
+      "bannerTitle": "Хөгжүүлэгчийн бусад апп-уудыг судалж үзнэ үү",
+      "banners": {
+        "banner_001": {
+          "description": "Ухаалаг усны сэрэмжлүүлэг"
+        },
+        "banner_002": {
+          "description": "Ухаалаг хөгжімний ойлголтоор EQ"
+        },
+        "banner_003": {
+          "description": "Ухаалаг өдөр тутмын амьдралын тооцоолуур"
+        }
+      }
+    },
+    "ka": {
+      "bannerTitle": "გამომუშავებელის სხვა აპლიკაციების აღმოჩენა",
+      "banners": {
+        "banner_001": {
+          "description": "ჭკვიანი წამილის შეხსენებამა"
+        },
+        "banner_002": {
+          "description": "ჭკვიანი მუსიკის ფლეიერი EQ"
+        },
+        "banner_003": {
+          "description": "ჭკვიანი ყოველდღიური ცხოვრების კალკულატორი"
+        }
+      }
+    },
+    "et": {
+      "bannerTitle": "Tutvuge arendaja muude rakendustega",
+      "banners": {
+        "banner_001": {
+          "description": "Nutikas veemälestus"
+        },
+        "banner_002": {
+          "description": "Nutikas muusikamängija EQ"
+        },
+        "banner_003": {
+          "description": "Nutikas igapäevase elu kalkulaator"
+        }
+      }
+    },
+    "is": {
+      "bannerTitle": "Kanna á öðrum öppum forritunaraanna",
+      "banners": {
+        "banner_001": {
+          "description": "Snjall vatnsáminning"
+        },
+        "banner_002": {
+          "description": "Snjall tónlistastöð EQ"
+        },
+        "banner_003": {
+          "description": "Snjall daglegra lífsreikning"
+        }
+      }
+    },
+    "be": {
+      "bannerTitle": "Даследзьце іншыя прыкладанні разработчыка",
+      "banners": {
+        "banner_001": {
+          "description": "Разумнае напамінаньне аб вадзе"
+        },
+        "banner_002": {
+          "description": "Разумны музычны плеер EQ"
+        },
+        "banner_003": {
+          "description": "Разумны калькулятар для штодзённага жыцця"
+        }
+      }
+    },
+    "kk": {
+      "bannerTitle": "Құрылтайшының басқа қосымшаларын зерттеу",
+      "banners": {
+        "banner_001": {
+          "description": "Ақылды сумен еске салу"
+        },
+        "banner_002": {
+          "description": "Ақылды музыка ойнатқышы EQ"
+        },
+        "banner_003": {
+          "description": "Ақылды күнделік өмірдің калькуляторы"
+        }
+      }
+    },
+    "uz": {
+      "bannerTitle": "Ishlab chiqaruvchining boshqa ilovalari haqida bilib oling",
+      "banners": {
+        "banner_001": {
+          "description": "Aqlli suv eslatmasi"
+        },
+        "banner_002": {
+          "description": "Aqlli musiqa ijrochisi EQ"
+        },
+        "banner_003": {
+          "description": "Aqlli kundalik hayot kalkulyatori"
+        }
+      }
+    }
+  },
+  "bannerInfo": [
+    {
+      "id": "banner_001",
+      "title": "WaterCoach",
+      "imageUrl": "https://play-lh.googleusercontent.com/rYjB6teF5LGfWSZYsALQPq-m9Oubc55Y-3gvzDJkr-i7QHnR8dOd2F7ZGv6Apq0SbeDQ_uwMSlrAN3WDs2gCZQ=w240-h480-rw",
+      "storeUrl": "market://details?id=com.crazycatlab.watercoach",
+      "priority": 1,
+      "isActive": true
+    },
+    {
+      "id": "banner_002",
+      "title": "Dodo Music Player",
+      "imageUrl": "https://play-lh.googleusercontent.com/ZzuMMU9wWz0NDwEG37pK9pAFIKcVTNXlf2sBHODHIPGBknjvxUpPSUxiR3Uhy6JTtZVZcqRpFrkETltwqXcb=w240-h480-rw",
+      "storeUrl": "market://details?id=com.crazycatlab.dodo",
+      "priority": 2,
+      "isActive": true
+    },
+    {
+      "id": "banner_003",
+      "title": "EveryCalc",
+      "imageUrl": "https://play-lh.googleusercontent.com/CAOFQoS_8e87RA9IV8o1ziQ_YQUKLyu1mc5YcHk5lLBgS22biMe6QsfN7-DdbwXYqNZVSLKiGxzEWeiTF56COQ=w240-h480-rw",
+      "storeUrl": "market://details?id=com.crazycatlab.every_calc",
+      "priority": 3,
+      "isActive": true
+    }
+  ]
+}
