@@ -3,56 +3,47 @@ const simpleTranslations = {
     en: {
         // Navigation
         'nav.about': 'About',
-        'nav.services': 'Services',
         'nav.portfolio': 'Portfolio',
-        'nav.ourapps': 'Our Apps',
-        'nav.stack': 'Tech Stack',
-        
+        'nav.ourapps': 'My Apps',
+        'nav.indev': 'In Dev',
+
         // Hero
-        'hero.title': 'Indie Mobile App Studio from Korea',
-        'hero.description': 'CrazyCat Lab designs and ships practical mobile apps with a clean UX and solid engineering. We focus on Flutter for cross‑platform speed, and Kotlin/Swift when native experiences are required.',
-        'hero.cta.primary': 'Start a conversation',
-        'hero.cta.secondary': 'See what we build',
+        'hero.title': 'Indie Developer from Korea',
+        'hero.description': 'Hi, I\'m Kay — a mobile developer who builds side projects with care. By day I work at a company, by night I craft apps that I actually need and use.',
+        'hero.cta.primary': 'See My Apps',
+        'hero.cta.secondary': 'View Portfolio',
         'hero.meta.location': '📍 Based in Korea',
         'hero.meta.platforms': '📱 iOS & Android',
-        'hero.meta.quality': '🧪 CI-ready, testable code',
-        'hero.highlights.title': 'Highlights',
-        'hero.highlights.item1': 'Product-minded development: quick experiments → reliable releases',
-        'hero.highlights.item2': 'Monetization: AdMob / AppLovin MAX mediation, IAP subscriptions',
-        'hero.highlights.item3': 'Privacy-first analytics and crash reporting',
+        'hero.meta.quality': '🌙 Building apps after work',
+        'hero.highlights.title': 'What I Do',
+        'hero.highlights.item1': 'Day job: Mobile developer at a company',
+        'hero.highlights.item2': 'Side projects: Apps I need, built with care',
+        'hero.highlights.item3': 'Philosophy: Minimal ads, maximum quality',
         'hero.welcome': 'Welcome to CrazyCat Lab',
-        'hero.subtitle': 'Where Quality Meets Creativity',
-        'hero.features': '• Flutter Expert • Native Performance • Indie Spirit',
-        'hero.status.badge': '🟢 Available for Projects',
-        'hero.status.description': 'Currently accepting new mobile app development projects',
-        
+        'hero.subtitle': 'Indie Developer from Korea',
+        'hero.features': '• Mobile Developer • Side Project Maker • Quality First',
+
         // About
-        'about.title': 'About CrazyCat Lab',
-        'about.description': 'CrazyCat Lab is an indie developer building helpful everyday apps. The goal is simple: deliver fast, stable, and delightful experiences that people keep on their home screen.',
-        'about.lean.title': 'Lean & Transparent',
-        'about.lean.description': 'We share timelines early, cut scope when needed, and ship value in small increments.',
-        'about.design.title': 'Design × Engineering',
-        'about.design.description': 'From wireframes to pixel‑polish: UX flows, UI systems, and implementation under one roof.',
-        'about.quality.title': 'Quality by Default',
-        'about.quality.description': 'Type‑safe code, lint rules, automated builds, and meaningful monitoring to keep apps healthy.',
-        
-        // Services
-        'services.title': 'What We Build',
-        'services.description': 'Production mobile apps for everyday needs — utilities, lifestyle, education, and simple games.',
-        'services.flutter.title': 'Cross‑platform Apps (Flutter)',
-        'services.flutter.description': 'Single codebase targeting iOS and Android with native‑level performance and smooth animations.',
-        'services.native.title': 'Native Android / iOS',
-        'services.native.description': 'Kotlin + Jetpack on Android, Swift + SwiftUI/UIKit on iOS when platform‑specific features matter.',
-        'services.monetization.title': 'Monetization & Growth',
-        'services.monetization.description': 'AdMob & AppLovin MAX mediation, in‑app purchases, A/B testing, privacy‑friendly analytics.',
-        
+        'about.title': 'About Me',
+        'about.description': 'I\'m an indie developer who takes side projects seriously. I build apps that I personally need and want to use every day.',
+        'about.indie.title': 'Indie & Independent',
+        'about.indie.description': 'One-person studio running side projects with passion. I make what I need, not what\'s trendy.',
+        'about.dayjob.title': 'Day Job + Side Projects',
+        'about.dayjob.description': 'By day, I work as a mobile developer at a company. By night, I craft personal apps in my spare time.',
+        'about.quality.title': 'Quality Over Ads',
+        'about.quality.description': 'Minimal ads, maximum usability. I build apps that I want to use myself — clean, fast, and respectful.',
+
         // Portfolio
-        'portfolio.title': 'Portfolio',
-        'portfolio.description': 'Mobile applications we\'ve developed and launched for various companies and clients.',
-        
+        'portfolio.title': 'Professional Work',
+        'portfolio.description': 'Projects from my career — apps built while working at various companies as a mobile developer. I\'m still working in the industry.',
+
         // Our Mobile Apps Section
-        'ourapps.title': 'Our Mobile Apps',
-        'ourapps.description': 'Innovative mobile applications we\'re developing and launching under our own brand.',
+        'ourapps.title': 'My Personal Apps',
+        'ourapps.description': 'Apps I build because I need them — minimal ads, high quality, crafted in my spare time after work.',
+
+        // In Development Section
+        'indev.title': 'Currently Building',
+        'indev.description': 'What I\'m working on right now — progress updates on upcoming apps.',
         'portfolio.wallypto.title': 'Wallypto Beta',
         'portfolio.wallypto.description': 'Blockchain wallet developed by LG Electronics, Inc. for secure digital asset management. Flutter app with Android and iOS development.',
         'portfolio.wallypto.android': 'Android',
@@ -101,25 +92,13 @@ const simpleTranslations = {
         'portfolio.dodomusicplayer.description': 'Automatically adjusts equalizer settings based on genre tags for optimal sound quality.',
         'portfolio.dodomusicplayer.progress': 'Released - Available on Google Play Store',
         'portfolio.dodomusicplayer.android': 'Android',
-        'portfolio.weather.title': 'Weather Companion',
-        'portfolio.weather.description': 'Smart weather forecasting with personalized insights and beautiful animations.',
-        'portfolio.weather.progress': '90% Complete - In Development',
-        'portfolio.health.title': 'Health Tracker',
-        'portfolio.health.description': 'Comprehensive health monitoring with AI-powered insights and goal tracking.',
-        'portfolio.health.progress': '70% Complete - In Development',
+        'portfolio.catwalk.title': 'CatWalk',
+        'portfolio.catwalk.description': 'Simple and beautiful pedometer app that tracks your daily steps and walking distance.',
+        'portfolio.catwalk.progress': '90% Complete - In Development',
         'portfolio.daily.title': 'Daily Life Assistant',
         'portfolio.daily.description': 'Smart daily planner with habit tracking and productivity insights.',
         'portfolio.daily.progress': '70% Complete - In Development',
-        
-        // Tech Stack
-        'stack.title': 'Tech Stack',
-        'stack.description': 'Modern tools and technologies we use to build exceptional mobile experiences.',
-        'stack.mobile.title': 'Mobile Development (Main)',
-        'stack.backend.title': 'Server Development (Sub)',
-        'stack.web.title': 'Web Development',
-        'stack.cloud.title': 'Cloud & Deployment',
-        'stack.tools.title': 'Development Tools',
-        
+
         // Footer
         'footer.rights': 'All rights reserved.',
         'footer.contact': 'Contact:',
@@ -129,56 +108,47 @@ const simpleTranslations = {
     ko: {
         // Navigation
         'nav.about': '소개',
-        'nav.services': '서비스',
         'nav.portfolio': '포트폴리오',
         'nav.ourapps': '자체 앱',
-        'nav.stack': '기술 스택',
-        
+        'nav.indev': '개발 중',
+
         // Hero
-        'hero.title': '한국의 인디 모바일 앱 스튜디오',
-        'hero.description': '크레이지캣 랩(CrazyCat Lab)은 깔끔한 UX와 견고한 엔지니어링으로 실용적인 모바일 앱을 설계하고 출시합니다. 크로스 플랫폼 속도를 위해 Flutter에 중점을 두고, 네이티브 경험이 필요할 때는 Kotlin/Swift를 사용합니다.',
-        'hero.cta.primary': '대화 시작하기',
+        'hero.title': '한국의 인디 개발자',
+        'hero.description': '안녕하세요, Kay입니다. 낮에는 회사에서 모바일 개발자로 일하고, 저녁에는 제가 실제로 필요한 앱들을 만들고 있습니다.',
+        'hero.cta.primary': '자체 앱 보기',
         'hero.cta.secondary': '포트폴리오 보기',
         'hero.meta.location': '📍 한국 기반',
         'hero.meta.platforms': '📱 iOS & Android',
-        'hero.meta.quality': '🧪 CI 준비된 테스트 가능한 코드',
-        'hero.highlights.title': '주요 특징',
-        'hero.highlights.item1': '제품 중심 개발: 빠른 실험 → 안정적인 릴리스',
-        'hero.highlights.item2': '수익화: AdMob / AppLovin MAX 중재, IAP 구독',
-        'hero.highlights.item3': '프라이버시 우선 분석 및 크래시 리포팅',
+        'hero.meta.quality': '🌙 퇴근 후 앱 만들기',
+        'hero.highlights.title': '저는 이런 사람입니다',
+        'hero.highlights.item1': '본업: 회사에서 모바일 개발자로 근무',
+        'hero.highlights.item2': '사이드 프로젝트: 제가 필요한 앱을 정성껏 제작',
+        'hero.highlights.item3': '철학: 광고는 최소화, 품질은 최대화',
         'hero.welcome': '크레이지캣 랩에 오신 것을 환영합니다',
-        'hero.subtitle': '품질과 창의성이 만나는 곳',
-        'hero.features': '• Flutter 전문가 • 네이티브 성능 • 인디 정신',
-        'hero.status.badge': '🟢 프로젝트 수주 가능',
-        'hero.status.description': '현재 새로운 모바일 앱 개발 프로젝트를 받고 있습니다',
-        
+        'hero.subtitle': '한국의 인디 개발자',
+        'hero.features': '• 모바일 개발자 • 사이드 프로젝트 메이커 • 품질 우선',
+
         // About
-        'about.title': '크레이지캣 랩(CrazyCat Lab) 소개',
-        'about.description': '크레이지캣 랩(CrazyCat Lab)은 유용한 일상 앱을 만드는 인디 개발 스튜디오입니다. 목표는 간단합니다: 사람들이 홈 화면에 계속 두고 싶어하는 빠르고 안정적이며 즐거운 경험을 제공하는 것입니다.',
-        'about.lean.title': '린 & 투명성',
-        'about.lean.description': '일정을 일찍 공유하고, 필요시 범위를 줄이며, 작은 단위로 가치를 제공합니다.',
-        'about.design.title': '디자인 × 엔지니어링',
-        'about.design.description': '와이어프레임부터 픽셀 완성까지: UX 플로우, UI 시스템, 구현을 한 곳에서.',
-        'about.quality.title': '기본적인 품질',
-        'about.quality.description': '타입 안전 코드, 린트 규칙, 자동화된 빌드, 앱을 건강하게 유지하는 의미있는 모니터링.',
-        
-        // Services
-        'services.title': '우리가 만드는 것',
-        'services.description': '일상적인 필요를 위한 프로덕션 모바일 앱 — 유틸리티, 라이프스타일, 교육, 간단한 게임.',
-        'services.flutter.title': '크로스 플랫폼 앱 (Flutter)',
-        'services.flutter.description': '네이티브 수준의 성능과 부드러운 애니메이션으로 iOS와 Android를 대상으로 하는 단일 코드베이스.',
-        'services.native.title': '네이티브 Android / iOS',
-        'services.native.description': '플랫폼별 기능이 중요할 때 Android의 Kotlin + Jetpack, iOS의 Swift + SwiftUI/UIKit.',
-        'services.monetization.title': '수익화 & 성장',
-        'services.monetization.description': 'AdMob & AppLovin MAX 중재, 인앱 구매, A/B 테스팅, 프라이버시 친화적 분석.',
-        
+        'about.title': '소개',
+        'about.description': '사이드 프로젝트를 진지하게 만드는 인디 개발자입니다. 제가 직접 매일 사용하고 싶은 앱들을 만들고 있습니다.',
+        'about.indie.title': '인디 & 독립 개발',
+        'about.indie.description': '열정으로 사이드 프로젝트를 운영하는 1인 스튜디오입니다. 트렌드가 아닌, 제가 필요한 것을 만듭니다.',
+        'about.dayjob.title': '본업 + 사이드 프로젝트',
+        'about.dayjob.description': '낮에는 회사에서 모바일 개발자로 일하고, 저녁 틈틈이 개인 앱을 만들고 있습니다.',
+        'about.quality.title': '광고보다 품질',
+        'about.quality.description': '광고는 최소화, 사용성은 최대화. 제가 직접 쓰고 싶은 앱 — 깔끔하고, 빠르고, 배려있는 앱을 만듭니다.',
+
         // Portfolio
-        'portfolio.title': '포트폴리오',
-        'portfolio.description': '다양한 회사와 클라이언트를 위해 개발하고 출시한 모바일 애플리케이션들입니다.',
-        
+        'portfolio.title': '직장 경력',
+        'portfolio.description': '여러 회사에서 모바일 개발자로 일하며 만든 프로젝트들입니다. 현재도 회사에 소속되어 개발자로 일하고 있습니다.',
+
         // Our Mobile Apps Section
-        'ourapps.title': '자체 모바일 앱',
-        'ourapps.description': '저희 브랜드로 개발하고 출시하는 혁신적인 모바일 애플리케이션들입니다.',
+        'ourapps.title': '자체 앱',
+        'ourapps.description': '내가 필요해서 만드는 앱들 — 광고는 최소화하고 품질은 높게, 저녁 틈틈이 만들고 있습니다.',
+
+        // In Development Section
+        'indev.title': '현재 개발 중',
+        'indev.description': '지금 만들고 있는 것들 — 곧 출시될 앱들의 개발 현황입니다.',
         'portfolio.wallypto.title': 'Wallypto Beta',
         'portfolio.wallypto.description': 'LG Electronics, Inc.에서 개발한 안전한 디지털 자산 관리를 위한 블록체인 지갑. Flutter 앱으로 Android와 iOS 담당 개발.',
         'portfolio.wallypto.android': 'Android',
@@ -228,25 +198,13 @@ const simpleTranslations = {
         'portfolio.dodomusicplayer.description': '장르 태그를 기반으로 이퀄라이저 설정을 자동으로 조절하여 최적의 음질을 제공합니다.',
         'portfolio.dodomusicplayer.progress': '출시됨 - 구글 플레이 스토어에서 이용 가능',
         'portfolio.dodomusicplayer.android': 'Android',
-        'portfolio.weather.title': '날씨 동반자',
-        'portfolio.weather.description': '개인화된 인사이트와 아름다운 애니메이션이 있는 스마트 날씨 예보.',
-        'portfolio.weather.progress': '90% 완료 - 개발 중',
-        'portfolio.health.title': '건강 트래커',
-        'portfolio.health.description': 'AI 기반 인사이트와 목표 추적이 있는 종합적인 건강 모니터링.',
-        'portfolio.health.progress': '70% 완료 - 개발 중',
+        'portfolio.catwalk.title': 'CatWalk',
+        'portfolio.catwalk.description': '하루 걸음 수와 걸은 거리를 추적하는 심플하고 아름다운 만보기 앱.',
+        'portfolio.catwalk.progress': '90% 완료 - 개발 중',
         'portfolio.daily.title': '일상 생활 도우미',
         'portfolio.daily.description': '습관 추적과 생산성 인사이트가 있는 스마트 일일 플래너.',
         'portfolio.daily.progress': '70% 완료 - 개발 중',
-        
-        // Tech Stack
-        'stack.title': '기술 스택',
-        'stack.description': '뛰어난 모바일 경험을 구축하기 위해 사용하는 현대적인 도구와 기술들.',
-        'stack.mobile.title': '모바일 개발 (주력)',
-        'stack.backend.title': '서버 개발 (보조)',
-        'stack.web.title': '웹 개발',
-        'stack.cloud.title': '클라우드 & 배포',
-        'stack.tools.title': '개발 도구',
-        
+
         // Footer
         'footer.rights': '모든 권리 보유.',
         'footer.contact': '연락처:',

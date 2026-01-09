@@ -1125,6 +1125,8 @@ a:focus {
         transition: right 0.3s ease;
         z-index: 9999;
         border-left: 1px solid var(--border-color);
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
     }
     
     .nav-menu.active {
