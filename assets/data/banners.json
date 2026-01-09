@@ -3,6 +3,7 @@
   "languages": {
     "ko": {
       "bannerTitle": "개발자의 다른 앱 둘러보기",
+      "bannerButton": "둘러보기",
       "banners": {
         "banner_001": {
           "description": "스마트 물 알림"
@@ -17,6 +18,7 @@
     },
     "en": {
       "bannerTitle": "Explore More Apps from the Developer",
+      "bannerButton": "Explore",
       "banners": {
         "banner_001": {
           "description": "Smart Water Reminder"
@@ -31,6 +33,7 @@
     },
     "ja": {
       "bannerTitle": "開発者の他のアプリを探索する",
+      "bannerButton": "見てみる",
       "banners": {
         "banner_001": {
           "description": "スマート水リマインダー"
@@ -45,6 +48,7 @@
     },
     "ru": {
       "bannerTitle": "Изучите другие приложения разработчика",
+      "bannerButton": "Смотреть",
       "banners": {
         "banner_001": {
           "description": "Умное напоминание о воде"
@@ -59,6 +63,7 @@
     },
     "de": {
       "bannerTitle": "Entdecken Sie weitere Apps des Entwicklers",
+      "bannerButton": "Entdecken",
       "banners": {
         "banner_001": {
           "description": "Intelligente Wassererinnerung"
@@ -73,6 +78,7 @@
     },
     "ar": {
       "bannerTitle": "استكشف المزيد من تطبيقات المطور",
+      "bannerButton": "استكشف",
       "banners": {
         "banner_001": {
           "description": "تذكير ذكي بشرب الماء"
@@ -87,6 +93,7 @@
     },
     "hi": {
       "bannerTitle": "डेवलपर की अन्य ऐप्स देखें",
+      "bannerButton": "देखें",
       "banners": {
         "banner_001": {
           "description": "स्मार्ट जल अनुस्मारक"
@@ -101,6 +108,7 @@
     },
     "id": {
       "bannerTitle": "Jelajahi Aplikasi Lain dari Developer",
+      "bannerButton": "Jelajahi",
       "banners": {
         "banner_001": {
           "description": "Pengingat Minum Air Pintar"
@@ -115,6 +123,7 @@
     },
     "tr": {
       "bannerTitle": "Geliştirici'nin Diğer Uygulamalarını Keşfet",
+      "bannerButton": "Keşfet",
       "banners": {
         "banner_001": {
           "description": "Akıllı Su Hatırlatıcısı"
@@ -129,6 +138,7 @@
     },
     "vi": {
       "bannerTitle": "Khám Phá Các Ứng Dụng Khác của Nhà Phát Triển",
+      "bannerButton": "Khám phá",
       "banners": {
         "banner_001": {
           "description": "Nhắc Nhở Uống Nước Thông Minh"
@@ -143,6 +153,7 @@
     },
     "th": {
       "bannerTitle": "สำรวจแอปอื่น ๆ ของผู้พัฒนา",
+      "bannerButton": "สำรวจ",
       "banners": {
         "banner_001": {
           "description": "การเตือนน้ำอัจฉริยะ"
@@ -157,6 +168,7 @@
     },
     "ms": {
       "bannerTitle": "Terokai Aplikasi Lain daripada Pembangun",
+      "bannerButton": "Terokai",
       "banners": {
         "banner_001": {
           "description": "Peringatan Air Pintar"
@@ -171,6 +183,7 @@
     },
     "fr": {
       "bannerTitle": "Découvrez les autres applications du développeur",
+      "bannerButton": "Découvrir",
       "banners": {
         "banner_001": {
           "description": "Rappel d'eau intelligent"
@@ -185,6 +198,7 @@
     },
     "it": {
       "bannerTitle": "Scopri altre app dello sviluppatore",
+      "bannerButton": "Scopri",
       "banners": {
         "banner_001": {
           "description": "Promemoria intelligente per l'acqua"
@@ -199,6 +213,7 @@
     },
     "pl": {
       "bannerTitle": "Odkryj inne aplikacje dewelopera",
+      "bannerButton": "Odkryj",
       "banners": {
         "banner_001": {
           "description": "Inteligentne przypomnienie wody"
@@ -213,6 +228,7 @@
     },
     "zh-cn": {
       "bannerTitle": "浏览开发者的其他应用",
+      "bannerButton": "浏览",
       "banners": {
         "banner_001": {
           "description": "智能喝水提醒"
@@ -227,6 +243,7 @@
     },
     "zh-tw": {
       "bannerTitle": "瀏覽開發者的其他應用",
+      "bannerButton": "瀏覽",
       "banners": {
         "banner_001": {
           "description": "智慧喝水提醒"
@@ -241,6 +258,7 @@
     },
     "zh-hk": {
       "bannerTitle": "瀏覽開發者的其他應用",
+      "bannerButton": "瀏覽",
       "banners": {
         "banner_001": {
           "description": "智能飲水提醒"
@@ -255,6 +273,7 @@
     },
     "pt": {
       "bannerTitle": "Explore outros aplicativos do desenvolvedor",
+      "bannerButton": "Explorar",
       "banners": {
         "banner_001": {
           "description": "Lembrete inteligente de água"
@@ -269,6 +288,7 @@
     },
     "pt-br": {
       "bannerTitle": "Explore outros aplicativos do desenvolvedor",
+      "bannerButton": "Explorar",
       "banners": {
         "banner_001": {
           "description": "Lembrete inteligente para beber água"
@@ -283,6 +303,7 @@
     },
     "he": {
       "bannerTitle": "בדוק יישומים נוספים של המפתח",
+      "bannerButton": "גלה",
       "banners": {
         "banner_001": {
           "description": "תזכורת חכמה למים"
@@ -297,6 +318,7 @@
     },
     "es": {
       "bannerTitle": "Explora más aplicaciones del desarrollador",
+      "bannerButton": "Explorar",
       "banners": {
         "banner_001": {
           "description": "Recordatorio inteligente de agua"
@@ -311,6 +333,7 @@
     },
     "es-mx": {
       "bannerTitle": "Explora más aplicaciones del desarrollador",
+      "bannerButton": "Explorar",
       "banners": {
         "banner_001": {
           "description": "Recordatorio inteligente para beber agua"
@@ -325,6 +348,7 @@
     },
     "nl": {
       "bannerTitle": "Verken meer apps van de ontwikkelaar",
+      "bannerButton": "Ontdekken",
       "banners": {
         "banner_001": {
           "description": "Slimme waterherinnering"
@@ -339,6 +363,7 @@
     },
     "sv": {
       "bannerTitle": "Utforska fler appar från utvecklaren",
+      "bannerButton": "Utforska",
       "banners": {
         "banner_001": {
           "description": "Smart vattenerinring"
@@ -353,6 +378,7 @@
     },
     "no": {
       "bannerTitle": "Utforsk flere apper fra utvikleren",
+      "bannerButton": "Utforsk",
       "banners": {
         "banner_001": {
           "description": "Smart vannpåminnelse"
@@ -367,6 +393,7 @@
     },
     "da": {
       "bannerTitle": "Udforsk flere apps fra udvikler",
+      "bannerButton": "Udforsk",
       "banners": {
         "banner_001": {
           "description": "Smart vandpåmindelse"
@@ -381,6 +408,7 @@
     },
     "cs": {
       "bannerTitle": "Prozkoumejte další aplikace od vývojáře",
+      "bannerButton": "Prozkoumat",
       "banners": {
         "banner_001": {
           "description": "Inteligentní připomenutí vody"
@@ -395,6 +423,7 @@
     },
     "ro": {
       "bannerTitle": "Explorează alte aplicații ale dezvoltatorului",
+      "bannerButton": "Explorează",
       "banners": {
         "banner_001": {
           "description": "Reamintire inteligentă de apă"
@@ -409,6 +438,7 @@
     },
     "el": {
       "bannerTitle": "Εξερευνήστε περισσότερες εφαρμογές του προγραμματιστή",
+      "bannerButton": "Εξερεύνηση",
       "banners": {
         "banner_001": {
           "description": "Έξυπνη υπενθύμιση νερού"
@@ -423,6 +453,7 @@
     },
     "fi": {
       "bannerTitle": "Tutustu kehittäjän muihin sovelluksiin",
+      "bannerButton": "Tutustu",
       "banners": {
         "banner_001": {
           "description": "Älykäs vesimuistutus"
@@ -437,6 +468,7 @@
     },
     "hu": {
       "bannerTitle": "Fedezd fel a fejlesztő további alkalmazásait",
+      "bannerButton": "Felfedezés",
       "banners": {
         "banner_001": {
           "description": "Intelligens vízfigyelmeztetés"
@@ -451,6 +483,7 @@
     },
     "ta": {
       "bannerTitle": "உருவாக்குநரின் மற்ற பயன்பாடுகளை ஆராயுங்கள்",
+      "bannerButton": "ஆராயுங்கள்",
       "banners": {
         "banner_001": {
           "description": "ஸ்மார்ட் நீர் நினைவூட்டல்"
@@ -465,6 +498,7 @@
     },
     "uk": {
       "bannerTitle": "Дослідіть інші додатки розробника",
+      "bannerButton": "Дослідити",
       "banners": {
         "banner_001": {
           "description": "Розумне нагадування про воду"
@@ -479,6 +513,7 @@
     },
     "bg": {
       "bannerTitle": "Изучете други приложения на разработчика",
+      "bannerButton": "Разгледай",
       "banners": {
         "banner_001": {
           "description": "Интелигентно напомняне за вода"
@@ -493,6 +528,7 @@
     },
     "sk": {
       "bannerTitle": "Pozrite si ďalšie aplikácie vývojára",
+      "bannerButton": "Preskúmať",
       "banners": {
         "banner_001": {
           "description": "Inteligentná upozornenie na vodu"
@@ -507,6 +543,7 @@
     },
     "sl": {
       "bannerTitle": "Odkrijte druge aplikacije razvojnega inženirja",
+      "bannerButton": "Razišči",
       "banners": {
         "banner_001": {
           "description": "Pametno opominjanje vode"
@@ -521,6 +558,7 @@
     },
     "sr": {
       "bannerTitle": "Истражите друге апликације разивача",
+      "bannerButton": "Истражи",
       "banners": {
         "banner_001": {
           "description": "Паметно подсећање о води"
@@ -535,6 +573,7 @@
     },
     "zu": {
       "bannerTitle": "Buye izinhlelo zesofthiwe ezinye zomtholakuli",
+      "bannerButton": "Hlola",
       "banners": {
         "banner_001": {
           "description": "Okukhumbula kokunca amanzi okusoka"
@@ -549,6 +588,7 @@
     },
     "sw": {
       "bannerTitle": "Chunguza Programu Nyingine za Mtengenezaji",
+      "bannerButton": "Gundua",
       "banners": {
         "banner_001": {
           "description": "Kumbukumbu ya Akili ya Maji"
@@ -563,6 +603,7 @@
     },
     "hr": {
       "bannerTitle": "Istražite druge aplikacije programera",
+      "bannerButton": "Istraži",
       "banners": {
         "banner_001": {
           "description": "Pametni podsjetnik vode"
@@ -577,6 +618,7 @@
     },
     "mn": {
       "bannerTitle": "Хөгжүүлэгчийн бусад апп-уудыг судалж үзнэ үү",
+      "bannerButton": "Судлах",
       "banners": {
         "banner_001": {
           "description": "Ухаалаг усны сэрэмжлүүлэг"
@@ -591,6 +633,7 @@
     },
     "ka": {
       "bannerTitle": "გამომუშავებელის სხვა აპლიკაციების აღმოჩენა",
+      "bannerButton": "გაიცანი",
       "banners": {
         "banner_001": {
           "description": "ჭკვიანი წამილის შეხსენებამა"
@@ -605,6 +648,7 @@
     },
     "et": {
       "bannerTitle": "Tutvuge arendaja muude rakendustega",
+      "bannerButton": "Avasta",
       "banners": {
         "banner_001": {
           "description": "Nutikas veemälestus"
@@ -619,6 +663,7 @@
     },
     "is": {
       "bannerTitle": "Kanna á öðrum öppum forritunaraanna",
+      "bannerButton": "Skoða",
       "banners": {
         "banner_001": {
           "description": "Snjall vatnsáminning"
@@ -633,6 +678,7 @@
     },
     "be": {
       "bannerTitle": "Даследзьце іншыя прыкладанні разработчыка",
+      "bannerButton": "Даследаваць",
       "banners": {
         "banner_001": {
           "description": "Разумнае напамінаньне аб вадзе"
@@ -647,6 +693,7 @@
     },
     "kk": {
       "bannerTitle": "Құрылтайшының басқа қосымшаларын зерттеу",
+      "bannerButton": "Зерттеу",
       "banners": {
         "banner_001": {
           "description": "Ақылды сумен еске салу"
@@ -661,6 +708,7 @@
     },
     "uz": {
       "bannerTitle": "Ishlab chiqaruvchining boshqa ilovalari haqida bilib oling",
+      "bannerButton": "Ko'rish",
       "banners": {
         "banner_001": {
           "description": "Aqlli suv eslatmasi"
