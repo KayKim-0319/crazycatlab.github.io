@@ -150,6 +150,14 @@
                 descriptionKo: '장르 태그를 기반으로 이퀄라이저 설정을 자동으로 조절하여 최적의 음질을 제공합니다.',
                 storeUrl: 'https://play.google.com/store/apps/details?id=com.crazycatlab.dodo',
                 images: ['image/dodo_music_player/dodo01.webp', 'image/dodo_music_player/dodo02.webp', 'image/dodo_music_player/dodo03.webp', 'image/dodo_music_player/dodo04.webp', 'image/dodo_music_player/dodo05.webp', 'image/dodo_music_player/dodo06.webp', 'image/dodo_music_player/dodo07.webp', 'image/dodo_music_player/dodo08.webp']
+            },
+            dodoeq: {
+                title: 'Dodo EQ',
+                titleKo: 'Dodo EQ',
+                description: 'Dodo EQ - Music Equalizer Bass. Elevate your music listening experience with professional audio equalizer. Dodo EQ offers intuitive controls and powerful sound engine to enjoy all music genres at their best quality.',
+                descriptionKo: 'Dodo EQ - Music Equalizer Bass. 프로페셔널 오디오 이퀄라이저로 음악 감상 경험을 향상시키세요. Dodo EQ는 직관적인 컨트롤과 강력한 사운드 엔진으로 모든 음악 장르를 최상의 품질로 즐길 수 있습니다.',
+                storeUrl: 'https://play.google.com/store/apps/details?id=com.crazycatlab.dodo_eq',
+                images: ['image/dodo_eq/dodo_eq_1.webp', 'image/dodo_eq/dodo_eq_2.webp', 'image/dodo_eq/dodo_eq_3.webp', 'image/dodo_eq/dodo_eq_4.webp', 'image/dodo_eq/dodo_eq_5.webp', 'image/dodo_eq/dodo_eq_6.webp']
             }
         };
 
@@ -647,7 +655,27 @@
         <section id="ourapps" class="section">
             <div class="container">
                 <div class="portfolio-grid">
-                    <!-- Dodo Music Player - First Position -->
+                    <!-- Dodo EQ - First Position -->
+                    <div class="portfolio-card featured" onclick="openAppModal('dodoeq')">
+                        <div class="portfolio-icon">
+                            <img src="image/dodo_eq/app_icon.webp" alt="Dodo EQ App Icon" loading="lazy">
+                        </div>
+                        <div class="portfolio-content">
+                            <h3 data-i18n="portfolio.dodoeq.title">Dodo EQ</h3>
+                            <p data-i18n="portfolio.dodoeq.description">Elevate your music listening experience with professional audio equalizer. Intuitive controls and powerful sound engine.</p>
+                            <div class="store-links">
+                                <a href="https://play.google.com/store/apps/details?id=com.crazycatlab.dodo_eq" target="_blank" class="store-link android" onclick="event.stopPropagation()">
+                                    <span data-i18n="portfolio.dodoeq.android">Android</span>
+                                </a>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 100%"></div>
+                            </div>
+                            <span class="progress-text" data-i18n="portfolio.dodoeq.progress">Released - Available on Google Play Store</span>
+                        </div>
+                    </div>
+
+                    <!-- Dodo Music Player - Second Position -->
                     <div class="portfolio-card featured" onclick="openAppModal('dodomusicplayer')">
                         <div class="portfolio-icon">
                             <img src="image/dodo_music_player/app_icon.webp" alt="Dodo Music Player App Icon" loading="lazy">
