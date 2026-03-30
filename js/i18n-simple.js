@@ -235,12 +235,12 @@ function simpleTranslate(key) {
 function updateLanguageButtons() {
     const langButtons = document.querySelectorAll('.lang-btn');
     langButtons.forEach(btn => {
-        btn.classList.remove('active');
-        if ((btn.textContent === 'EN' && currentLang === 'en') ||
-            (btn.textContent === '한국어' && currentLang === 'ko')) {
-            btn.classList.add('active');
-        }
+        const isActive = (btn.textContent === 'EN' && currentLang === 'en') ||
+            (btn.textContent === '한국어' && currentLang === 'ko');
+        btn.classList.toggle('active', isActive);
+        btn.setAttribute('aria-pressed', String(isActive));
     });
+    document.documentElement.lang = currentLang;
 }
 
 function applyTranslations() {
@@ -257,8 +257,6 @@ function applyTranslations() {
 function switchToKorean() {
     currentLang = 'ko';
     localStorage.setItem('language', 'ko');
-    console.log('Switching to Korean');
-    
     applyTranslations();
     updateLanguageButtons();
 }
@@ -266,15 +264,12 @@ function switchToKorean() {
 function switchToEnglish() {
     currentLang = 'en';
     localStorage.setItem('language', 'en');
-    console.log('Switching to English');
-    
     applyTranslations();
     updateLanguageButtons();
 }
 
 // Initialize language buttons and translations on page load
 document.addEventListener('DOMContentLoaded', function() {
-    console.log('Page loaded, current language:', currentLang);
     applyTranslations();
     updateLanguageButtons();
 });

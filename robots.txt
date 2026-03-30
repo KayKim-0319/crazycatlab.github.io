@@ -1,31 +1,18 @@
+# Default rules for all crawlers
 User-agent: *
 Allow: /
+Disallow: /*.md
+Disallow: /test_i18n.html
+Disallow: /test-modal.html
+Disallow: /cdn-cgi/
 
-# Google AdsTxt Crawler (Official Google Guideline)
+# Google AdsTxt Crawler
 User-agent: Google-adstxt
-Disallow:
+Allow: /
 
-# Google AdSense Crawler (Supporting Google Guideline)
+# Google AdSense Crawler
 User-agent: Mediapartners-Google
-Disallow:
+Allow: /
 
 # Sitemap
 Sitemap: https://crazycatlab.com/sitemap.xml
-
-# Allow important resources for rendering (CRITICAL for Google indexing)
-Allow: /js/
-Allow: /css/
-Allow: /image/
-
-# Disallow sensitive files only
-Disallow: *.md
-Disallow: /CLAUDE.md
-Disallow: /README.md
-Disallow: /test_i18n.html
-Disallow: /test-modal.html
-
-# Disallow Cloudflare paths (if Email Protection is enabled)
-Disallow: /cdn-cgi/
-
-# Crawl delay (optional)
-Crawl-delay: 1

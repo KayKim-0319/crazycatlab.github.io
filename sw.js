@@ -1,5 +1,5 @@
 // Service Worker for offline support and caching
-const CACHE_NAME = 'ddsoft-v1.0.0';
+const CACHE_NAME = 'ddsoft-v1.1.0';
 const urlsToCache = [
     '/',
     '/index.html',
@@ -7,7 +7,7 @@ const urlsToCache = [
     '/terms.html',
     '/css/style.css',
     '/js/main.js',
-    '/js/i18n.js',
+    '/js/i18n-simple.js',
     '/js/i18n-privacy.js',
     '/js/i18n-terms.js'
 ];
@@ -17,7 +17,6 @@ self.addEventListener('install', event => {
     event.waitUntil(
         caches.open(CACHE_NAME)
             .then(cache => {
-                console.log('Opened cache');
                 return cache.addAll(urlsToCache);
             })
     );
@@ -50,7 +49,6 @@ self.addEventListener('activate', event => {
             return Promise.all(
                 cacheNames.map(cacheName => {
                     if (cacheName !== CACHE_NAME) {
-                        console.log('Deleting old cache:', cacheName);
                         return caches.delete(cacheName);
                     }
                 })

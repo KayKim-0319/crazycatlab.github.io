@@ -16,6 +16,11 @@
     <meta property="og:image" content="https://crazycatlab.com/app_icon.png">
     <meta property="og:locale" content="en_US">
     <meta property="og:locale:alternate" content="ko_KR">
+
+    <!-- Hreflang Tags -->
+    <link rel="alternate" hreflang="en" href="https://crazycatlab.com/">
+    <link rel="alternate" hreflang="ko" href="https://crazycatlab.com/">
+    <link rel="alternate" hreflang="x-default" href="https://crazycatlab.com/">
     
     <!-- Twitter Card Tags -->
     <meta name="twitter:card" content="summary_large_image">
@@ -31,9 +36,9 @@
     
     <!-- Security Headers -->
     <meta http-equiv="X-Content-Type-Options" content="nosniff">
-    <meta http-equiv="X-XSS-Protection" content="1; mode=block">
     <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
-    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests; default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; connect-src 'self'; frame-ancestors 'none'">
+    <meta http-equiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=()">
     
     <!-- Favicon -->
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%238b5cf6'/><text x='50' y='58' text-anchor='middle' font-size='54' fill='white' font-family='Arial,Helvetica,sans-serif'>C</text></svg>">
@@ -161,90 +166,104 @@
             }
         };
 
-        // Define functions (will be registered after DOM and scripts load)
+        // Safe URL validation
+        function headIsValidUrl(url) {
+            try { const p = new URL(url); return ['http:', 'https:'].includes(p.protocol); }
+            catch { return false; }
+        }
+
+        // Safe store link builder
+        function headCreateStoreLink(url, text, extraStyle) {
+            const a = document.createElement('a');
+            a.href = url;
+            a.target = '_blank';
+            a.rel = 'noopener noreferrer';
+            a.className = 'modal-store-link';
+            a.textContent = text;
+            if (extraStyle) a.style.cssText = extraStyle;
+            return a;
+        }
+
         function headOpenAppModal(appId) {
             const app = appData[appId];
-            if (!app) {
-                console.error('App data not found for:', appId);
-                return;
-            }
-            
+            if (!app) return;
+
             const modal = document.getElementById('appModal');
             const modalTitle = document.getElementById('modalTitle');
             const modalDescription = document.getElementById('modalDescription');
             const modalStoreLink = document.getElementById('modalStoreLink');
             const imageContainer = document.getElementById('imageContainer');
-            
-            if (!modal) {
-                console.error('Modal element not found!');
-                return;
-            }
-            
-            // Set title and description based on current language
+            if (!modal) return;
+
             const currentLang = localStorage.getItem('language') || 'en';
             modalTitle.textContent = currentLang === 'ko' && app.titleKo ? app.titleKo : app.title;
             modalDescription.textContent = currentLang === 'ko' && app.descriptionKo ? app.descriptionKo : app.description;
-            
-            // Clear and populate images
-            imageContainer.innerHTML = '';
-            
+
+            // Clear previous content safely
+            imageContainer.textContent = '';
+            modalStoreLink.textContent = '';
+
             if (app.isDoubleApp) {
-                // Handle double app (Cat & Dog President)
                 const allImages = [...app.apps.cat.images, ...app.apps.dog.images];
-                allImages.forEach(imageSrc => {
+                allImages.forEach(function(imageSrc) {
                     const img = document.createElement('img');
                     img.src = imageSrc;
                     img.className = 'gallery-image';
                     img.loading = 'lazy';
                     imageContainer.appendChild(img);
                 });
-                
-                modalStoreLink.innerHTML = `
-                    <div style="display: flex; gap: 1rem; justify-content: space-between; align-items: center; flex-wrap: wrap;">
-                        <div style="display: flex; gap: 0.5rem;">
-                            <a href="https://play.google.com/store/apps/details?id=com.funnc.catpre" target="_blank" class="modal-store-link">고양이 대통령 Android</a>
-                            <a href="https://apps.apple.com/me/app/id1133039683" target="_blank" class="modal-store-link" style="background: linear-gradient(135deg, #6366f1, #8b5cf6);">고양이 대통령 iOS</a>
-                        </div>
-                        <span style="color: var(--text-muted); font-size: 1.2rem;">|</span>
-                        <div style="display: flex; gap: 0.5rem;">
-                            <a href="https://play.google.com/store/apps/details?id=com.funnc.dogpre" target="_blank" class="modal-store-link">강아지 대통령 Android</a>
-                            <a href="https://apps.apple.com/me/app/id1121905472" target="_blank" class="modal-store-link" style="background: linear-gradient(135deg, #6366f1, #8b5cf6);">강아지 대통령 iOS</a>
-                        </div>
-                    </div>
-                `;
+
+                const wrapper = document.createElement('div');
+                wrapper.style.cssText = 'display:flex;gap:1rem;justify-content:space-between;align-items:center;flex-wrap:wrap';
+                const catDiv = document.createElement('div');
+                catDiv.style.cssText = 'display:flex;gap:0.5rem';
+                catDiv.appendChild(headCreateStoreLink('https://play.google.com/store/apps/details?id=com.funnc.catpre', '고양이 대통령 Android'));
+                catDiv.appendChild(headCreateStoreLink('https://apps.apple.com/me/app/id1133039683', '고양이 대통령 iOS', 'background:linear-gradient(135deg,#6366f1,#8b5cf6)'));
+                const sep = document.createElement('span');
+                sep.style.cssText = 'color:var(--text-muted);font-size:1.2rem';
+                sep.textContent = '|';
+                const dogDiv = document.createElement('div');
+                dogDiv.style.cssText = 'display:flex;gap:0.5rem';
+                dogDiv.appendChild(headCreateStoreLink('https://play.google.com/store/apps/details?id=com.funnc.dogpre', '강아지 대통령 Android'));
+                dogDiv.appendChild(headCreateStoreLink('https://apps.apple.com/me/app/id1121905472', '강아지 대통령 iOS', 'background:linear-gradient(135deg,#6366f1,#8b5cf6)'));
+                wrapper.appendChild(catDiv);
+                wrapper.appendChild(sep);
+                wrapper.appendChild(dogDiv);
+                modalStoreLink.appendChild(wrapper);
             } else {
-                // Handle regular apps
-                app.images.forEach(imageSrc => {
+                app.images.forEach(function(imageSrc) {
                     const img = document.createElement('img');
                     img.src = imageSrc;
                     img.className = 'gallery-image';
                     img.loading = 'lazy';
                     imageContainer.appendChild(img);
                 });
-                
+
                 if (app.storeUrl || app.storeUrlIos) {
-                    let storeLinksHtml = '<div style="display: flex; gap: 0.5rem;">';
-                    if (app.storeUrl) {
-                        storeLinksHtml += `<a href="${app.storeUrl}" target="_blank" class="modal-store-link">Android</a>`;
+                    const linksDiv = document.createElement('div');
+                    linksDiv.style.cssText = 'display:flex;gap:0.5rem';
+                    if (app.storeUrl && headIsValidUrl(app.storeUrl)) {
+                        linksDiv.appendChild(headCreateStoreLink(app.storeUrl, 'Android'));
                     }
-                    if (app.storeUrlIos) {
-                        storeLinksHtml += `<a href="${app.storeUrlIos}" target="_blank" class="modal-store-link">iOS</a>`;
+                    if (app.storeUrlIos && headIsValidUrl(app.storeUrlIos)) {
+                        linksDiv.appendChild(headCreateStoreLink(app.storeUrlIos, 'iOS'));
                     }
-                    storeLinksHtml += '</div>';
-                    modalStoreLink.innerHTML = storeLinksHtml;
+                    modalStoreLink.appendChild(linksDiv);
                 } else if (appId === 'smarthq') {
-                    // Special case for Smart HQ - show proper release status
-                    const currentLang = localStorage.getItem('language') || 'en';
-                    const releaseMessage = currentLang === 'ko' ? 
-                        '출시됨 - 미국 앱 스토어에서 이용 가능 (VPN 필요)' : 
+                    const span = document.createElement('span');
+                    span.style.color = 'var(--accent-green)';
+                    span.textContent = currentLang === 'ko' ?
+                        '출시됨 - 미국 앱 스토어에서 이용 가능 (VPN 필요)' :
                         'Released - Available on US App Store (VPN required for access)';
-                    modalStoreLink.innerHTML = `<span style="color: var(--accent-green);">${releaseMessage}</span>`;
+                    modalStoreLink.appendChild(span);
                 } else {
-                    modalStoreLink.innerHTML = '<span style="color: var(--accent-green);">Coming Soon</span>';
+                    const span = document.createElement('span');
+                    span.style.color = 'var(--accent-green)';
+                    span.textContent = 'Coming Soon';
+                    modalStoreLink.appendChild(span);
                 }
             }
-            
-            // Show modal
+
             modal.style.display = 'block';
             document.body.style.overflow = 'hidden';
         }
@@ -333,8 +352,11 @@
     </script>
 </head>
 <body>
+    <!-- Skip Navigation -->
+    <a href="#hero" class="skip-nav">Skip to main content</a>
+
     <!-- Header -->
-    <header class="header">
+    <header class="header" role="banner">
         <div class="container">
             <nav class="nav">
                 <a href="#hero" class="brand">
@@ -348,9 +370,9 @@
                     <a href="#portfolio" data-i18n="nav.portfolio">Portfolio</a>
                     <a href="#ourapps" data-i18n="nav.ourapps">Our Apps</a>
                     <a href="#indev" data-i18n="nav.indev">In Dev</a>
-                    <div class="language-switcher">
-                        <button class="lang-btn" onclick="switchToEnglish()">EN</button>
-                        <button class="lang-btn" onclick="switchToKorean()">한국어</button>
+                    <div class="language-switcher" role="group" aria-label="Language selection">
+                        <button class="lang-btn" onclick="switchToEnglish()" aria-pressed="true" aria-label="Switch to English">EN</button>
+                        <button class="lang-btn" onclick="switchToKorean()" aria-pressed="false" aria-label="한국어로 전환">한국어</button>
                     </div>
                 </div>
                 <div class="mobile-menu-btn">
@@ -483,7 +505,7 @@
             <div class="container">
                 <div class="portfolio-grid">
                     <!-- Smart HQ - First Position -->
-                    <div class="portfolio-card featured" onclick="window.openAppModal('smarthq')">
+                    <div class="portfolio-card featured" role="button" tabindex="0" onclick="window.openAppModal('smarthq')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();window.openAppModal('smarthq')}">
                         <div class="portfolio-icon">
                             <img src="image/smarthq/app_icon.webp" alt="Smart HQ App Icon" loading="lazy">
                         </div>
@@ -498,7 +520,7 @@
                     </div>
                     
                     <!-- MyData KKL - Second Position -->
-                    <div class="portfolio-card featured" onclick="openAppModal('kkl')">
+                    <div class="portfolio-card featured" role="button" tabindex="0" onclick="openAppModal('kkl')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openAppModal('kkl')}">
                         <div class="portfolio-icon">
                             <img src="image/kkl/app_icon.webp" alt="MyData KKL App Icon" loading="lazy">
                         </div>
@@ -506,10 +528,10 @@
                             <h3 data-i18n="portfolio.kkl.title">MyData KKL</h3>
                             <p data-i18n="portfolio.kkl.description">Personalized financial data integration and asset management service mobile app by Kyobo Securities.</p>
                             <div class="store-links">
-                                <a href="https://play.google.com/store/apps/details?id=com.iprovest.mykkl" target="_blank" class="store-link android" onclick="event.stopPropagation()">
+                                <a href="https://play.google.com/store/apps/details?id=com.iprovest.mykkl" target="_blank" rel="noopener noreferrer" class="store-link android" onclick="event.stopPropagation()">
                                     <span data-i18n="portfolio.kkl.android">Android</span>
                                 </a>
-                                <a href="https://apps.apple.com/us/app/id1617913593" target="_blank" class="store-link ios" onclick="event.stopPropagation()">
+                                <a href="https://apps.apple.com/us/app/id1617913593" target="_blank" rel="noopener noreferrer" class="store-link ios" onclick="event.stopPropagation()">
                                     <span data-i18n="portfolio.kkl.ios">iOS</span>
                                 </a>
                             </div>
@@ -521,7 +543,7 @@
                     </div>
                     
                     <!-- Wallypto Beta - Third Position -->
-                    <div class="portfolio-card featured" onclick="openAppModal('wallypto')">
+                    <div class="portfolio-card featured" role="button" tabindex="0" onclick="openAppModal('wallypto')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openAppModal('wallypto')}">
                         <div class="portfolio-icon">
                             <img src="image/wallypto/app_icon.webp" alt="Wallypto Beta App Icon" loading="lazy">
                         </div>
@@ -529,10 +551,10 @@
                             <h3 data-i18n="portfolio.wallypto.title">Wallypto Beta</h3>
                             <p data-i18n="portfolio.wallypto.description">Blockchain wallet developed by LG Electronics, Inc. for secure digital asset management.</p>
                             <div class="store-links">
-                                <a href="https://play.google.com/store/apps/details?id=xyz.wallypto" target="_blank" class="store-link android" onclick="event.stopPropagation()">
+                                <a href="https://play.google.com/store/apps/details?id=xyz.wallypto" target="_blank" rel="noopener noreferrer" class="store-link android" onclick="event.stopPropagation()">
                                     <span data-i18n="portfolio.wallypto.android">Android</span>
                                 </a>
-                                <a href="https://apps.apple.com/kr/app/wallypto-blockchain-wallet/id1639302472" target="_blank" class="store-link ios" onclick="event.stopPropagation()">
+                                <a href="https://apps.apple.com/kr/app/wallypto-blockchain-wallet/id1639302472" target="_blank" rel="noopener noreferrer" class="store-link ios" onclick="event.stopPropagation()">
                                     <span data-i18n="portfolio.wallypto.ios">iOS</span>
                                 </a>
                             </div>
@@ -544,7 +566,7 @@
                     </div>
                     
                     <!-- Cat & Dog President - Fourth Position -->
-                    <div class="portfolio-card featured" onclick="openAppModal('funnc')">
+                    <div class="portfolio-card featured" role="button" tabindex="0" onclick="openAppModal('funnc')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openAppModal('funnc')}">
                         <div style="display: flex; gap: 10px; margin-bottom: 1.5rem; justify-content: flex-start;">
                             <div class="portfolio-icon">
                                 <img src="image/funnc/app_icon1.webp" alt="Cat President App Icon" loading="lazy">
@@ -558,18 +580,18 @@
                             <p data-i18n="portfolio.funnc.description">Pet shopping mall apps featuring cat and dog characters, providing users with a friendly and fun shopping experience.</p>
                             <div class="store-links" style="display: flex; justify-content: space-between; align-items: center; gap: 1rem;">
                                 <div style="display: flex; gap: 0.5rem;">
-                                    <a href="https://play.google.com/store/apps/details?id=com.funnc.catpre" target="_blank" class="store-link android" onclick="event.stopPropagation()">
+                                    <a href="https://play.google.com/store/apps/details?id=com.funnc.catpre" target="_blank" rel="noopener noreferrer" class="store-link android" onclick="event.stopPropagation()">
                                         <span>Android</span>
                                     </a>
-                                    <a href="https://apps.apple.com/me/app/id1133039683" target="_blank" class="store-link ios" onclick="event.stopPropagation()">
+                                    <a href="https://apps.apple.com/me/app/id1133039683" target="_blank" rel="noopener noreferrer" class="store-link ios" onclick="event.stopPropagation()">
                                         <span>iOS</span>
                                     </a>
                                 </div>
                                 <div style="display: flex; gap: 0.5rem;">
-                                    <a href="https://play.google.com/store/apps/details?id=com.funnc.dogpre" target="_blank" class="store-link android" onclick="event.stopPropagation()">
+                                    <a href="https://play.google.com/store/apps/details?id=com.funnc.dogpre" target="_blank" rel="noopener noreferrer" class="store-link android" onclick="event.stopPropagation()">
                                         <span>Android</span>
                                     </a>
-                                    <a href="https://apps.apple.com/me/app/id1121905472" target="_blank" class="store-link ios" onclick="event.stopPropagation()">
+                                    <a href="https://apps.apple.com/me/app/id1121905472" target="_blank" rel="noopener noreferrer" class="store-link ios" onclick="event.stopPropagation()">
                                         <span>iOS</span>
                                     </a>
                                 </div>
@@ -582,7 +604,7 @@
                     </div>
                     
                     <!-- Favoriit - Fifth Position -->
-                    <div class="portfolio-card featured" onclick="openAppModal('favoriit')">
+                    <div class="portfolio-card featured" role="button" tabindex="0" onclick="openAppModal('favoriit')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openAppModal('favoriit')}">
                         <div class="portfolio-icon">
                             <img src="image/favoriit/app_icon.webp" alt="Favoriit App Icon" loading="lazy">
                         </div>
@@ -590,10 +612,10 @@
                             <h3 data-i18n="portfolio.favoriit.title">Favoriit</h3>
                             <p data-i18n="portfolio.favoriit.description">Innovative secondhand trading platform with instant sales, real-time auctions, and story features for beloved items.</p>
                             <div class="store-links">
-                                <a href="https://play.google.com/store/apps/details?id=com.favoriit" target="_blank" class="store-link android" onclick="event.stopPropagation()">
+                                <a href="https://play.google.com/store/apps/details?id=com.favoriit" target="_blank" rel="noopener noreferrer" class="store-link android" onclick="event.stopPropagation()">
                                     <span data-i18n="portfolio.favoriit.android">Android</span>
                                 </a>
-                                <a href="https://apps.apple.com/kr/app/페이보릿-favoriit/id1532185221" target="_blank" class="store-link ios" onclick="event.stopPropagation()">
+                                <a href="https://apps.apple.com/kr/app/페이보릿-favoriit/id1532185221" target="_blank" rel="noopener noreferrer" class="store-link ios" onclick="event.stopPropagation()">
                                     <span data-i18n="portfolio.favoriit.ios">iOS</span>
                                 </a>
                             </div>
@@ -605,7 +627,7 @@
                     </div>
                     
                     <!-- StyleSeller - Sixth Position -->
-                    <div class="portfolio-card featured" onclick="openAppModal('style')">
+                    <div class="portfolio-card featured" role="button" tabindex="0" onclick="openAppModal('style')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openAppModal('style')}">
                         <div class="portfolio-icon">
                             <img src="image/style/app_icon.webp" alt="StyleSeller App Icon" loading="lazy">
                         </div>
@@ -613,10 +635,10 @@
                             <h3 data-i18n="portfolio.style.title">StyleSeller</h3>
                             <p data-i18n="portfolio.style.description">Easy and fast SNS product sales platform for side hustlers with free multi-links, recommended products, and data-driven group buying.</p>
                             <div class="store-links">
-                                <a href="https://play.google.com/store/apps/details?id=com.mint.style" target="_blank" class="store-link android" onclick="event.stopPropagation()">
+                                <a href="https://play.google.com/store/apps/details?id=com.mint.style" target="_blank" rel="noopener noreferrer" class="store-link android" onclick="event.stopPropagation()">
                                     <span data-i18n="portfolio.style.android">Android</span>
                                 </a>
-                                <a href="https://apps.apple.com/kr/app/n잡러-필수앱-스타일셀러/id1262954182" target="_blank" class="store-link ios" onclick="event.stopPropagation()">
+                                <a href="https://apps.apple.com/kr/app/n잡러-필수앱-스타일셀러/id1262954182" target="_blank" rel="noopener noreferrer" class="store-link ios" onclick="event.stopPropagation()">
                                     <span data-i18n="portfolio.style.ios">iOS</span>
                                 </a>
                             </div>
@@ -656,7 +678,7 @@
             <div class="container">
                 <div class="portfolio-grid">
                     <!-- Dodo EQ - First Position -->
-                    <div class="portfolio-card featured" onclick="openAppModal('dodoeq')">
+                    <div class="portfolio-card featured" role="button" tabindex="0" onclick="openAppModal('dodoeq')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openAppModal('dodoeq')}">
                         <div class="portfolio-icon">
                             <img src="image/dodo_eq/app_icon.webp" alt="Dodo EQ App Icon" loading="lazy">
                         </div>
@@ -664,7 +686,7 @@
                             <h3 data-i18n="portfolio.dodoeq.title">Dodo EQ</h3>
                             <p data-i18n="portfolio.dodoeq.description">Elevate your music listening experience with professional audio equalizer. Intuitive controls and powerful sound engine.</p>
                             <div class="store-links">
-                                <a href="https://play.google.com/store/apps/details?id=com.crazycatlab.dodo_eq" target="_blank" class="store-link android" onclick="event.stopPropagation()">
+                                <a href="https://play.google.com/store/apps/details?id=com.crazycatlab.dodo_eq" target="_blank" rel="noopener noreferrer" class="store-link android" onclick="event.stopPropagation()">
                                     <span data-i18n="portfolio.dodoeq.android">Android</span>
                                 </a>
                             </div>
@@ -676,7 +698,7 @@
                     </div>
 
                     <!-- Dodo Music Player - Second Position -->
-                    <div class="portfolio-card featured" onclick="openAppModal('dodomusicplayer')">
+                    <div class="portfolio-card featured" role="button" tabindex="0" onclick="openAppModal('dodomusicplayer')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openAppModal('dodomusicplayer')}">
                         <div class="portfolio-icon">
                             <img src="image/dodo_music_player/app_icon.webp" alt="Dodo Music Player App Icon" loading="lazy">
                         </div>
@@ -684,7 +706,7 @@
                             <h3 data-i18n="portfolio.dodomusicplayer.title">Dodo Music Player</h3>
                             <p data-i18n="portfolio.dodomusicplayer.description">Automatically adjusts equalizer settings based on genre tags for optimal sound quality.</p>
                             <div class="store-links">
-                                <a href="https://play.google.com/store/apps/details?id=com.crazycatlab.dodo" target="_blank" class="store-link android" onclick="event.stopPropagation()">
+                                <a href="https://play.google.com/store/apps/details?id=com.crazycatlab.dodo" target="_blank" rel="noopener noreferrer" class="store-link android" onclick="event.stopPropagation()">
                                     <span data-i18n="portfolio.dodomusicplayer.android">Android</span>
                                 </a>
                             </div>
@@ -696,7 +718,7 @@
                     </div>
 
                     <!-- Water Coach - Second Position -->
-                    <div class="portfolio-card featured" onclick="openAppModal('watercoach')">
+                    <div class="portfolio-card featured" role="button" tabindex="0" onclick="openAppModal('watercoach')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openAppModal('watercoach')}">
                         <div class="portfolio-icon">
                             <img src="image/water_coach/app_icon.webp" alt="Water Coach App Icon" loading="lazy">
                         </div>
@@ -704,7 +726,7 @@
                             <h3 data-i18n="portfolio.watercoach.title">Water Coach</h3>
                             <p data-i18n="portfolio.watercoach.description">Smart Water Tracker. Personalized water goals, smart alerts, and analytics to build healthy hydration.</p>
                             <div class="store-links">
-                                <a href="https://play.google.com/store/apps/details?id=com.crazycatlab.watercoach" target="_blank" class="store-link android" onclick="event.stopPropagation()">
+                                <a href="https://play.google.com/store/apps/details?id=com.crazycatlab.watercoach" target="_blank" rel="noopener noreferrer" class="store-link android" onclick="event.stopPropagation()">
                                     <span data-i18n="portfolio.watercoach.android">Android</span>
                                 </a>
                             </div>
@@ -716,7 +738,7 @@
                     </div>
 
                     <!-- Window Close - Second Position -->
-                    <div class="portfolio-card featured" onclick="openAppModal('windowclose')">
+                    <div class="portfolio-card featured" role="button" tabindex="0" onclick="openAppModal('windowclose')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openAppModal('windowclose')}">
                         <div class="portfolio-icon">
                             <img src="image/window_close/app_icon.webp" alt="Window Close App Icon" loading="lazy">
                         </div>
@@ -724,7 +746,7 @@
                             <h3 data-i18n="portfolio.windowclose.title">Window Close</h3>
                             <p data-i18n="portfolio.windowclose.description">Fine dust/Ultra-fine dust alerts, Real-time air quality information and weather data.</p>
                             <div class="store-links">
-                                <a href="https://play.google.com/store/apps/details?id=com.crazycatlab.simple_air" target="_blank" class="store-link android" onclick="event.stopPropagation()">
+                                <a href="https://play.google.com/store/apps/details?id=com.crazycatlab.simple_air" target="_blank" rel="noopener noreferrer" class="store-link android" onclick="event.stopPropagation()">
                                     <span data-i18n="portfolio.windowclose.android">Android</span>
                                 </a>
                             </div>
@@ -736,7 +758,7 @@
                     </div>
 
                     <!-- Every Calc - Fourth Position -->
-                    <div class="portfolio-card featured" onclick="openAppModal('everycalc')">
+                    <div class="portfolio-card featured" role="button" tabindex="0" onclick="openAppModal('everycalc')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openAppModal('everycalc')}">
                         <div class="portfolio-icon">
                             <img src="image/every_calc/app_icon.webp" alt="Every Calc App Icon" loading="lazy">
                         </div>
@@ -744,7 +766,7 @@
                             <h3 data-i18n="portfolio.calc.title">Every Calc</h3>
                             <p data-i18n="portfolio.calc.description">Comprehensive calculator app with multiple calculation modes and beautiful design.</p>
                             <div class="store-links">
-                                <a href="https://play.google.com/store/apps/details?id=com.crazycatlab.every_calc" target="_blank" class="store-link android" onclick="event.stopPropagation()">
+                                <a href="https://play.google.com/store/apps/details?id=com.crazycatlab.every_calc" target="_blank" rel="noopener noreferrer" class="store-link android" onclick="event.stopPropagation()">
                                     <span data-i18n="portfolio.calc.android">Android</span>
                                 </a>
                             </div>
@@ -846,11 +868,11 @@
     <!-- Debug Script -->
 
     <!-- App Modal -->
-    <div id="appModal" class="modal" onclick="closeAppModal()">
+    <div id="appModal" class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle" onclick="closeAppModal()">
         <div class="modal-content" onclick="event.stopPropagation()">
             <div class="modal-header">
                 <h3 id="modalTitle"></h3>
-                <span class="modal-close" onclick="closeAppModal()">&times;</span>
+                <button class="modal-close" aria-label="Close modal" onclick="closeAppModal()">&times;</button>
             </div>
             <div class="modal-body">
                 <div class="image-gallery">

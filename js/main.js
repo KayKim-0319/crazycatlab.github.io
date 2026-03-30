@@ -1,34 +1,25 @@
 // Main JavaScript functionality
 document.addEventListener('DOMContentLoaded', function() {
-    // Initialize EmailJS (replace with your actual User ID)
-    // Get your User ID from https://dashboard.emailjs.com/admin/account
-    if (typeof emailjs !== 'undefined') {
-        emailjs.init("YOUR_EMAILJS_USER_ID"); // Replace with your EmailJS user ID
-    }
-    
     // Set current year in footer
     const currentYearElement = document.getElementById('currentYear');
     if (currentYearElement) {
         currentYearElement.textContent = new Date().getFullYear();
     }
-    
+
     // Initialize i18n (internationalization)
     if (typeof initI18n === 'function') {
         initI18n();
     }
-    
+
     // Initialize smooth scrolling
     initSmoothScrolling();
-    
-    // Initialize contact form
-    initContactForm();
-    
+
     // Initialize mobile menu
     initMobileMenu();
-    
+
     // Initialize scroll animations
     initScrollAnimations();
-    
+
     // Initialize header scroll effect
     initHeaderScrollEffect();
 });
@@ -52,135 +43,8 @@ function initSmoothScrolling() {
     });
 }
 
-// Scroll to section function
-function scrollToSection(sectionId) {
-    const target = document.getElementById(sectionId);
-    if (target) {
-        const headerHeight = document.querySelector('.header').offsetHeight || 0;
-        const targetPosition = target.offsetTop - headerHeight - 20;
-        
-        window.scrollTo({
-            top: targetPosition,
-            behavior: 'smooth'
-        });
-    }
-}
-
-// Contact form initialization
-function initContactForm() {
-    const form = document.getElementById('contact-form');
-    const statusDiv = document.getElementById('form-status');
-    
-    if (form) {
-        form.addEventListener('submit', async function(e) {
-            e.preventDefault();
-            
-            const formData = new FormData(form);
-            const name = formData.get('name');
-            const email = formData.get('email');
-            const message = formData.get('message');
-            
-            // Basic validation
-            if (!name || !email || !message) {
-                showFormStatus('Please fill in all fields.', 'error');
-                return;
-            }
-            
-            // Email validation
-            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-            if (!emailRegex.test(email)) {
-                showFormStatus('Please enter a valid email address.', 'error');
-                return;
-            }
-            
-            // Show loading state
-            showFormStatus('Sending message...', 'loading');
-            
-            try {
-                // EmailJS integration
-                if (typeof emailjs !== 'undefined') {
-                    const result = await emailjs.send('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', {
-                        from_name: name,
-                        from_email: email,
-                        message: message,
-                        to_email: 'your-email@example.com'
-                    });
-                    
-                    showFormStatus('Message sent successfully!', 'success');
-                    form.reset();
-                } else {
-                    throw new Error('EmailJS not loaded');
-                }
-            } catch (error) {
-                console.error('Form submission error:', error);
-                showFormStatus('Failed to send message. Please try again.', 'error');
-            }
-        });
-    }
-}
-
-// Show form status
-function showFormStatus(message, type) {
-    const statusDiv = document.getElementById('form-status');
-    if (statusDiv) {
-        statusDiv.textContent = message;
-        statusDiv.className = `form-status ${type}`;
-        statusDiv.style.display = 'block';
-        
-        if (type === 'success') {
-            setTimeout(() => {
-                statusDiv.style.display = 'none';
-            }, 5000);
-        }
-    }
-}
-
-// Mobile menu functionality - DISABLED to prevent conflict with head event listener
-function initMobileMenu() {
-    const menuToggle = document.querySelector('.mobile-menu-btn');
-    const navMenu = document.querySelector('.nav-menu');
-    
-    // Mobile menu is handled by head section - this function is disabled
-    
-    // COMMENTED OUT to prevent double event registration
-    // if (menuToggle && navMenu) {
-    //     menuToggle.addEventListener('click', function() {
-    //         toggleMobileMenu();
-    //     });
-        
-    //     // Close menu when clicking on nav links
-    //     navMenu.querySelectorAll('a').forEach(link => {
-    //         link.addEventListener('click', function() {
-    //             if (navMenu.classList.contains('active')) {
-    //                 toggleMobileMenu();
-    //             }
-    //         });
-    //     });
-    //     
-    //     // Close menu when clicking outside
-    //     document.addEventListener('click', function(e) {
-    //         if (!menuToggle.contains(e.target) && !navMenu.contains(e.target)) {
-    //             if (navMenu.classList.contains('active')) {
-    //                 toggleMobileMenu();
-    //             }
-    //         }
-    //     });
-    // }
-}
-
-// Toggle mobile menu
-function toggleMobileMenu() {
-    const menuToggle = document.querySelector('.mobile-menu-btn');
-    const navMenu = document.querySelector('.nav-menu');
-    
-    if (menuToggle && navMenu) {
-        navMenu.classList.toggle('active');
-        menuToggle.classList.toggle('active');
-        
-        // Prevent body scroll when menu is open
-        document.body.classList.toggle('menu-open', navMenu.classList.contains('active'));
-    }
-}
+// Mobile menu handled by head section script
+function initMobileMenu() {}
 
 // Scroll animations
 function initScrollAnimations() {
@@ -211,7 +75,7 @@ function initHeaderScrollEffect() {
     
     if (header) {
         window.addEventListener('scroll', function() {
-            const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            const scrollTop = window.scrollY || document.documentElement.scrollTop;
             
             if (scrollTop > 100) {
                 header.classList.add('scrolled');
@@ -231,49 +95,109 @@ function initHeaderScrollEffect() {
     }
 }
 
-// App modal functionality
+// Safe text escaping to prevent XSS
+function escapeHtml(str) {
+    if (!str) return '';
+    const div = document.createElement('div');
+    div.textContent = str;
+    return div.innerHTML;
+}
+
+// Safe URL validation
+function isValidUrl(url) {
+    try {
+        const parsed = new URL(url);
+        return ['http:', 'https:'].includes(parsed.protocol);
+    } catch { return false; }
+}
+
+// App modal functionality (safe DOM API version)
 function openAppModal(appKey) {
-    
-    if (!appData || !appData[appKey]) {
-        console.error('App data not found for:', appKey);
-        return;
-    }
-    
+    if (!appData || !appData[appKey]) return;
+
     const app = appData[appKey];
     const currentLang = localStorage.getItem('language') || 'en';
-    
-    // Create modal HTML
-    const modalHtml = `
-        <div class="modal-overlay" id="app-modal">
-            <div class="modal-content">
-                <button class="modal-close" onclick="closeAppModal()">&times;</button>
-                <div class="modal-header">
-                    <h2>${currentLang === 'ko' ? app.titleKo : app.title}</h2>
-                </div>
-                <div class="modal-body">
-                    <div class="app-gallery">
-                        ${app.images ? app.images.map((img, index) => `
-                            <img src="${img}" alt="${app.title} screenshot ${index + 1}" 
-                                 onclick="openImageModal('${img}')" loading="lazy">
-                        `).join('') : ''}
-                    </div>
-                    <div class="app-description">
-                        <p>${currentLang === 'ko' ? app.descriptionKo : app.description}</p>
-                    </div>
-                    <div class="app-links">
-                        ${app.storeUrl ? `<a href="${app.storeUrl}" target="_blank" class="btn btn-primary">Google Play</a>` : ''}
-                        ${app.storeUrlIos ? `<a href="${app.storeUrlIos}" target="_blank" class="btn btn-secondary">App Store</a>` : ''}
-                    </div>
-                </div>
-            </div>
-        </div>
-    `;
-    
-    // Add modal to page
-    document.body.insertAdjacentHTML('beforeend', modalHtml);
+
+    // Build modal using safe DOM APIs
+    const overlay = document.createElement('div');
+    overlay.className = 'modal-overlay';
+    overlay.id = 'app-modal';
+    overlay.setAttribute('role', 'dialog');
+    overlay.setAttribute('aria-modal', 'true');
+    overlay.setAttribute('aria-labelledby', 'app-modal-title');
+
+    const content = document.createElement('div');
+    content.className = 'modal-content';
+
+    const closeBtn = document.createElement('button');
+    closeBtn.className = 'modal-close';
+    closeBtn.textContent = '\u00D7';
+    closeBtn.setAttribute('aria-label', 'Close modal');
+    closeBtn.addEventListener('click', closeAppModal);
+
+    const header = document.createElement('div');
+    header.className = 'modal-header';
+    const title = document.createElement('h2');
+    title.id = 'app-modal-title';
+    title.textContent = currentLang === 'ko' ? (app.titleKo || app.title) : app.title;
+    header.appendChild(title);
+
+    const body = document.createElement('div');
+    body.className = 'modal-body';
+
+    // Gallery
+    const gallery = document.createElement('div');
+    gallery.className = 'app-gallery';
+    if (app.images) {
+        app.images.forEach(function(imgSrc, index) {
+            const img = document.createElement('img');
+            img.src = imgSrc;
+            img.alt = escapeHtml(app.title) + ' screenshot ' + (index + 1);
+            img.loading = 'lazy';
+            img.addEventListener('click', function() { openImageModal(imgSrc); });
+            gallery.appendChild(img);
+        });
+    }
+
+    // Description
+    const desc = document.createElement('div');
+    desc.className = 'app-description';
+    const descP = document.createElement('p');
+    descP.textContent = currentLang === 'ko' ? (app.descriptionKo || app.description) : app.description;
+    desc.appendChild(descP);
+
+    // Store links
+    const links = document.createElement('div');
+    links.className = 'app-links';
+    if (app.storeUrl && isValidUrl(app.storeUrl)) {
+        const a = document.createElement('a');
+        a.href = app.storeUrl;
+        a.target = '_blank';
+        a.rel = 'noopener noreferrer';
+        a.className = 'btn btn-primary';
+        a.textContent = 'Google Play';
+        links.appendChild(a);
+    }
+    if (app.storeUrlIos && isValidUrl(app.storeUrlIos)) {
+        const a = document.createElement('a');
+        a.href = app.storeUrlIos;
+        a.target = '_blank';
+        a.rel = 'noopener noreferrer';
+        a.className = 'btn btn-secondary';
+        a.textContent = 'App Store';
+        links.appendChild(a);
+    }
+
+    body.appendChild(gallery);
+    body.appendChild(desc);
+    body.appendChild(links);
+    content.appendChild(closeBtn);
+    content.appendChild(header);
+    content.appendChild(body);
+    overlay.appendChild(content);
+    document.body.appendChild(overlay);
     document.body.classList.add('modal-open');
-    
-    // Add escape key listener
+    closeBtn.focus();
     document.addEventListener('keydown', handleModalEscape);
 }
 
@@ -295,18 +219,36 @@ function handleModalEscape(e) {
     }
 }
 
-// Open image modal
+// Open image modal (safe DOM API version)
 function openImageModal(imageSrc) {
-    const imageModalHtml = `
-        <div class="image-modal-overlay" id="image-modal" onclick="closeImageModal()">
-            <div class="image-modal-content">
-                <button class="modal-close" onclick="closeImageModal()">&times;</button>
-                <img src="${imageSrc}" alt="App screenshot" onclick="event.stopPropagation()">
-            </div>
-        </div>
-    `;
-    
-    document.body.insertAdjacentHTML('beforeend', imageModalHtml);
+    if (!isValidUrl(imageSrc) && !imageSrc.startsWith('image/')) return;
+
+    const overlay = document.createElement('div');
+    overlay.className = 'image-modal-overlay';
+    overlay.id = 'image-modal';
+    overlay.setAttribute('role', 'dialog');
+    overlay.setAttribute('aria-modal', 'true');
+    overlay.addEventListener('click', closeImageModal);
+
+    const content = document.createElement('div');
+    content.className = 'image-modal-content';
+    content.addEventListener('click', function(e) { e.stopPropagation(); });
+
+    const closeBtn = document.createElement('button');
+    closeBtn.className = 'modal-close';
+    closeBtn.textContent = '\u00D7';
+    closeBtn.setAttribute('aria-label', 'Close image');
+    closeBtn.addEventListener('click', closeImageModal);
+
+    const img = document.createElement('img');
+    img.src = imageSrc;
+    img.alt = 'App screenshot';
+
+    content.appendChild(closeBtn);
+    content.appendChild(img);
+    overlay.appendChild(content);
+    document.body.appendChild(overlay);
+    closeBtn.focus();
 }
 
 // Close image modal
@@ -320,25 +262,6 @@ function closeImageModal() {
 // Register Service Worker
 if ('serviceWorker' in navigator) {
     window.addEventListener('load', function() {
-        navigator.serviceWorker.register('/sw.js')
-            .then(function(registration) {
-                console.log('ServiceWorker registration successful with scope: ', registration.scope);
-            })
-            .catch(function(err) {
-                console.log('ServiceWorker registration failed: ', err);
-            });
+        navigator.serviceWorker.register('/sw.js').catch(function() {});
     });
 }
-
-// Global functions for modal access - REMOVED to prevent head override conflict
-// These functions will be registered by head section after page load
-// window.openAppModal = openAppModal;
-// window.closeAppModal = closeAppModal; 
-// window.toggleMobileMenu = toggleMobileMenu;
-
-// Expose real functions for temporary functions to use
-window.realOpenAppModal = openAppModal;
-window.realCloseAppModal = closeAppModal;
-window.realToggleMobileMenu = toggleMobileMenu;
-
-// Main.js loaded successfully
