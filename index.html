@@ -266,6 +266,7 @@
 
             modal.style.display = 'block';
             document.body.style.overflow = 'hidden';
+            document.addEventListener('keydown', headHandleEscape);
         }
         
         function headCloseAppModal() {
@@ -273,6 +274,7 @@
             if (modal) {
                 modal.style.display = 'none';
                 document.body.style.overflow = 'auto';
+                document.removeEventListener('keydown', headHandleEscape);
             }
         }
         
@@ -293,6 +295,13 @@
             }
         }
         
+        // Escape key handler for modal
+        function headHandleEscape(e) {
+            if (e.key === 'Escape') {
+                headCloseAppModal();
+            }
+        }
+
         // Register functions after DOM loads
         document.addEventListener('DOMContentLoaded', function() {
             // 글로벌 함수 등록
