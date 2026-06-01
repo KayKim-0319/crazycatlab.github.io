@@ -208,9 +208,9 @@ function applyTranslations() {
         if (translation && translation !== key) {
             // 특별한 경우 처리 (날짜가 포함된 텍스트)
             if (key === 'privacy.updated' && element.querySelector('#privacy-date')) {
-                element.innerHTML = translation + '<span id="privacy-date">December 4, 2025</span>';
+                element.innerHTML = translation + '<span id="privacy-date">June 1, 2026</span>';
             } else if (key === 'terms.updated' && element.querySelector('#terms-date')) {
-                element.innerHTML = translation + '<span id="terms-date">December 4, 2025</span>';
+                element.innerHTML = translation + '<span id="terms-date">June 1, 2026</span>';
             } else {
                 element.textContent = translation;
             }

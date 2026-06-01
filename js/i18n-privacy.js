@@ -72,6 +72,27 @@ const privacyTranslations = {
         'privacy.thirdparty.links.google': 'Google Privacy Policy',
         'privacy.thirdparty.links.firebase': 'Firebase Privacy and Security',
 
+        // Device Identifiers and Advertising ID
+        'privacy.deviceid.title': 'Device Identifiers and Advertising ID',
+        'privacy.deviceid.intro': 'This app collects the following device identifiers for advertising, analytics, and security. Some are shared with the third parties below.',
+        'privacy.deviceid.collected.title': 'Identifiers Collected',
+        'privacy.deviceid.collected.item1': 'Advertising ID (Google Advertising ID, GAID)',
+        'privacy.deviceid.collected.item2': 'Firebase Installation ID and App Instance ID',
+        'privacy.deviceid.collected.item3': 'Device attributes used for integrity verification',
+        'privacy.deviceid.purpose.title': 'Purposes',
+        'privacy.deviceid.purpose.item1': 'Ad delivery and measurement (Google AdMob)',
+        'privacy.deviceid.purpose.item2': 'App usage analytics (Google Firebase Analytics)',
+        'privacy.deviceid.purpose.item3': 'Crash diagnostics and stability (Firebase Crashlytics)',
+        'privacy.deviceid.purpose.item4': 'Detecting tampering/hooking and protecting app integrity (Talsec freeRASP)',
+        'privacy.deviceid.sharing.title': 'Third-Party Sharing & Processing',
+        'privacy.deviceid.sharing.google.label': 'Google (AdMob):',
+        'privacy.deviceid.sharing.google.content': 'shares the advertising ID and device identifiers with Google for ad delivery, measurement, and fraud prevention.',
+        'privacy.deviceid.sharing.firebase.label': 'Google (Firebase Analytics/Crashlytics):',
+        'privacy.deviceid.sharing.firebase.content': 'processes device identifiers for analytics and crash diagnostics.',
+        'privacy.deviceid.sharing.talsec.label': 'Talsec (freeRASP):',
+        'privacy.deviceid.sharing.talsec.content': 'processes device-integrity information for app integrity and security threat monitoring.',
+        'privacy.deviceid.note': 'All data is transmitted securely over HTTPS. You can reset or delete your advertising ID in [Device Settings > Google > Ads].',
+
         // Data Retention
         'privacy.retention.title': 'Data Retention',
         'privacy.retention.local.title': 'Local Data',
@@ -194,6 +215,27 @@ const privacyTranslations = {
         'privacy.thirdparty.links.google': 'Google 개인정보처리방침',
         'privacy.thirdparty.links.firebase': 'Firebase 개인정보 및 보안',
 
+        // 기기 식별자 및 광고 ID 수집·이용
+        'privacy.deviceid.title': '기기 식별자 및 광고 ID 수집·이용',
+        'privacy.deviceid.intro': '본 앱은 광고, 분석, 보안을 위해 다음의 기기 식별자를 수집하며, 일부 항목은 아래 제3자와 공유됩니다.',
+        'privacy.deviceid.collected.title': '수집·이용하는 기기 식별자',
+        'privacy.deviceid.collected.item1': '광고 ID(Google 광고 ID, GAID)',
+        'privacy.deviceid.collected.item2': 'Firebase 설치 ID(Installation ID) 및 앱 인스턴스 ID',
+        'privacy.deviceid.collected.item3': '기기 무결성 검증을 위한 기기 특성 정보',
+        'privacy.deviceid.purpose.title': '수집 목적',
+        'privacy.deviceid.purpose.item1': '광고 게재 및 측정 (Google AdMob)',
+        'privacy.deviceid.purpose.item2': '앱 사용 통계·분석 (Google Firebase Analytics)',
+        'privacy.deviceid.purpose.item3': '비정상 종료(크래시) 진단 및 안정성 개선 (Firebase Crashlytics)',
+        'privacy.deviceid.purpose.item4': '앱 변조·후킹 등 보안 위협 탐지 및 무결성 보호 (Talsec freeRASP)',
+        'privacy.deviceid.sharing.title': '제3자 공유 및 처리 위탁',
+        'privacy.deviceid.sharing.google.label': 'Google (AdMob):',
+        'privacy.deviceid.sharing.google.content': '광고 ID 및 기기 식별자를 광고 게재·측정·사기 방지를 위해 Google과 공유합니다.',
+        'privacy.deviceid.sharing.firebase.label': 'Google (Firebase Analytics·Crashlytics):',
+        'privacy.deviceid.sharing.firebase.content': '분석 및 크래시 진단을 위해 기기 식별자가 처리됩니다.',
+        'privacy.deviceid.sharing.talsec.label': 'Talsec (freeRASP):',
+        'privacy.deviceid.sharing.talsec.content': '앱 무결성 및 보안 위협 모니터링을 위해 기기 무결성 관련 정보가 처리됩니다.',
+        'privacy.deviceid.note': '모든 데이터는 HTTPS(전송 계층 암호화)를 통해 안전하게 전송됩니다. 사용자는 [기기 설정 > Google > 광고]에서 광고 ID를 재설정하거나 삭제할 수 있습니다.',
+
         // 데이터 보관
         'privacy.retention.title': '데이터 보관',
         'privacy.retention.local.title': '로컬 데이터',
@@ -310,9 +352,9 @@ function applyTranslations() {
         if (translation && translation !== key) {
             // 특별한 경우 처리 (날짜가 포함된 텍스트)
             if (key === 'privacy.updated' && element.querySelector('#privacy-date')) {
-                element.innerHTML = translation + '<span id="privacy-date">December 4, 2025</span>';
+                element.innerHTML = translation + '<span id="privacy-date">June 1, 2026</span>';
             } else if (key === 'terms.updated' && element.querySelector('#terms-date')) {
-                element.innerHTML = translation + '<span id="terms-date">December 4, 2025</span>';
+                element.innerHTML = translation + '<span id="terms-date">June 1, 2026</span>';
             } else {
                 element.textContent = translation;
             }
