@@ -46,6 +46,18 @@ const termsTranslations = {
         'terms.termination.title': 'Termination',
         'terms.termination.content': 'We may terminate or suspend your access immediately, without prior notice or liability, for any reason whatsoever, including without limitation if you breach the Terms.',
         
+        'terms.purchase.title': 'Paid Services, Withdrawal of Purchase, and Refunds',
+        'terms.purchase.content': 'Some of our apps offer paid services such as premium features. All payments are processed through in-app purchases on the Google Play Store.',
+        'terms.purchase.item1': 'The price and contents of paid services are displayed on the purchase screen, and users may review them before completing payment.',
+        'terms.purchase.item2': 'Cancellations and refunds follow the refund policy and procedures of the Google Play Store. Users may request a refund through Google Play Support.',
+        'terms.purchase.item3': 'Users may withdraw their purchase in accordance with applicable law. However, withdrawal may be restricted where applicable law provides for such restrictions, for example where the user has already used the benefits of the paid service.',
+        'terms.purchase.item4': 'Refund inquiries may be submitted to support@crazycatlab.com, and we will handle them in accordance with applicable law.',
+
+        'terms.minors.title': 'Payments by Minors',
+        'terms.minors.content': 'Where a minor purchases a paid service, the consent of a legal guardian is required.',
+        'terms.minors.item1': 'A payment made by a minor without the consent of a legal guardian may be cancelled by the minor or the legal guardian in accordance with applicable law.',
+        'terms.minors.item2': 'To prevent unintended payments by minors, we recommend that legal guardians use the protective features provided by the Google Play Store, such as purchase approval and authentication settings.',
+
         'terms.disclaimer.title': 'Disclaimer',
         'terms.disclaimer.content': 'The information on this website is provided on an "as is" basis. To the fullest extent permitted by law, this Company:',
         'terms.disclaimer.item1': 'Excludes all representations and warranties relating to this website and its contents',
@@ -117,6 +129,18 @@ const termsTranslations = {
         'terms.termination.title': '종료',
         'terms.termination.content': '당사는 약관 위반을 포함하여 어떤 이유로든 사전 통지나 책임 없이 즉시 귀하의 액세스를 종료하거나 중단할 수 있습니다.',
         
+        'terms.purchase.title': '유료 서비스 및 청약철회·환불',
+        'terms.purchase.content': '당사 앱 중 일부는 프리미엄 기능 등 유료 서비스를 제공하며, 모든 결제는 Google Play 스토어의 인앱 결제를 통해 이루어집니다.',
+        'terms.purchase.item1': '유료 서비스의 가격과 제공 내용은 결제 화면에 표시되며, 이용자는 결제 전 이를 확인할 수 있습니다.',
+        'terms.purchase.item2': '결제의 취소 및 환불은 Google Play 스토어의 환불 정책과 절차에 따르며, 이용자는 Google Play 고객센터를 통해 환불을 요청할 수 있습니다.',
+        'terms.purchase.item3': '이용자는 관련 법령이 정하는 바에 따라 청약철회를 할 수 있습니다. 다만 이용자가 유료 서비스의 혜택을 이미 사용한 경우 등 관련 법령이 청약철회를 제한하는 사유에 해당하는 때에는 청약철회가 제한될 수 있습니다.',
+        'terms.purchase.item4': '환불에 관한 문의는 support@crazycatlab.com 으로 접수할 수 있으며, 당사는 관련 법령에 따라 처리합니다.',
+
+        'terms.minors.title': '미성년자의 결제',
+        'terms.minors.content': '미성년자가 유료 서비스를 결제하는 경우에는 법정대리인의 동의를 받아야 합니다.',
+        'terms.minors.item1': '법정대리인의 동의 없이 이루어진 미성년자의 결제는 본인 또는 법정대리인이 관련 법령에 따라 취소할 수 있습니다.',
+        'terms.minors.item2': '당사는 미성년자의 의도하지 않은 결제를 방지하기 위해, 법정대리인이 Google Play 스토어가 제공하는 구매 승인·인증 설정 등의 보호 기능을 이용할 것을 권장합니다.',
+
         'terms.disclaimer.title': '면책 조항',
         'terms.disclaimer.content': '본 웹사이트의 정보는 "있는 그대로" 제공됩니다. 법률이 허용하는 최대 범위 내에서 본 회사는:',
         'terms.disclaimer.item1': '본 웹사이트 및 그 내용과 관련된 모든 진술 및 보증을 배제합니다',
