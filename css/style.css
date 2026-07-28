@@ -1579,6 +1579,10 @@ body .modal {
     flex-shrink: 0;
     width: 200px;
     height: auto;
+    /* Reserve the slot before the image decodes so the gallery does not jump.
+       contain keeps apps whose screenshots differ from 9:16 undistorted. */
+    aspect-ratio: 9 / 16;
+    object-fit: contain;
     border-radius: 12px;
     border: 2px solid var(--border-color);
     transition: all 0.3s ease;
