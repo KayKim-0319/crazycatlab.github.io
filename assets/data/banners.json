@@ -1,21 +1,24 @@
 {
-  "version": 1,
+  "version": 2,
   "languages": {
     "ko": {
       "bannerTitle": "개발자의 다른 앱 둘러보기",
       "bannerButton": "둘러보기",
       "banners": {
         "banner_001": {
-          "description": "스마트 물 알림"
+          "description": "물 마시기 알림: 수분 섭취 워터트래커"
         },
         "banner_002": {
-          "description": "스마트 EQ 음악 플레이어"
-        },
-        "banner_003": {
-          "description": "스마트 생활 계산기"
+          "description": "음악 플레이어: 오프라인 MP3"
         },
         "banner_004": {
           "description": "음악 이퀄라이저 & 베이스"
+        },
+        "banner_005": {
+          "description": "필름 사진 필터: 빈티지 감성 보정"
+        },
+        "banner_006": {
+          "description": "포모도로 타이머: 공부, 집중, 목표, 디데이관리"
         }
       }
     },
@@ -24,16 +27,19 @@
       "bannerButton": "Explore",
       "banners": {
         "banner_001": {
-          "description": "Smart Water Reminder"
+          "description": "Water Reminder: Hydration Tracker"
         },
         "banner_002": {
-          "description": "Smart EQ Music Player"
-        },
-        "banner_003": {
-          "description": "Smart Daily Calculator"
+          "description": "Music Player: Offline MP3"
         },
         "banner_004": {
           "description": "Music Equalizer & Bass"
+        },
+        "banner_005": {
+          "description": "Film Photo Filter: Vintage Editor"
+        },
+        "banner_006": {
+          "description": "Pomodoro Timer: Study, Focus, Goals & D-Day"
         }
       }
     },
@@ -42,16 +48,19 @@
       "bannerButton": "見てみる",
       "banners": {
         "banner_001": {
-          "description": "スマート水リマインダー"
+          "description": "水分補給リマインダー：飲水トラッカー"
         },
         "banner_002": {
-          "description": "スマート EQ 音楽プレイヤー"
-        },
-        "banner_003": {
-          "description": "スマート生活計算機"
+          "description": "音楽プレーヤー：オフラインMP3"
         },
         "banner_004": {
-          "description": "音楽イコライザー & ベース"
+          "description": "音楽イコライザー＆重低音"
+        },
+        "banner_005": {
+          "description": "フィルム写真フィルター：レトロ加工"
+        },
+        "banner_006": {
+          "description": "ポモドーロタイマー：勉強・集中・Dデイ管理"
         }
       }
     },
@@ -60,16 +69,19 @@
       "bannerButton": "Смотреть",
       "banners": {
         "banner_001": {
-          "description": "Умное напоминание о воде"
+          "description": "Напоминание пить воду: трекер гидратации"
         },
         "banner_002": {
-          "description": "Умный эквалайзер для музыки"
-        },
-        "banner_003": {
-          "description": "Умный калькулятор повседневной жизни"
+          "description": "Музыкальный плеер: офлайн MP3"
         },
         "banner_004": {
-          "description": "Музыкальный эквалайзер и бас"
+          "description": "Эквалайзер и бас для музыки"
+        },
+        "banner_005": {
+          "description": "Плёночные фотофильтры: винтажный стиль"
+        },
+        "banner_006": {
+          "description": "Таймер Помодоро: учёба, фокус, цели, дедлайны"
         }
       }
     },
@@ -78,16 +90,19 @@
       "bannerButton": "Entdecken",
       "banners": {
         "banner_001": {
-          "description": "Intelligente Wassererinnerung"
+          "description": "Trink-Erinnerung & Wasser-Tracker"
         },
         "banner_002": {
-          "description": "Intelligenter Musik-Equalizer"
-        },
-        "banner_003": {
-          "description": "Intelligenter Alltags-Taschenrechner"
+          "description": "Musikplayer: Offline-MP3"
         },
         "banner_004": {
           "description": "Musik-Equalizer & Bass"
+        },
+        "banner_005": {
+          "description": "Retro-Filmfilter: Vintage-Bildbearbeitung"
+        },
+        "banner_006": {
+          "description": "Pomodoro-Timer: Lernen, Fokus, Ziele, Countdown"
         }
       }
     },
@@ -96,16 +111,19 @@
       "bannerButton": "استكشف",
       "banners": {
         "banner_001": {
-          "description": "تذكير ذكي بشرب الماء"
+          "description": "تذكير بشرب الماء: تتبع استهلاك الماء"
         },
         "banner_002": {
-          "description": "معادل صوت ذكي لتطبيق الموسيقى"
-        },
-        "banner_003": {
-          "description": "آلة حاسبة ذكية للحياة اليومية"
+          "description": "مشغل الموسيقى: MP3 بدون إنترنت"
         },
         "banner_004": {
-          "description": "معادل الموسيقى والباس"
+          "description": "معادل الصوت والباس للموسيقى"
+        },
+        "banner_005": {
+          "description": "فلتر صور الفيلم: تعديل بلمسة عتيقة"
+        },
+        "banner_006": {
+          "description": "مؤقت بومودورو: دراسة وتركيز وأهداف وعد تنازلي"
         }
       }
     },
@@ -114,16 +132,19 @@
       "bannerButton": "देखें",
       "banners": {
         "banner_001": {
-          "description": "स्मार्ट जल अनुस्मारक"
+          "description": "पानी पीने का रिमाइंडर: हाइड्रेशन ट्रैकर"
         },
         "banner_002": {
-          "description": "स्मार्ट संगीत EQ"
-        },
-        "banner_003": {
-          "description": "स्मार्ट दैनिक जीवन कैलकुलेटर"
+          "description": "म्यूज़िक प्लेयर: ऑफ़लाइन MP3"
         },
         "banner_004": {
-          "description": "संगीत इक्वलाइज़र और बास"
+          "description": "म्यूज़िक इक्वलाइज़र और बास"
+        },
+        "banner_005": {
+          "description": "फ़िल्म फ़ोटो फ़िल्टर: विंटेज एडिटिंग"
+        },
+        "banner_006": {
+          "description": "पोमोडोरो टाइमर: पढ़ाई, फोकस और लक्ष्य काउंटडाउन"
         }
       }
     },
@@ -132,16 +153,19 @@
       "bannerButton": "Jelajahi",
       "banners": {
         "banner_001": {
-          "description": "Pengingat Minum Air Pintar"
+          "description": "Pengingat Minum Air: Pelacak Hidrasi"
         },
         "banner_002": {
-          "description": "Pemutar Musik EQ Pintar"
-        },
-        "banner_003": {
-          "description": "Kalkulator Kehidupan Sehari-hari Pintar"
+          "description": "Pemutar Musik: MP3 Offline"
         },
         "banner_004": {
           "description": "Equalizer Musik & Bass"
+        },
+        "banner_005": {
+          "description": "Filter Foto Film: Edit Gaya Vintage"
+        },
+        "banner_006": {
+          "description": "Timer Pomodoro: Belajar, Fokus & Hitung Mundur"
         }
       }
     },
@@ -150,16 +174,19 @@
       "bannerButton": "Keşfet",
       "banners": {
         "banner_001": {
-          "description": "Akıllı Su Hatırlatıcısı"
+          "description": "Su İçme Hatırlatıcısı: Su Takibi"
         },
         "banner_002": {
-          "description": "Akıllı Müzik Eşitleyicisi"
-        },
-        "banner_003": {
-          "description": "Akıllı Günlük Yaşam Hesap Makinesi"
+          "description": "Müzik Çalar: Çevrimdışı MP3"
         },
         "banner_004": {
-          "description": "Müzik Ekolayzırı ve Bas"
+          "description": "Müzik Ekolayzeri ve Bas"
+        },
+        "banner_005": {
+          "description": "Film Fotoğraf Filtresi: Vintage Dokunuş"
+        },
+        "banner_006": {
+          "description": "Pomodoro Zamanlayıcı: Ders, Odak, Hedef ve Gün Sayacı"
         }
       }
     },
@@ -168,16 +195,19 @@
       "bannerButton": "Khám phá",
       "banners": {
         "banner_001": {
-          "description": "Nhắc Nhở Uống Nước Thông Minh"
+          "description": "Nhắc uống nước: Theo dõi lượng nước"
         },
         "banner_002": {
-          "description": "Trình Phát Nhạc EQ Thông Minh"
-        },
-        "banner_003": {
-          "description": "Máy Tính Sinh Hoạt Hàng Ngày Thông Minh"
+          "description": "Trình phát nhạc: MP3 ngoại tuyến"
         },
         "banner_004": {
-          "description": "Cân Bằng Âm Nhạc & Bass"
+          "description": "Equalizer nhạc & Tăng Bass"
+        },
+        "banner_005": {
+          "description": "Lọc ảnh phim: Chỉnh màu vintage"
+        },
+        "banner_006": {
+          "description": "Pomodoro: Học tập, Tập trung & Đếm ngược mục tiêu"
         }
       }
     },
@@ -186,16 +216,19 @@
       "bannerButton": "สำรวจ",
       "banners": {
         "banner_001": {
-          "description": "การเตือนน้ำอัจฉริยะ"
+          "description": "แจ้งเตือนดื่มน้ำ: ติดตามการดื่มน้ำ"
         },
         "banner_002": {
-          "description": "เครื่องเล่นเพลง EQ อัจฉริยะ"
-        },
-        "banner_003": {
-          "description": "เครื่องคิดเลขชีวิตประจำวันอัจฉริยะ"
+          "description": "เครื่องเล่นเพลง: MP3 ออฟไลน์"
         },
         "banner_004": {
-          "description": "อีควอไลเซอร์เพลงและเบส"
+          "description": "อีควอไลเซอร์เพลง & เพิ่มเบส"
+        },
+        "banner_005": {
+          "description": "ฟิลเตอร์ภาพฟิล์ม: แต่งภาพวินเทจ"
+        },
+        "banner_006": {
+          "description": "ตัวจับเวลาโพโมโดโร: เรียน โฟกัส เป้าหมาย นับถอยหลัง"
         }
       }
     },
@@ -204,16 +237,19 @@
       "bannerButton": "Terokai",
       "banners": {
         "banner_001": {
-          "description": "Peringatan Air Pintar"
+          "description": "Peringatan Minum Air: Penjejak Hidrasi"
         },
         "banner_002": {
-          "description": "Pemain Musik EQ Pintar"
-        },
-        "banner_003": {
-          "description": "Kalkulator Kehidupan Sehari-hari Pintar"
+          "description": "Pemain Muzik: MP3 Luar Talian"
         },
         "banner_004": {
-          "description": "Penyama Muzik & Bass"
+          "description": "Equalizer Muzik & Bass"
+        },
+        "banner_005": {
+          "description": "Penapis Foto Filem: Sunting Vintaj"
+        },
+        "banner_006": {
+          "description": "Pemasa Pomodoro: Belajar, Fokus & Kira Detik"
         }
       }
     },
@@ -222,16 +258,19 @@
       "bannerButton": "Découvrir",
       "banners": {
         "banner_001": {
-          "description": "Rappel d'eau intelligent"
+          "description": "Rappel d'hydratation : suivi de l'eau"
         },
         "banner_002": {
-          "description": "Lecteur Musique EQ Intelligent"
-        },
-        "banner_003": {
-          "description": "Calculatrice de vie quotidienne intelligente"
+          "description": "Lecteur de musique : MP3 hors ligne"
         },
         "banner_004": {
-          "description": "Égaliseur musical et basses"
+          "description": "Égaliseur de musique & basses"
+        },
+        "banner_005": {
+          "description": "Filtres photo argentique : retouche vintage"
+        },
+        "banner_006": {
+          "description": "Pomodoro : étude, focus, objectifs, échéances"
         }
       }
     },
@@ -240,16 +279,19 @@
       "bannerButton": "Scopri",
       "banners": {
         "banner_001": {
-          "description": "Promemoria intelligente per l'acqua"
+          "description": "Promemoria acqua: monitora l'idratazione"
         },
         "banner_002": {
-          "description": "Lettore Musica EQ Intelligente"
-        },
-        "banner_003": {
-          "description": "Calcolatrice intelligente della vita quotidiana"
+          "description": "Lettore musicale: MP3 offline"
         },
         "banner_004": {
           "description": "Equalizzatore musicale e bassi"
+        },
+        "banner_005": {
+          "description": "Filtro foto pellicola: ritocco vintage"
+        },
+        "banner_006": {
+          "description": "Timer Pomodoro: studio, focus, obiettivi, scadenze"
         }
       }
     },
@@ -258,16 +300,19 @@
       "bannerButton": "Odkryj",
       "banners": {
         "banner_001": {
-          "description": "Inteligentne przypomnienie wody"
+          "description": "Przypomnienie o piciu wody: tracker nawodnienia"
         },
         "banner_002": {
-          "description": "Inteligentny Odtwarzacz Muzyki EQ"
-        },
-        "banner_003": {
-          "description": "Inteligentny kalkulator życia codziennego"
+          "description": "Odtwarzacz muzyki: offline MP3"
         },
         "banner_004": {
-          "description": "Korektor muzyczny i bas"
+          "description": "Ekwalizator dźwięku i bas"
+        },
+        "banner_005": {
+          "description": "Filtry zdjęć retro: efekt vintage"
+        },
+        "banner_006": {
+          "description": "Timer Pomodoro: nauka, skupienie, cele, terminy"
         }
       }
     },
@@ -276,16 +321,19 @@
       "bannerButton": "浏览",
       "banners": {
         "banner_001": {
-          "description": "智能喝水提醒"
+          "description": "喝水提醒：饮水打卡追踪"
         },
         "banner_002": {
-          "description": "智能音乐均衡器"
-        },
-        "banner_003": {
-          "description": "智能日常生活计算器"
+          "description": "音乐播放器：离线MP3"
         },
         "banner_004": {
-          "description": "音乐均衡器 & 低音"
+          "description": "音乐均衡器＆低音增强"
+        },
+        "banner_005": {
+          "description": "胶片相机滤镜：复古感修图"
+        },
+        "banner_006": {
+          "description": "番茄钟：学习专注目标倒计时"
         }
       }
     },
@@ -294,16 +342,19 @@
       "bannerButton": "瀏覽",
       "banners": {
         "banner_001": {
-          "description": "智慧喝水提醒"
+          "description": "喝水提醒：飲水記錄追蹤"
         },
         "banner_002": {
-          "description": "智慧音樂均衡器"
-        },
-        "banner_003": {
-          "description": "智慧日常生活計算機"
+          "description": "音樂播放器：離線MP3"
         },
         "banner_004": {
-          "description": "音樂均衡器 & 低音"
+          "description": "音樂等化器＆重低音"
+        },
+        "banner_005": {
+          "description": "底片相機濾鏡：復古風修圖"
+        },
+        "banner_006": {
+          "description": "番茄鐘：讀書專注目標倒數"
         }
       }
     },
@@ -312,16 +363,19 @@
       "bannerButton": "瀏覽",
       "banners": {
         "banner_001": {
-          "description": "智能飲水提醒"
+          "description": "飲水提醒：飲水紀錄追蹤"
         },
         "banner_002": {
-          "description": "智能音樂均衡器"
-        },
-        "banner_003": {
-          "description": "智能日常生活計算機"
+          "description": "音樂播放器：離線MP3"
         },
         "banner_004": {
-          "description": "音樂均衡器 & 低音"
+          "description": "音樂均衡器＆重低音"
+        },
+        "banner_005": {
+          "description": "菲林相機濾鏡：懷舊風格修圖"
+        },
+        "banner_006": {
+          "description": "番茄鐘：溫習專注目標倒數"
         }
       }
     },
@@ -330,16 +384,19 @@
       "bannerButton": "Explorar",
       "banners": {
         "banner_001": {
-          "description": "Lembrete inteligente de água"
+          "description": "Lembrete de água: monitorização da hidratação"
         },
         "banner_002": {
-          "description": "Reprodutor Música EQ Inteligente"
-        },
-        "banner_003": {
-          "description": "Calculadora inteligente da vida cotidiana"
+          "description": "Leitor de música: MP3 offline"
         },
         "banner_004": {
           "description": "Equalizador de música e graves"
+        },
+        "banner_005": {
+          "description": "Filtro de fotos vintage: edição em película"
+        },
+        "banner_006": {
+          "description": "Pomodoro: estudo, foco, metas, contagem decrescente"
         }
       }
     },
@@ -348,16 +405,19 @@
       "bannerButton": "Explorar",
       "banners": {
         "banner_001": {
-          "description": "Lembrete inteligente para beber água"
+          "description": "Lembrete de água: monitoramento da hidratação"
         },
         "banner_002": {
-          "description": "Reprodutor Música EQ Inteligente"
-        },
-        "banner_003": {
-          "description": "Calculadora inteligente para a vida cotidiana"
+          "description": "Player de música: MP3 offline"
         },
         "banner_004": {
           "description": "Equalizador de música e graves"
+        },
+        "banner_005": {
+          "description": "Filtro de fotos vintage: efeito filme retrô"
+        },
+        "banner_006": {
+          "description": "Pomodoro: estudos, foco, metas e contagem regressiva"
         }
       }
     },
@@ -366,16 +426,19 @@
       "bannerButton": "גלה",
       "banners": {
         "banner_001": {
-          "description": "תזכורת חכמה למים"
+          "description": "תזכורת לשתיית מים: מעקב אחר צריכת מים"
         },
         "banner_002": {
-          "description": "נגן מוסיקה EQ חכם"
-        },
-        "banner_003": {
-          "description": "מחשבון חכם לחיי היום יום"
+          "description": "נגן מוזיקה: MP3 ללא אינטרנט"
         },
         "banner_004": {
-          "description": "אקולייזר מוזיקה ובס"
+          "description": "אקולייזר מוזיקה ובאס"
+        },
+        "banner_005": {
+          "description": "פילטר צילום פילם: סגנון וינטג'"
+        },
+        "banner_006": {
+          "description": "טיימר פומודורו: לימודים, ריכוז ומטרות עם ספירה לאחור"
         }
       }
     },
@@ -384,16 +447,19 @@
       "bannerButton": "Explorar",
       "banners": {
         "banner_001": {
-          "description": "Recordatorio inteligente de agua"
+          "description": "Recordatorio de agua: control de hidratación"
         },
         "banner_002": {
-          "description": "Reproductor Música EQ Inteligente"
-        },
-        "banner_003": {
-          "description": "Calculadora inteligente de la vida cotidiana"
+          "description": "Reproductor de música: MP3 sin conexión"
         },
         "banner_004": {
           "description": "Ecualizador de música y graves"
+        },
+        "banner_005": {
+          "description": "Filtro de carrete: edición vintage retro"
+        },
+        "banner_006": {
+          "description": "Pomodoro: estudio, foco, metas y cuenta atrás"
         }
       }
     },
@@ -402,16 +468,19 @@
       "bannerButton": "Explorar",
       "banners": {
         "banner_001": {
-          "description": "Recordatorio inteligente para beber agua"
+          "description": "Recordatorio de agua: rastreador de hidratación"
         },
         "banner_002": {
-          "description": "Reproductor Música EQ Inteligente"
-        },
-        "banner_003": {
-          "description": "Calculadora inteligente para la vida diaria"
+          "description": "Reproductor de música: MP3 offline"
         },
         "banner_004": {
-          "description": "Ecualizador de música y graves"
+          "description": "Ecualizador de música y bajos"
+        },
+        "banner_005": {
+          "description": "Filtro de rollo fotográfico: edición vintage"
+        },
+        "banner_006": {
+          "description": "Pomodoro: estudio, enfoque, metas y cuenta regresiva"
         }
       }
     },
@@ -420,16 +489,19 @@
       "bannerButton": "Ontdekken",
       "banners": {
         "banner_001": {
-          "description": "Slimme waterherinnering"
+          "description": "Waterherinnering: hydratatietracker"
         },
         "banner_002": {
-          "description": "Slimme Muziekspeler EQ"
-        },
-        "banner_003": {
-          "description": "Slimme dagelijks leven rekenmachine"
+          "description": "Muziekspeler: offline mp3"
         },
         "banner_004": {
-          "description": "Muziek-equalizer & bas"
+          "description": "Muziekequalizer & bas"
+        },
+        "banner_005": {
+          "description": "Filmfoto-filter: vintage bewerking"
+        },
+        "banner_006": {
+          "description": "Pomodoro-timer: studeren, focus, doelen, countdown"
         }
       }
     },
@@ -438,16 +510,19 @@
       "bannerButton": "Utforska",
       "banners": {
         "banner_001": {
-          "description": "Smart vattenerinring"
+          "description": "Drick vatten-påminnelse: Vattentracker"
         },
         "banner_002": {
-          "description": "Smart musikspelare EQ"
-        },
-        "banner_003": {
-          "description": "Smart miniräknare för vardagen"
+          "description": "Musikspelare: Offline MP3"
         },
         "banner_004": {
           "description": "Musikequalizer & bas"
+        },
+        "banner_005": {
+          "description": "Filmfotofilter: Vintagekänsla"
+        },
+        "banner_006": {
+          "description": "Pomodoro-timer: Studier, fokus, mål och nedräkning"
         }
       }
     },
@@ -456,16 +531,19 @@
       "bannerButton": "Utforsk",
       "banners": {
         "banner_001": {
-          "description": "Smart vannpåminnelse"
+          "description": "Påminnelse om vanndrikking: Vanntracker"
         },
         "banner_002": {
-          "description": "Smart musikspiller EQ"
-        },
-        "banner_003": {
-          "description": "Smart kalkulator for dagliglivet"
+          "description": "Musikkspiller: Offline MP3"
         },
         "banner_004": {
-          "description": "Musikk-equalizer & bass"
+          "description": "Musikkequalizer og bass"
+        },
+        "banner_005": {
+          "description": "Filmfotofilter: Vintage-følelse"
+        },
+        "banner_006": {
+          "description": "Pomodoro-timer: Studier, fokus, mål og nedtelling"
         }
       }
     },
@@ -474,16 +552,19 @@
       "bannerButton": "Udforsk",
       "banners": {
         "banner_001": {
-          "description": "Smart vandpåmindelse"
+          "description": "Påmindelse om at drikke vand: Vandtracker"
         },
         "banner_002": {
-          "description": "Smart musikafspiller EQ"
-        },
-        "banner_003": {
-          "description": "Smart dagligdags regnemaskine"
+          "description": "Musikafspiller: Offline MP3"
         },
         "banner_004": {
-          "description": "Musik-equalizer & bas"
+          "description": "Musikequalizer og bas"
+        },
+        "banner_005": {
+          "description": "Filmfotofilter: Vintage-stemning"
+        },
+        "banner_006": {
+          "description": "Pomodoro-timer: Studier, fokus, mål og nedtælling"
         }
       }
     },
@@ -492,16 +573,19 @@
       "bannerButton": "Prozkoumat",
       "banners": {
         "banner_001": {
-          "description": "Inteligentní připomenutí vody"
+          "description": "Připomínka pití vody: sledování hydratace"
         },
         "banner_002": {
-          "description": "Inteligentní hudební přehrávač EQ"
-        },
-        "banner_003": {
-          "description": "Inteligentní kalkulačka na každodenní život"
+          "description": "Hudební přehrávač: offline MP3"
         },
         "banner_004": {
-          "description": "Hudební ekvalizér a basy"
+          "description": "Ekvalizér hudby a basy"
+        },
+        "banner_005": {
+          "description": "Foto filtry retro: vintage styl"
+        },
+        "banner_006": {
+          "description": "Pomodoro časovač: studium, fokus, cíle, termíny"
         }
       }
     },
@@ -510,16 +594,19 @@
       "bannerButton": "Explorează",
       "banners": {
         "banner_001": {
-          "description": "Reamintire inteligentă de apă"
+          "description": "Reamintire hidratare: urmărește consumul de apă"
         },
         "banner_002": {
-          "description": "Playerul Muzică EQ Inteligent"
-        },
-        "banner_003": {
-          "description": "Calculator inteligent al vieții cotidiene"
+          "description": "Player de muzică: MP3 offline"
         },
         "banner_004": {
-          "description": "Egalizator muzical și bass"
+          "description": "Egalizator muzical și bas"
+        },
+        "banner_005": {
+          "description": "Filtru foto peliculă: retuș vintage retro"
+        },
+        "banner_006": {
+          "description": "Pomodoro: studiu, concentrare, obiective, numărătoare inversă"
         }
       }
     },
@@ -528,16 +615,19 @@
       "bannerButton": "Εξερεύνηση",
       "banners": {
         "banner_001": {
-          "description": "Έξυπνη υπενθύμιση νερού"
+          "description": "Υπενθύμιση νερού: Καταγραφή κατανάλωσης νερού"
         },
         "banner_002": {
-          "description": "Έξυπνος Αναπαραγωγός Μουσικής EQ"
-        },
-        "banner_003": {
-          "description": "Έξυπνη αριθμομηχανή καθημερινής ζωής"
+          "description": "Media Player μουσικής: MP3 Offline"
         },
         "banner_004": {
-          "description": "Ισοσταθμιστής μουσικής & μπάσο"
+          "description": "Ισοσταθμιστής μουσικής & μπάσου"
+        },
+        "banner_005": {
+          "description": "Φίλτρο φωτογραφιών φιλμ: Vintage διάθεση"
+        },
+        "banner_006": {
+          "description": "Χρονόμετρο Pomodoro: Μελέτη, συγκέντρωση, στόχοι & αντίστροφη μέτρηση"
         }
       }
     },
@@ -546,16 +636,19 @@
       "bannerButton": "Tutustu",
       "banners": {
         "banner_001": {
-          "description": "Älykäs vesimuistutus"
+          "description": "Vedenjuontimuistutus: Nesteytyksen seuranta"
         },
         "banner_002": {
-          "description": "Älykäs musiikkisovitin EQ"
-        },
-        "banner_003": {
-          "description": "Älykäs päivittäisen elämän laskin"
+          "description": "Musiikkisoitin: Offline MP3"
         },
         "banner_004": {
-          "description": "Musiikkitaajuuskorjain & basso"
+          "description": "Musiikkiequalizer ja basso"
+        },
+        "banner_005": {
+          "description": "Filmivalokuvasuodin: Vintage-tunnelma"
+        },
+        "banner_006": {
+          "description": "Pomodoro-ajastin: Opiskelu, keskittyminen, tavoitteet ja laskuri"
         }
       }
     },
@@ -564,16 +657,19 @@
       "bannerButton": "Felfedezés",
       "banners": {
         "banner_001": {
-          "description": "Intelligens vízfigyelmeztetés"
+          "description": "Vízivó emlékeztető: Vízfogyasztás-követő"
         },
         "banner_002": {
-          "description": "Intelligens Zenelejátszó EQ"
-        },
-        "banner_003": {
-          "description": "Intelligens mindennapi élet számológép"
+          "description": "Zenelejátszó: Offline MP3"
         },
         "banner_004": {
-          "description": "Zenei kiegyenlítő és basszus"
+          "description": "Zenei equalizer és basszus"
+        },
+        "banner_005": {
+          "description": "Filmes fotószűrő: Vintage hangulat"
+        },
+        "banner_006": {
+          "description": "Pomodoro időzítő: Tanulás, fókusz, célok és visszaszámlálás"
         }
       }
     },
@@ -582,16 +678,19 @@
       "bannerButton": "ஆராயுங்கள்",
       "banners": {
         "banner_001": {
-          "description": "ஸ்மார்ட் நீர் நினைவூட்டல்"
+          "description": "தண்ணீர் குடிக்க நினைவூட்டல்: நீரேற்ற டிராக்கர்"
         },
         "banner_002": {
-          "description": "ஸ்மார்ட் இசை இ கியு"
-        },
-        "banner_003": {
-          "description": "ஸ்மார்ட் தினசரி வாழ்க்கை கணக்கெடுப்பு"
+          "description": "இசை பிளேயர்: ஆஃப்லைன் MP3"
         },
         "banner_004": {
-          "description": "இசை சமநிலை & பாஸ்"
+          "description": "இசை ஈக்குவலைசர் & பாஸ்"
+        },
+        "banner_005": {
+          "description": "ஃபிலிம் ஃபோட்டோ ஃபில்டர்: வின்டேஜ் எடிட்டிங்"
+        },
+        "banner_006": {
+          "description": "போமோடோரோ டைமர்: படிப்பு, கவனம், இலக்கு கவுண்ட்டவுன்"
         }
       }
     },
@@ -600,16 +699,19 @@
       "bannerButton": "Дослідити",
       "banners": {
         "banner_001": {
-          "description": "Розумне нагадування про воду"
+          "description": "Нагадування пити воду: трекер гідратації"
         },
         "banner_002": {
-          "description": "Розумний музичний плеєр EQ"
-        },
-        "banner_003": {
-          "description": "Розумний калькулятор повсякденного життя"
+          "description": "Музичний плеєр: офлайн MP3"
         },
         "banner_004": {
           "description": "Музичний еквалайзер і бас"
+        },
+        "banner_005": {
+          "description": "Плівкові фотофільтри: вінтажний стиль"
+        },
+        "banner_006": {
+          "description": "Таймер Помодоро: навчання, фокус, цілі, дедлайни"
         }
       }
     },
@@ -618,16 +720,19 @@
       "bannerButton": "Разгледай",
       "banners": {
         "banner_001": {
-          "description": "Интелигентно напомняне за вода"
+          "description": "Напомняне за вода: тракер на хидратацията"
         },
         "banner_002": {
-          "description": "Интелигентен музикален плеър EQ"
-        },
-        "banner_003": {
-          "description": "Интелигентен ежедневен калкулатор"
+          "description": "Музикален плейър: офлайн MP3"
         },
         "banner_004": {
           "description": "Музикален еквалайзер и бас"
+        },
+        "banner_005": {
+          "description": "Ретро фото филтри: винтидж стил"
+        },
+        "banner_006": {
+          "description": "Таймер Помодоро: учене, фокус, цели, срокове"
         }
       }
     },
@@ -636,16 +741,19 @@
       "bannerButton": "Preskúmať",
       "banners": {
         "banner_001": {
-          "description": "Inteligentná upozornenie na vodu"
+          "description": "Pripomienka pitia vody: sledovanie hydratácie"
         },
         "banner_002": {
-          "description": "Inteligentný hudobný prehrávač EQ"
-        },
-        "banner_003": {
-          "description": "Inteligentná kalkulačka na každodenný život"
+          "description": "Hudobný prehrávač: offline MP3"
         },
         "banner_004": {
-          "description": "Hudobný ekvalizér a basy"
+          "description": "Ekvalizér hudby a basy"
+        },
+        "banner_005": {
+          "description": "Foto filtre retro: vintage štýl"
+        },
+        "banner_006": {
+          "description": "Pomodoro časovač: štúdium, fokus, ciele, termíny"
         }
       }
     },
@@ -654,16 +762,19 @@
       "bannerButton": "Razišči",
       "banners": {
         "banner_001": {
-          "description": "Pametno opominjanje vode"
+          "description": "Opomnik za pitje vode: sledenje hidraciji"
         },
         "banner_002": {
-          "description": "Pametni glasbeni predvajalnik EQ"
-        },
-        "banner_003": {
-          "description": "Pametni kalkulator vsakdanjega življenja"
+          "description": "Predvajalnik glasbe: offline MP3"
         },
         "banner_004": {
-          "description": "Glasbeni izenačevalnik in bas"
+          "description": "Glasbeni ekvalizator in bas"
+        },
+        "banner_005": {
+          "description": "Foto filtri retro: vintage stil"
+        },
+        "banner_006": {
+          "description": "Pomodoro časovnik: učenje, fokus, cilji, roki"
         }
       }
     },
@@ -672,16 +783,19 @@
       "bannerButton": "Истражи",
       "banners": {
         "banner_001": {
-          "description": "Паметно подсећање о води"
+          "description": "Подсетник за воду: трекер хидратације"
         },
         "banner_002": {
-          "description": "Паметан музички плејер EQ"
-        },
-        "banner_003": {
-          "description": "Паметан калкулатор свакодневног живота"
+          "description": "Плејер за музику: офлајн MP3"
         },
         "banner_004": {
-          "description": "Музички еквалајзер и бас"
+          "description": "Музички еквилајзер и бас"
+        },
+        "banner_005": {
+          "description": "Ретро фото филтери: винтидж стил"
+        },
+        "banner_006": {
+          "description": "Помодоро тајмер: учење, фокус, циљеви, рокови"
         }
       }
     },
@@ -690,16 +804,19 @@
       "bannerButton": "Hlola",
       "banners": {
         "banner_001": {
-          "description": "Okukhumbula kokunca amanzi okusoka"
+          "description": "Isikhumbuzo Sokuphuza Amanzi: Isilandeleli Samanzi"
         },
         "banner_002": {
-          "description": "Isikhali semusika se-EQ esosoka"
-        },
-        "banner_003": {
-          "description": "Isibali sesosoka sokuphila nsuku zonke"
+          "description": "Isidlali Somculo: I-MP3 Ngaphandle Kwe-Inthanethi"
         },
         "banner_004": {
-          "description": "Isilungiseleli somculo ne-bass"
+          "description": "I-Equalizer Yomculo ne-Bass"
+        },
+        "banner_005": {
+          "description": "Isihlungi Sezithombe ze-Filimu: Umuzwa Wakudala"
+        },
+        "banner_006": {
+          "description": "Isibali-Sikhathi se-Pomodoro: Ukufunda, Ukugxila, Izinjongo Nosuku Olubaliwe"
         }
       }
     },
@@ -708,16 +825,19 @@
       "bannerButton": "Gundua",
       "banners": {
         "banner_001": {
-          "description": "Kumbukumbu ya Akili ya Maji"
+          "description": "Kikumbusho cha Kunywa Maji: Kifuatiliaji cha Maji"
         },
         "banner_002": {
-          "description": "Kichezaji Muziki cha Akili cha EQ"
-        },
-        "banner_003": {
-          "description": "Kikokotoo cha Akili cha Maisha ya Kila Siku"
+          "description": "Kicheza Muziki: MP3 Bila Mtandao"
         },
         "banner_004": {
-          "description": "Kisawazisha Muziki & Bass"
+          "description": "Kisawazishaji cha Muziki na Besi"
+        },
+        "banner_005": {
+          "description": "Kichujio cha Picha za Filamu: Mtindo wa Kale"
+        },
+        "banner_006": {
+          "description": "Kipima Muda cha Pomodoro: Kusoma, Kuzingatia, Malengo na Kuhesabu Siku"
         }
       }
     },
@@ -726,16 +846,19 @@
       "bannerButton": "Istraži",
       "banners": {
         "banner_001": {
-          "description": "Pametni podsjetnik vode"
+          "description": "Podsjetnik za vodu: praćenje hidracije"
         },
         "banner_002": {
-          "description": "Pametni glazbeni ključ EQ"
-        },
-        "banner_003": {
-          "description": "Pametni kalkulator svakodnevnog života"
+          "description": "Reproduktor glazbe: offline MP3"
         },
         "banner_004": {
           "description": "Glazbeni ekvalizator i bas"
+        },
+        "banner_005": {
+          "description": "Foto filtri retro: vintage stil"
+        },
+        "banner_006": {
+          "description": "Pomodoro timer: učenje, fokus, ciljevi, rokovi"
         }
       }
     },
@@ -744,16 +867,19 @@
       "bannerButton": "Судлах",
       "banners": {
         "banner_001": {
-          "description": "Ухаалаг усны сэрэмжлүүлэг"
+          "description": "Ус уух сануулга: чийгшлийн хяналт"
         },
         "banner_002": {
-          "description": "Ухаалаг хөгжімний ойлголтоор EQ"
-        },
-        "banner_003": {
-          "description": "Ухаалаг өдөр тутмын амьдралын тооцоолуур"
+          "description": "Хөгжмийн тоглуулагч: офлайн MP3"
         },
         "banner_004": {
-          "description": "Хөгжмийн тэгшитгэгч ба басс"
+          "description": "Хөгжмийн эквалайзер ба бас"
+        },
+        "banner_005": {
+          "description": "Ретро гэрэл зургийн шүүлтүүр: винтаж загвар"
+        },
+        "banner_006": {
+          "description": "Помодоро таймер: хичээл, анхаарал, зорилго, хугацаа"
         }
       }
     },
@@ -762,16 +888,19 @@
       "bannerButton": "გაიცანი",
       "banners": {
         "banner_001": {
-          "description": "ჭკვიანი წამილის შეხსენებამა"
+          "description": "წყლის დალევის შეხსენება: წყლის მიღების ტრეკერი"
         },
         "banner_002": {
-          "description": "ჭკვიანი მუსიკის ფლეიერი EQ"
-        },
-        "banner_003": {
-          "description": "ჭკვიანი ყოველდღიური ცხოვრების კალკულატორი"
+          "description": "მუსიკის პლეერი: ოფლაინ MP3"
         },
         "banner_004": {
-          "description": "მუსიკალური ეკვალაიზერი და ბასი"
+          "description": "მუსიკის ეკვალაიზერი და ბასი"
+        },
+        "banner_005": {
+          "description": "ფილმის ფოტოფილტრი: ვინტაჟური სტილი"
+        },
+        "banner_006": {
+          "description": "პომოდორო ტაიმერი: სწავლა, კონცენტრაცია, მიზნები და უკუთვლა"
         }
       }
     },
@@ -780,16 +909,19 @@
       "bannerButton": "Avasta",
       "banners": {
         "banner_001": {
-          "description": "Nutikas veemälestus"
+          "description": "Vee joomise meeldetuletus: Veetarbimise jälgija"
         },
         "banner_002": {
-          "description": "Nutikas muusikamängija EQ"
-        },
-        "banner_003": {
-          "description": "Nutikas igapäevase elu kalkulaator"
+          "description": "Muusikamängija: Offline MP3"
         },
         "banner_004": {
           "description": "Muusika ekvalaiser ja bass"
+        },
+        "banner_005": {
+          "description": "Filmifoto filter: Vintage-tunne"
+        },
+        "banner_006": {
+          "description": "Pomodoro taimer: Õppimine, fookus, eesmärgid ja loendur"
         }
       }
     },
@@ -798,16 +930,19 @@
       "bannerButton": "Skoða",
       "banners": {
         "banner_001": {
-          "description": "Snjall vatnsáminning"
+          "description": "Áminning um vatnsdrykkju: Vatnsneyslumælir"
         },
         "banner_002": {
-          "description": "Snjall tónlistastöð EQ"
-        },
-        "banner_003": {
-          "description": "Snjall daglegra lífsreikning"
+          "description": "Tónlistarspilari: MP3 án nettengingar"
         },
         "banner_004": {
-          "description": "Tónlistarjafnari og bass"
+          "description": "Tónjafnari: Tónlist og bassi"
+        },
+        "banner_005": {
+          "description": "Ljósmyndasía í filmustíl: Vintage-blær"
+        },
+        "banner_006": {
+          "description": "Pomodoro-tímamælir: Nám, einbeiting, markmið og niðurtalning"
         }
       }
     },
@@ -816,16 +951,19 @@
       "bannerButton": "Даследаваць",
       "banners": {
         "banner_001": {
-          "description": "Разумнае напамінаньне аб вадзе"
+          "description": "Напамін піць ваду: трэкер гідратацыі"
         },
         "banner_002": {
-          "description": "Разумны музычны плеер EQ"
-        },
-        "banner_003": {
-          "description": "Разумны калькулятар для штодзённага жыцця"
+          "description": "Музычны плэер: афлайн MP3"
         },
         "banner_004": {
           "description": "Музычны эквалайзер і бас"
+        },
+        "banner_005": {
+          "description": "Плёначныя фотафільтры: вінтажны стыль"
+        },
+        "banner_006": {
+          "description": "Таймер Памадора: вучоба, фокус, мэты, тэрміны"
         }
       }
     },
@@ -834,16 +972,19 @@
       "bannerButton": "Зерттеу",
       "banners": {
         "banner_001": {
-          "description": "Ақылды сумен еске салу"
+          "description": "Су ішу еске салғышы: гидратация трекері"
         },
         "banner_002": {
-          "description": "Ақылды музыка ойнатқышы EQ"
-        },
-        "banner_003": {
-          "description": "Ақылды күнделік өмірдің калькуляторы"
+          "description": "Музыка ойнатқыш: офлайн MP3"
         },
         "banner_004": {
-          "description": "Музыкалық эквалайзер және басс"
+          "description": "Музыкалық эквалайзер және бас"
+        },
+        "banner_005": {
+          "description": "Ретро фотосурет сүзгісі: винтаж әсері"
+        },
+        "banner_006": {
+          "description": "Помодоро таймері: оқу, зейін, мақсат, мерзім"
         }
       }
     },
@@ -852,16 +993,19 @@
       "bannerButton": "Ko'rish",
       "banners": {
         "banner_001": {
-          "description": "Aqlli suv eslatmasi"
+          "description": "Suv ichish eslatmasi: gidratatsiya trekeri"
         },
         "banner_002": {
-          "description": "Aqlli musiqa ijrochisi EQ"
-        },
-        "banner_003": {
-          "description": "Aqlli kundalik hayot kalkulyatori"
+          "description": "Musiqa pleyeri: oflayn MP3"
         },
         "banner_004": {
-          "description": "Musiqa ekvalayzer va bass"
+          "description": "Musiqa ekvalayzeri va bas"
+        },
+        "banner_005": {
+          "description": "Plyonka foto filtri: vintage uslub"
+        },
+        "banner_006": {
+          "description": "Pomodoro taymeri: dars, diqqat, maqsad, muddat"
         }
       }
     }
@@ -872,7 +1016,7 @@
       "title": "WaterCoach",
       "imageUrl": "https://play-lh.googleusercontent.com/rYjB6teF5LGfWSZYsALQPq-m9Oubc55Y-3gvzDJkr-i7QHnR8dOd2F7ZGv6Apq0SbeDQ_uwMSlrAN3WDs2gCZQ=w240-h480-rw",
       "storeUrl": "market://details?id=com.crazycatlab.watercoach",
-      "priority": 3,
+      "priority": 5,
       "isActive": true
     },
     {
@@ -884,19 +1028,27 @@
       "isActive": true
     },
     {
-      "id": "banner_003",
-      "title": "EveryCalc",
-      "imageUrl": "https://play-lh.googleusercontent.com/CAOFQoS_8e87RA9IV8o1ziQ_YQUKLyu1mc5YcHk5lLBgS22biMe6QsfN7-DdbwXYqNZVSLKiGxzEWeiTF56COQ=w240-h480-rw",
-      "storeUrl": "market://details?id=com.crazycatlab.every_calc",
-      "priority": 4,
-      "isActive": true
-    },
-    {
       "id": "banner_004",
       "title": "Dodo EQ",
       "imageUrl": "https://play-lh.googleusercontent.com/gM5z9fQz_dz6NJqimDxd8YsxcwZHBhT4hyT3tyjzgFxAYHSMwRAOlLGoW8gRdh8sfqyxS4FJ58T4a0eGvIti=w240-h480-rw",
       "storeUrl": "market://details?id=com.crazycatlab.dodo_eq",
       "priority": 1,
+      "isActive": true
+    },
+    {
+      "id": "banner_005",
+      "title": "Photo Filter Editor Retro Film",
+      "imageUrl": "https://play-lh.googleusercontent.com/Aoy1LE95kJyrJVy2Nc36BesAyhvf3BdA6BmBOuDR0rdGrDHeCX2iAQDHP22RuB_yjaNrN8ofvNDO3J_jyi9g8A=w240-h480-rw",
+      "storeUrl": "market://details?id=com.crazycatlab.dodo_grain",
+      "priority": 3,
+      "isActive": true
+    },
+    {
+      "id": "banner_006",
+      "title": "Pomodoro Timer - Study & Focus",
+      "imageUrl": "https://play-lh.googleusercontent.com/gyBO4-w9frtxRZbEhr_avI5i7U-yfD-FElF9gKY_4aCs4haAEAmM9tHd40mm48JD14IG-SsJOPogwRG40PAsyQ=w240-h480-rw",
+      "storeUrl": "market://details?id=com.crazycatlab.corefocus",
+      "priority": 4,
       "isActive": true
     }
   ]
