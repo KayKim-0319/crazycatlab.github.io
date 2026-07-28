@@ -275,6 +275,8 @@ function switchToKorean() {
     localStorage.setItem('language', 'ko');
     applyTranslations();
     updateLanguageButtons();
+    // 모달이 열려 있으면 본문도 새 언어로 다시 그린다 (data-i18n 대상이 아님)
+    if (typeof window.refreshOpenModal === 'function') window.refreshOpenModal();
 }
 
 function switchToEnglish() {
@@ -282,6 +284,8 @@ function switchToEnglish() {
     localStorage.setItem('language', 'en');
     applyTranslations();
     updateLanguageButtons();
+    // 모달이 열려 있으면 본문도 새 언어로 다시 그린다 (data-i18n 대상이 아님)
+    if (typeof window.refreshOpenModal === 'function') window.refreshOpenModal();
 }
 
 // Initialize language buttons and translations on page load

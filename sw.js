@@ -36,7 +36,14 @@ function isNetworkFirst(request) {
 
 async function networkFirst(request) {
     try {
-        const response = await fetch(request);
+        // A plain fetch() may still be answered from the browser's HTTP cache,
+        // which would defeat network-first. 'no-cache' forces revalidation:
+        // the server replies 304 when nothing changed, so this costs little.
+        const revalidating = new Request(request.url, {
+            cache: 'no-cache',
+            credentials: 'same-origin'
+        });
+        const response = await fetch(revalidating);
         if (response && response.ok) {
             const cache = await caches.open(CACHE_NAME);
             cache.put(request, response.clone());

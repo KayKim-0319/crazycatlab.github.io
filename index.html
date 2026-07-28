@@ -204,9 +204,13 @@
             return a;
         }
 
+        // Which app the dialog currently shows, so it can be re-rendered on language change
+        let headCurrentAppId = null;
+
         function headOpenAppModal(appId) {
             const app = appData[appId];
             if (!app) return;
+            headCurrentAppId = appId;
 
             const modal = document.getElementById('appModal');
             const modalTitle = document.getElementById('modalTitle');
@@ -284,7 +288,12 @@
                 }
             }
 
+            // Re-rendering an already open dialog (language change) must not lock
+            // the scroll a second time or steal the focus the user is on.
+            const wasOpen = modal.style.display === 'block';
             modal.style.display = 'block';
+            if (wasOpen) return;
+
             headLockScroll();
 
             // Move focus into the dialog and remember where it came from.
@@ -300,6 +309,7 @@
             if (!modal) return;
 
             modal.style.display = 'none';
+            headCurrentAppId = null;
             headUnlockScroll();
             document.removeEventListener('keydown', headHandleModalKeydown);
 
@@ -389,13 +399,35 @@
             }
         }
 
+        // Re-render the open dialog in the newly selected language (called by i18n)
+        function headRefreshOpenModal() {
+            const modal = document.getElementById('appModal');
+            if (!headCurrentAppId || !modal || modal.style.display !== 'block') return;
+            headOpenAppModal(headCurrentAppId);
+        }
+
         // Register functions after DOM loads
         document.addEventListener('DOMContentLoaded', function() {
             // 글로벌 함수 등록
             window.openAppModal = headOpenAppModal;
             window.closeAppModal = headCloseAppModal;
             window.toggleMobileMenu = headToggleMobileMenu;
-            
+            window.refreshOpenModal = headRefreshOpenModal;
+
+            // 오버레이를 직접 눌러서 뗐을 때만 닫는다.
+            // 본문에서 드래그로 텍스트를 선택하다 오버레이에서 손을 떼도 닫히던 문제 방지.
+            const appModal = document.getElementById('appModal');
+            if (appModal) {
+                let pressedOnOverlay = false;
+                appModal.addEventListener('mousedown', function(e) {
+                    pressedOnOverlay = (e.target === appModal);
+                });
+                appModal.addEventListener('click', function(e) {
+                    if (pressedOnOverlay && e.target === appModal) headCloseAppModal();
+                    pressedOnOverlay = false;
+                });
+            }
+
             // 모바일 메뉴 이벤트 등록
             const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
             const navMenu = document.querySelector('.nav-menu');
@@ -1004,8 +1036,8 @@
     <!-- Debug Script -->
 
     <!-- App Modal -->
-    <div id="appModal" class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle" onclick="closeAppModal()">
-        <div class="modal-content" onclick="event.stopPropagation()">
+    <div id="appModal" class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+        <div class="modal-content">
             <div class="modal-header">
                 <h3 id="modalTitle"></h3>
                 <button class="modal-close" aria-label="Close modal" onclick="closeAppModal()">&times;</button>
