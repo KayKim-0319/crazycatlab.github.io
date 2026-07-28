@@ -163,6 +163,22 @@
                 descriptionKo: 'Dodo EQ - Music Equalizer Bass. 프로페셔널 오디오 이퀄라이저로 음악 감상 경험을 향상시키세요. Dodo EQ는 직관적인 컨트롤과 강력한 사운드 엔진으로 모든 음악 장르를 최상의 품질로 즐길 수 있습니다.',
                 storeUrl: 'https://play.google.com/store/apps/details?id=com.crazycatlab.dodo_eq',
                 images: ['image/dodo_eq/dodo_eq_1.webp', 'image/dodo_eq/dodo_eq_2.webp', 'image/dodo_eq/dodo_eq_3.webp', 'image/dodo_eq/dodo_eq_4.webp', 'image/dodo_eq/dodo_eq_5.webp', 'image/dodo_eq/dodo_eq_6.webp', 'image/dodo_eq/dodo_eq_7.webp', 'image/dodo_eq/dodo_eq_8.webp']
+            },
+            dodograin: {
+                title: 'Dodo Grain',
+                titleKo: 'Dodo Grain',
+                description: 'Film Photo Filter - Vintage Editor. Turn any shot into an analog mood in three taps with authentic film LUTs, grain, light leaks, polaroid frames and retro date stamps. Works fully offline, no login required.',
+                descriptionKo: '필름 사진 필터 · 빈티지 감성 보정. 사진 선택 → 필터 → 강도 조절, 단 3탭으로 아날로그 무드를 완성합니다. 진짜 같은 필름 LUT, 그레인·라이트 릭·할레이션 오버레이, 폴라로이드 프레임, 레트로 날짜 스탬프, 디지캠 팩을 제공합니다. 100% 오프라인, 로그인 없음.',
+                storeUrl: 'https://play.google.com/store/apps/details?id=com.crazycatlab.dodo_grain',
+                images: ['image/dodo_grain/dodo_grain_1.webp', 'image/dodo_grain/dodo_grain_2.webp', 'image/dodo_grain/dodo_grain_3.webp', 'image/dodo_grain/dodo_grain_4.webp', 'image/dodo_grain/dodo_grain_5.webp']
+            },
+            dodofocus: {
+                title: 'Dodo Focus',
+                titleKo: 'Dodo Focus',
+                description: 'Pomodoro Timer for study and work. Customizable focus cycles, goal D-day countdowns, focus score, ranks and streaks with automatic session stats. Works offline, no subscription, no login.',
+                descriptionKo: '공부와 업무를 위한 포모도로 타이머. 집중 25분 / 휴식 5분을 자유롭게 조절하고, 시험일·마감일 디데이와 목표 집중 시간을 함께 관리합니다. 집중 점수, 랭크, 연속 기록과 자동 통계를 제공하며 오프라인으로 작동합니다. 구독·로그인 없음.',
+                storeUrl: 'https://play.google.com/store/apps/details?id=com.crazycatlab.corefocus',
+                images: ['image/corefocus/corefocus_1.webp', 'image/corefocus/corefocus_2.webp', 'image/corefocus/corefocus_3.webp', 'image/corefocus/corefocus_4.webp', 'image/corefocus/corefocus_5.webp']
             }
         };
 
@@ -726,7 +742,47 @@
                         </div>
                     </div>
 
-                    <!-- Water Coach - Second Position -->
+                    <!-- Dodo Grain - Third Position -->
+                    <div class="portfolio-card featured" role="button" tabindex="0" onclick="openAppModal('dodograin')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openAppModal('dodograin')}">
+                        <div class="portfolio-icon">
+                            <img src="image/dodo_grain/app_icon.webp" alt="Dodo Grain App Icon" loading="lazy">
+                        </div>
+                        <div class="portfolio-content">
+                            <h3 data-i18n="portfolio.dodograin.title">Dodo Grain</h3>
+                            <p data-i18n="portfolio.dodograin.description">Film photo filter with vintage editing. Authentic film LUTs, grain, light leaks and polaroid frames in just three taps.</p>
+                            <div class="store-links">
+                                <a href="https://play.google.com/store/apps/details?id=com.crazycatlab.dodo_grain" target="_blank" rel="noopener noreferrer" class="store-link android" onclick="event.stopPropagation()">
+                                    <span data-i18n="portfolio.dodograin.android">Android</span>
+                                </a>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 100%"></div>
+                            </div>
+                            <span class="progress-text" data-i18n="portfolio.dodograin.progress">Released - Available on Google Play Store</span>
+                        </div>
+                    </div>
+
+                    <!-- Dodo Focus - Fourth Position -->
+                    <div class="portfolio-card featured" role="button" tabindex="0" onclick="openAppModal('dodofocus')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openAppModal('dodofocus')}">
+                        <div class="portfolio-icon">
+                            <img src="image/corefocus/app_icon.webp" alt="Dodo Focus App Icon" loading="lazy">
+                        </div>
+                        <div class="portfolio-content">
+                            <h3 data-i18n="portfolio.dodofocus.title">Dodo Focus</h3>
+                            <p data-i18n="portfolio.dodofocus.description">Pomodoro timer for study and work. Customizable focus cycles, goal D-day countdowns, focus score and streaks.</p>
+                            <div class="store-links">
+                                <a href="https://play.google.com/store/apps/details?id=com.crazycatlab.corefocus" target="_blank" rel="noopener noreferrer" class="store-link android" onclick="event.stopPropagation()">
+                                    <span data-i18n="portfolio.dodofocus.android">Android</span>
+                                </a>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 100%"></div>
+                            </div>
+                            <span class="progress-text" data-i18n="portfolio.dodofocus.progress">Released - Available on Google Play Store</span>
+                        </div>
+                    </div>
+
+                    <!-- Water Coach - Fifth Position -->
                     <div class="portfolio-card featured" role="button" tabindex="0" onclick="openAppModal('watercoach')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openAppModal('watercoach')}">
                         <div class="portfolio-icon">
                             <img src="image/water_coach/app_icon.webp" alt="Water Coach App Icon" loading="lazy">
@@ -746,7 +802,7 @@
                         </div>
                     </div>
 
-                    <!-- Window Close - Second Position -->
+                    <!-- Window Close - Sixth Position -->
                     <div class="portfolio-card featured" role="button" tabindex="0" onclick="openAppModal('windowclose')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openAppModal('windowclose')}">
                         <div class="portfolio-icon">
                             <img src="image/window_close/app_icon.webp" alt="Window Close App Icon" loading="lazy">
@@ -766,7 +822,7 @@
                         </div>
                     </div>
 
-                    <!-- Every Calc - Fourth Position -->
+                    <!-- Every Calc - Seventh Position -->
                     <div class="portfolio-card featured" role="button" tabindex="0" onclick="openAppModal('everycalc')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openAppModal('everycalc')}">
                         <div class="portfolio-icon">
                             <img src="image/every_calc/app_icon.webp" alt="Every Calc App Icon" loading="lazy">
