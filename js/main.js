@@ -47,6 +47,8 @@ function initScrollAnimations() {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 entry.target.classList.add('animate-in');
+                // The animation only runs once, so stop watching the element
+                observer.unobserve(entry.target);
             }
         });
     }, observerOptions);
@@ -63,24 +65,26 @@ function initHeaderScrollEffect() {
     let lastScrollTop = 0;
     
     if (header) {
-        window.addEventListener('scroll', function() {
+        let ticking = false;
+
+        function updateHeader() {
             const scrollTop = window.scrollY || document.documentElement.scrollTop;
-            
-            if (scrollTop > 100) {
-                header.classList.add('scrolled');
-            } else {
-                header.classList.remove('scrolled');
-            }
-            
+
+            header.classList.toggle('scrolled', scrollTop > 100);
             // Hide/show header on scroll
-            if (scrollTop > lastScrollTop && scrollTop > 300) {
-                header.classList.add('hidden');
-            } else {
-                header.classList.remove('hidden');
-            }
-            
+            header.classList.toggle('hidden', scrollTop > lastScrollTop && scrollTop > 300);
+
             lastScrollTop = scrollTop;
-        });
+            ticking = false;
+        }
+
+        // Scroll fires far more often than the screen repaints; coalesce the work
+        // into one update per frame. passive tells the browser we never block scrolling.
+        window.addEventListener('scroll', function() {
+            if (ticking) return;
+            ticking = true;
+            requestAnimationFrame(updateHeader);
+        }, { passive: true });
     }
 }
 

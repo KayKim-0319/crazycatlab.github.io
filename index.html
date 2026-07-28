@@ -234,6 +234,7 @@
                     img.src = imageSrc;
                     img.className = 'gallery-image';
                     img.loading = 'lazy';
+                    img.decoding = 'async';
                     imageContainer.appendChild(img);
                 });
 
@@ -260,6 +261,7 @@
                     img.src = imageSrc;
                     img.className = 'gallery-image';
                     img.loading = 'lazy';
+                    img.decoding = 'async';
                     imageContainer.appendChild(img);
                 });
 
@@ -496,7 +498,7 @@
                 <div class="nav-menu">
                     <a href="#about" data-i18n="nav.about">About</a>
                     <a href="#portfolio" data-i18n="nav.portfolio">Portfolio</a>
-                    <a href="#ourapps" data-i18n="nav.ourapps">Our Apps</a>
+                    <a href="#ourapps" data-i18n="nav.ourapps">My Apps</a>
                     <a href="#indev" data-i18n="nav.indev">In Dev</a>
                     <div class="language-switcher" role="group" aria-label="Language selection">
                         <button class="lang-btn" onclick="switchToEnglish()" aria-pressed="true" aria-label="Switch to English">EN</button>
