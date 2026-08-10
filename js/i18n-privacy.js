@@ -125,9 +125,9 @@ const privacyTranslations = {
         // Data Retention
         'privacy.retention.title': 'Data Retention',
         'privacy.retention.local.title': 'Local Data',
-        'privacy.retention.local.content': 'We do not store your personal information on our servers. All app-related data is stored locally on your device only. When you uninstall the app, all local data is automatically and permanently deleted from your device.',
+        'privacy.retention.local.content': 'We do not store your personal information on our own servers. Information created in the app (such as step counts, in-app progress and app settings) is stored only on your device, and it is automatically and permanently deleted when you uninstall the app. Information sent to the third-party services listed above (such as the advertising identifier, app usage statistics and error diagnostics) is retained by those services and is not removed by uninstalling the app.',
         'privacy.retention.thirdparty.title': 'Third-Party Service Data',
-        'privacy.retention.thirdparty.content': 'Data collected through Firebase Analytics and Google AdMob is processed and retained according to Google\'s data retention policies. Please refer to Google\'s privacy policy for more information about their data retention practices.',
+        'privacy.retention.thirdparty.content': 'Data collected through Firebase Analytics, Firebase Crashlytics and Google AdMob is processed and retained according to Google\'s data retention policies (for Analytics, typically 2 to 14 months depending on configuration). Please refer to Google\'s privacy policy for more information about their data retention practices.',
 
         'privacy.security.title': 'Data Security',
         'privacy.security.content': 'We implement appropriate technical and organizational security measures to protect your personal information against unauthorized access, alteration, disclosure, or destruction. However, no method of transmission over the internet is 100% secure.',
@@ -143,7 +143,7 @@ const privacyTranslations = {
 
         // Data Deletion
         'privacy.rights.deletion.title': 'How to Delete Your Data',
-        'privacy.rights.deletion.local': 'Simply uninstall the app from your device. All locally stored data will be automatically and permanently deleted.',
+        'privacy.rights.deletion.local': 'Simply uninstall the app from your device. All data stored on the device will be automatically and permanently deleted. Data already sent to third-party services is not affected — see below.',
         'privacy.rights.deletion.local.label': 'Local Data:',
         'privacy.rights.deletion.thirdparty': 'To manage or delete data collected by Google services (Firebase Analytics, AdMob), you can:',
         'privacy.rights.deletion.thirdparty.label': 'Third-Party Service Data:',
@@ -297,9 +297,9 @@ const privacyTranslations = {
         // 데이터 보관
         'privacy.retention.title': '데이터 보관',
         'privacy.retention.local.title': '로컬 데이터',
-        'privacy.retention.local.content': '당사는 서버에 귀하의 개인정보를 저장하지 않습니다. 모든 앱 관련 데이터는 귀하의 기기에만 로컬로 저장됩니다. 앱을 삭제하면 모든 로컬 데이터가 자동으로 영구 삭제됩니다.',
+        'privacy.retention.local.content': '당사는 자체 서버에 귀하의 개인정보를 저장하지 않습니다. 앱에서 생성되는 정보(걸음 수, 앱 내 진행 상황, 앱 설정 등)는 귀하의 기기에만 저장되며 앱을 삭제하면 자동으로 영구 삭제됩니다. 위에 안내된 제3자 서비스로 전송되는 정보(광고 식별자, 앱 사용 통계, 오류 진단 정보 등)는 해당 서비스가 보관하며 앱 삭제로는 삭제되지 않습니다.',
         'privacy.retention.thirdparty.title': '제3자 서비스 데이터',
-        'privacy.retention.thirdparty.content': 'Firebase Analytics 및 Google AdMob을 통해 수집된 데이터는 Google의 데이터 보관 정책에 따라 처리 및 보관됩니다. 데이터 보관 관행에 대한 자세한 내용은 Google 개인정보처리방침을 참조하세요.',
+        'privacy.retention.thirdparty.content': 'Firebase Analytics, Firebase Crashlytics 및 Google AdMob을 통해 수집된 데이터는 Google의 데이터 보관 정책에 따라 처리 및 보관됩니다(Analytics는 설정에 따라 통상 2~14개월). 데이터 보관 관행에 대한 자세한 내용은 Google 개인정보처리방침을 참조하세요.',
 
         'privacy.security.title': '데이터 보안',
         'privacy.security.content': '당사는 무단 액세스, 변경, 공개 또는 파괴로부터 귀하의 개인정보를 보호하기 위해 적절한 기술적, 조직적 보안 조치를 구현합니다. 그러나 인터넷을 통한 전송 방법은 100% 안전하지 않습니다.',
@@ -315,7 +315,7 @@ const privacyTranslations = {
 
         // 데이터 삭제
         'privacy.rights.deletion.title': '데이터 삭제 방법',
-        'privacy.rights.deletion.local': '기기에서 앱을 삭제하기만 하면 됩니다. 로컬에 저장된 모든 데이터가 자동으로 영구 삭제됩니다.',
+        'privacy.rights.deletion.local': '기기에서 앱을 삭제하기만 하면 됩니다. 기기에 저장된 모든 데이터가 자동으로 영구 삭제됩니다. 이미 제3자 서비스로 전송된 데이터는 영향을 받지 않으며, 아래 항목을 참고해 주세요.',
         'privacy.rights.deletion.local.label': '로컬 데이터:',
         'privacy.rights.deletion.thirdparty': 'Google 서비스(Firebase Analytics, AdMob)가 수집한 데이터를 관리하거나 삭제하려면 다음을 수행할 수 있습니다:',
         'privacy.rights.deletion.thirdparty.label': '제3자 서비스 데이터:',
