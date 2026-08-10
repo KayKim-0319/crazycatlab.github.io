@@ -99,6 +99,29 @@ const privacyTranslations = {
         'privacy.deviceid.sharing.talsec.content': 'processes device-integrity information for app integrity and security threat monitoring.',
         'privacy.deviceid.note': 'All data is transmitted securely over HTTPS. You can reset or delete your advertising ID in [Device Settings > Google > Ads].',
 
+        // Health and Fitness Data
+        'privacy.health.title': 'Health and Fitness Data',
+        'privacy.health.intro': 'Some of our apps provide step counting and activity tracking (for example, Cat Walk). Those apps process the following health and fitness data.',
+        'privacy.health.collected.title': 'Data Processed',
+        'privacy.health.collected.item1': 'Step count measured by your device\'s built-in step sensor (physical activity recognition permission)',
+        'privacy.health.collected.item2': 'Walking distance and calories burned, calculated from your step count',
+        'privacy.health.collected.item3': 'Step records read from Health Connect (Android) or HealthKit (iOS), only if you grant permission',
+        'privacy.health.purpose.title': 'Purpose',
+        'privacy.health.purpose.content': 'Health and fitness data is used solely to display your step count, statistics, goals, missions and in-app rewards inside the app.',
+        'privacy.health.handling.title': 'How We Handle It',
+        'privacy.health.handling.item1': 'Health data is stored only on your device and is never transmitted to our servers.',
+        'privacy.health.handling.item2': 'We never use health data for advertising or marketing, and we never sell or share it with third parties.',
+        'privacy.health.handling.item3': 'Access to Health Connect and HealthKit is read-only. Our apps do not write any data back to them.',
+        'privacy.health.handling.item4': 'You can withdraw the permission at any time in Health Connect (Android) or the Health app (iOS). Uninstalling the app permanently deletes all health data stored on the device.',
+
+        // Google Drive Backup
+        'privacy.drive.title': 'Google Drive Backup (Optional)',
+        'privacy.drive.intro': 'Some of our apps offer an optional backup feature that saves your app data to your own Google Drive. It runs only when you start it yourself.',
+        'privacy.drive.item1': 'Backup files are stored in your own Google Drive storage. They are never stored on our servers, and we cannot access them.',
+        'privacy.drive.item2': 'The app requests only the restricted "drive.file" scope, which grants access solely to files the app itself creates. It cannot read any other file in your Drive.',
+        'privacy.drive.item3': 'Your Google account email address is shown in the app only to indicate which account is signed in. It is not transmitted to our servers.',
+        'privacy.drive.item4': 'You can delete a backup at any time from Google Drive, and you can revoke the app\'s access in your Google Account settings.',
+
         // Data Retention
         'privacy.retention.title': 'Data Retention',
         'privacy.retention.local.title': 'Local Data',
@@ -248,6 +271,29 @@ const privacyTranslations = {
         'privacy.deviceid.sharing.talsec.content': '앱 무결성 및 보안 위협 모니터링을 위해 기기 무결성 관련 정보가 처리됩니다.',
         'privacy.deviceid.note': '모든 데이터는 HTTPS(전송 계층 암호화)를 통해 안전하게 전송됩니다. 사용자는 [기기 설정 > Google > 광고]에서 광고 ID를 재설정하거나 삭제할 수 있습니다.',
 
+        // 건강 및 피트니스 데이터
+        'privacy.health.title': '건강 및 피트니스 데이터',
+        'privacy.health.intro': '당사 앱 중 걸음 수 측정·활동 기록을 제공하는 일부 앱(예: Cat Walk)은 다음의 건강·피트니스 데이터를 처리합니다.',
+        'privacy.health.collected.title': '처리하는 데이터',
+        'privacy.health.collected.item1': '기기에 내장된 걸음 센서로 측정한 걸음 수 (신체 활동 인식 권한)',
+        'privacy.health.collected.item2': '걸음 수를 바탕으로 계산한 이동 거리 및 소모 칼로리',
+        'privacy.health.collected.item3': '사용자가 권한을 허용한 경우에 한해 Health Connect(Android) 또는 HealthKit(iOS)에서 읽어온 걸음 수 기록',
+        'privacy.health.purpose.title': '이용 목적',
+        'privacy.health.purpose.content': '건강·피트니스 데이터는 앱 내에서 걸음 수 표시, 통계, 목표, 미션 및 앱 내 보상 기능을 제공하기 위한 목적으로만 이용됩니다.',
+        'privacy.health.handling.title': '처리 원칙',
+        'privacy.health.handling.item1': '건강 데이터는 사용자의 기기에만 저장되며, 당사 서버로 전송되지 않습니다.',
+        'privacy.health.handling.item2': '건강 데이터를 광고 또는 마케팅 목적으로 이용하지 않으며, 제3자에게 판매하거나 제공하지 않습니다.',
+        'privacy.health.handling.item3': 'Health Connect 및 HealthKit에 대한 접근은 읽기 전용입니다. 당사 앱은 이들 서비스에 데이터를 기록하지 않습니다.',
+        'privacy.health.handling.item4': '권한은 언제든지 Health Connect(Android) 또는 건강 앱(iOS)에서 철회할 수 있으며, 앱을 삭제하면 기기에 저장된 모든 건강 데이터가 영구 삭제됩니다.',
+
+        // Google Drive 백업
+        'privacy.drive.title': 'Google Drive 백업 (선택 기능)',
+        'privacy.drive.intro': '당사 앱 중 일부는 앱 데이터를 사용자 본인의 Google Drive에 저장하는 선택적 백업 기능을 제공합니다. 이 기능은 사용자가 직접 실행할 때만 동작합니다.',
+        'privacy.drive.item1': '백업 파일은 사용자 본인의 Google Drive 저장공간에 보관됩니다. 당사 서버에는 저장되지 않으며, 당사는 해당 파일에 접근할 수 없습니다.',
+        'privacy.drive.item2': '앱은 자신이 생성한 파일에만 접근할 수 있는 제한적 권한("drive.file" 범위)만 요청하며, Drive의 다른 파일은 읽을 수 없습니다.',
+        'privacy.drive.item3': 'Google 계정 이메일 주소는 로그인된 계정을 표시하기 위해 앱 화면에만 표시되며, 당사 서버로 전송되지 않습니다.',
+        'privacy.drive.item4': '백업 파일은 언제든지 Google Drive에서 직접 삭제할 수 있으며, Google 계정 설정에서 앱의 접근 권한을 철회할 수 있습니다.',
+
         // 데이터 보관
         'privacy.retention.title': '데이터 보관',
         'privacy.retention.local.title': '로컬 데이터',
@@ -302,6 +348,17 @@ const privacyTranslations = {
 
 // Use privacy translations directly
 const translations = privacyTranslations;
+
+// 최종 업데이트 날짜 — 방침 본문을 고칠 때 이 값만 바꾸면 된다.
+// privacy.html 의 <span id="privacy-date"> 초기값도 같이 맞춰 둘 것(JS 로드 전 표시분).
+const LAST_UPDATED = {
+    en: 'August 10, 2026',
+    ko: '2026년 8월 10일'
+};
+
+function getLastUpdated() {
+    return LAST_UPDATED[currentLanguage] || LAST_UPDATED.en;
+}
 
 // Current language state
 let currentLanguage = localStorage.getItem('language') || 'en';
@@ -363,10 +420,12 @@ function applyTranslations() {
         
         if (translation && translation !== key) {
             // 특별한 경우 처리 (날짜가 포함된 텍스트)
+            // 날짜는 LAST_UPDATED 한 곳에서만 관리한다. 예전에는 여기에 날짜가
+            // 하드코딩돼 있어 HTML의 <span> 값과 실제 표시값이 서로 달랐다.
             if (key === 'privacy.updated' && element.querySelector('#privacy-date')) {
-                element.innerHTML = translation + '<span id="privacy-date">June 1, 2026</span>';
+                element.innerHTML = translation + '<span id="privacy-date">' + getLastUpdated() + '</span>';
             } else if (key === 'terms.updated' && element.querySelector('#terms-date')) {
-                element.innerHTML = translation + '<span id="terms-date">June 1, 2026</span>';
+                element.innerHTML = translation + '<span id="terms-date">' + getLastUpdated() + '</span>';
             } else {
                 element.textContent = translation;
             }
